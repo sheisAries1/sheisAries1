@@ -32,7 +32,7 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 ## 📌 Projects
 
 ### 🌐 Personal Portfolio Website  
-💻 GitHub: https://github.com/yourusername/portfolio  
+💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
 - Built with HTML, CSS, and JavaScript  
 - Mobile-first design and clean UI  
