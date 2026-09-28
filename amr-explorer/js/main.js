@@ -69,7 +69,7 @@ function readHash() {
 }
 function writeHash() {
   const p = new URLSearchParams({ source: state.source, pathogen: state.pathogen, year: state.year, country: state.country });
-  history.replaceState(null, "", `#${p}`);
+  try { history.replaceState(null, "", `#${p}`); } catch (e) { /* URL state unavailable in sandboxed frames */ }
 }
 
 function setState(patch) {
