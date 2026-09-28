@@ -377,7 +377,7 @@
         ${box('Brain Dump', area('x:dump', 'Empty your head here…', 'dotted', 'rows="12"'), '', 'flush')}
         ${box('Settings & Backup', `
           <div class="setting"><label for="${idOf('set:theme')}">Theme</label>
-            <select id="${idOf('set:theme')}" class="line" data-bind="set:theme" data-default="auto"><option value="auto">Match device</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+            <select id="${idOf('set:theme')}" class="line" data-bind="set:theme" data-default="light"><option value="light">Light (paper)</option><option value="dark">Dark</option><option value="auto">Match device</option></select></div>
           <div class="setting"><label for="${idOf('set:currency')}">Currency</label>
             <select id="${idOf('set:currency')}" class="line" data-bind="set:currency" data-default="£">${['£', '$', '€', '₦', '¥', '₹', 'R', 'CA$', 'A$'].map(c => `<option>${c}</option>`).join('')}</select></div>
           <p class="muted">Your planner saves automatically on this device. Download a backup to move it to another device, then use Restore there.</p>
@@ -433,7 +433,7 @@
   }
 
   function applyTheme() {
-    const t = get('set:theme', 'auto');
+    const t = get('set:theme', 'light');
     if (t === 'auto') document.documentElement.removeAttribute('data-theme');
     else document.documentElement.setAttribute('data-theme', t);
   }

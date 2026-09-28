@@ -1,17 +1,17 @@
 /* Layout: a paper sheet with tab dividers on its right edge (laptop / iPad);
    on phones the tabs move to a bottom bar and every section stacks. */
 :root {
-  --desk: #e7e2db;
-  --paper: #fbfaf7;
-  --band: #ece6dd;
-  --tab: #e9e3da;
-  --line: #ddd5ca;
-  --line-soft: #ebe5dc;
-  --dot: #cfc6ba;
-  --ink: #3d3935;
-  --muted: #8b8279;
-  --accent: #a8927a;
-  --accent-ink: #fbfaf7;
+  --desk: #e8e5e0;
+  --paper: #f7f6f3;
+  --band: #ebe7e1;
+  --tab: #e6e2dc;
+  --line: #dbd5cd;
+  --line-soft: #e8e3dc;
+  --dot: #cdc7bf;
+  --ink: #45413d;
+  --muted: #8c857d;
+  --accent: #a69a8b;
+  --accent-ink: #f7f6f3;
   --good: #7d9a78;
   --warn: #b5835a;
   --shadow: 0 1px 2px rgba(60, 50, 40, .06), 0 18px 40px -18px rgba(60, 50, 40, .25);
