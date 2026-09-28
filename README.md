@@ -39,6 +39,16 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### 🗓️ Responsive Digital Planner  
+💻 GitHub: https://github.com/sheisAries1/Responsive-Digital-Planner  
+- Weekly planner with schedule, priorities, tasks, habit tracker and notes  
+- Calendar, monthly overview, wellness, finance, goals and notes sections  
+- Responsive layout for phone, iPad and laptop, with a light/dark theme toggle  
+- Saves automatically in the browser, works offline and can be added to the home screen  
+- Built with HTML, CSS and JavaScript  
+
+---
+
 ### 📄 Responsive Landing Page  
 - Built using Flexbox and CSS Grid  
 - Fully responsive across devices  
