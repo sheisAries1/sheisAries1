@@ -105,6 +105,7 @@ button { cursor: pointer; }
   padding-right: 15px;
 }
 .tab.home { writing-mode: horizontal-tb; padding: 12px 11px; }
+.theme-btn { writing-mode: horizontal-tb; padding: 12px 11px; margin-top: 10px; border-radius: 0 12px 12px 0; }
 .tab svg { width: 18px; height: 18px; display: block; margin: auto; fill: currentColor; }
 
 /* ---------- Page header ---------- */
@@ -430,6 +431,15 @@ select.line { padding-right: 0; }
   }
   .tab[aria-current="page"] { padding-right: 12px; }
   .tab.home { padding: 10px 12px; }
+  .theme-btn {
+    position: fixed; z-index: 11; margin: 0;
+    top: calc(env(safe-area-inset-top, 0px) + 14px); right: 14px;
+    width: 40px; height: 40px; padding: 0; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--paper); color: var(--ink); border: 1px solid var(--line);
+    box-shadow: 0 4px 14px -6px rgba(0, 0, 0, .25);
+  }
+  .page-head > div:first-child, .home-hero > div:first-child { padding-right: 48px; }
   .toast { bottom: calc(var(--tabs-h) + 20px + env(safe-area-inset-bottom, 0px)); }
 
   input.line, select.line, textarea { font-size: 16px; } /* stops iOS zoom on focus */

@@ -403,7 +403,31 @@
   const HOME_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 11.2l1.3 1.5L5 11.7V21h5.5v-6h3v6H19v-9.3l1.2 1 1.3-1.5z"/></svg>';
   tabsEl.innerHTML = ORDER.map(id =>
     `<a class="tab ${id === 'home' ? 'home' : ''}" href="#${id}" data-tab="${id}" ${id === 'home' ? 'aria-label="Home"' : ''}>${id === 'home' ? HOME_ICON : pages[id].label}</a>`
-  ).join('');
+  ).join('') + '<button type="button" class="tab theme-btn" id="theme-toggle"></button>';
+
+  const MOON_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>';
+  const SUN_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></g></svg>';
+  const themeBtn = document.getElementById('theme-toggle');
+  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => {
+    const t = document.documentElement.getAttribute('data-theme');
+    return t ? t === 'dark' : darkQuery.matches;
+  };
+  function syncThemeBtn() {
+    const dark = isDark();
+    themeBtn.innerHTML = dark ? SUN_ICON : MOON_ICON;
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    themeBtn.title = dark ? 'Light theme' : 'Dark theme';
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    set('set:theme', next, true);
+    applyTheme();
+    const sel = document.getElementById(idOf('set:theme'));
+    if (sel) sel.value = next;
+    toast(next === 'dark' ? 'Dark theme' : 'Light theme');
+  });
+  if (darkQuery.addEventListener) darkQuery.addEventListener('change', () => syncThemeBtn());
 
   function hydrate() {
     pageEl.querySelectorAll('[data-bind]').forEach(el => {
@@ -436,6 +460,7 @@
     const t = get('set:theme', 'light');
     if (t === 'auto') document.documentElement.removeAttribute('data-theme');
     else document.documentElement.setAttribute('data-theme', t);
+    syncThemeBtn();
   }
 
   /* ---------- Events ---------- */
