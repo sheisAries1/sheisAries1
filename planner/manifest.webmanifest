@@ -1,0 +1,16 @@
+{
+  "name": "Digital Planner",
+  "short_name": "Planner",
+  "description": "Weekly planner with schedule, habits, wellness, finance, goals and notes.",
+  "start_url": "./#weekly",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e7e2db",
+  "theme_color": "#e7e2db",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
