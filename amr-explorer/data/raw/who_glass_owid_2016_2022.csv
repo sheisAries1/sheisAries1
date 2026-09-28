@@ -1,0 +1,818 @@
+Country,Code,Year,Resistance_Rate,Pathogen,Antibiotic,Consumption
+Argentina,ARG,2020,21.21,E. coli,Cephalosporins,
+Australia,AUS,2020,13.36,E. coli,Cephalosporins,
+Bahrain,BHR,2020,59.06,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2020,23.46,E. coli,Cephalosporins,
+Brunei,BRN,2020,17.3,E. coli,Cephalosporins,
+Cambodia,KHM,2020,73.72,E. coli,Cephalosporins,
+Cote d'Ivoire,CIV,2020,90.0,E. coli,Cephalosporins,
+East Timor,TLS,2020,61.54,E. coli,Cephalosporins,
+Ghana,GHA,2020,64.29,E. coli,Cephalosporins,
+Greece,GRC,2020,24.46,E. coli,Cephalosporins,
+India,IND,2020,86.81,E. coli,Cephalosporins,
+Indonesia,IDN,2020,75.63,E. coli,Cephalosporins,
+Iraq,IRQ,2020,94.87,E. coli,Cephalosporins,
+Japan,JPN,2020,20.66,E. coli,Cephalosporins,
+Kuwait,KWT,2020,100.0,E. coli,Cephalosporins,
+Lebanon,LBN,2020,56.41,E. coli,Cephalosporins,
+Liberia,LBR,2020,40.0,E. coli,Cephalosporins,
+Libya,LBY,2020,61.54,E. coli,Cephalosporins,
+Luxembourg,LUX,2020,10.75,E. coli,Cephalosporins,
+Malawi,MWI,2020,56.46,E. coli,Cephalosporins,
+Malaysia,MYS,2020,25.79,E. coli,Cephalosporins,
+Mauritius,MUS,2020,49.59,E. coli,Cephalosporins,
+Moldova,MDA,2020,88.89,E. coli,Cephalosporins,
+Mozambique,MOZ,2020,31.58,E. coli,Cephalosporins,
+Myanmar,MMR,2020,80.56,E. coli,Cephalosporins,
+Netherlands,NLD,2020,6.55,E. coli,Cephalosporins,
+Nigeria,NGA,2020,80.77,E. coli,Cephalosporins,
+North Macedonia,MKD,2020,85.71,E. coli,Cephalosporins,
+Oman,OMN,2020,78.91,E. coli,Cephalosporins,
+Pakistan,PAK,2020,82.29,E. coli,Cephalosporins,
+Palestine,PSE,2020,47.37,E. coli,Cephalosporins,
+Philippines,PHL,2020,35.62,E. coli,Cephalosporins,
+Qatar,QAT,2020,40.0,E. coli,Cephalosporins,
+Saudi Arabia,SAU,2020,58.27,E. coli,Cephalosporins,
+Singapore,SGP,2020,30.48,E. coli,Cephalosporins,
+South Korea,KOR,2020,37.66,E. coli,Cephalosporins,
+Sri Lanka,LKA,2020,61.92,E. coli,Cephalosporins,
+Sudan,SDN,2020,100.0,E. coli,Cephalosporins,
+Syria,SYR,2020,0.0,E. coli,Cephalosporins,
+Thailand,THA,2020,39.4,E. coli,Cephalosporins,
+Trinidad and Tobago,TTO,2020,26.32,E. coli,Cephalosporins,
+Uganda,UGA,2020,88.24,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2020,54.08,E. coli,Cephalosporins,
+Yemen,YEM,2020,100.0,E. coli,Cephalosporins,
+Zambia,ZMB,2020,100.0,E. coli,Cephalosporins,
+Argentina,ARG,2020,38.4,S. aureus,Methicillin,
+Australia,AUS,2020,17.65,S. aureus,Methicillin,
+Bahrain,BHR,2020,34.39,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2020,23.21,S. aureus,Methicillin,
+Brunei,BRN,2020,12.47,S. aureus,Methicillin,
+Cambodia,KHM,2020,68.09,S. aureus,Methicillin,
+Cote d'Ivoire,CIV,2020,71.53,S. aureus,Methicillin,
+East Timor,TLS,2020,21.43,S. aureus,Methicillin,
+Eswatini,SWZ,2020,2.33,S. aureus,Methicillin,
+Greece,GRC,2020,41.16,S. aureus,Methicillin,
+India,IND,2020,64.66,S. aureus,Methicillin,
+Indonesia,IDN,2020,36.24,S. aureus,Methicillin,
+Iraq,IRQ,2020,86.36,S. aureus,Methicillin,
+Japan,JPN,2020,35.86,S. aureus,Methicillin,
+Kuwait,KWT,2020,100.0,S. aureus,Methicillin,
+Lebanon,LBN,2020,35.09,S. aureus,Methicillin,
+Liberia,LBR,2020,12.9,S. aureus,Methicillin,
+Libya,LBY,2020,83.33,S. aureus,Methicillin,
+Luxembourg,LUX,2020,3.08,S. aureus,Methicillin,
+Malawi,MWI,2020,61.19,S. aureus,Methicillin,
+Malaysia,MYS,2020,17.12,S. aureus,Methicillin,
+Mauritius,MUS,2020,39.62,S. aureus,Methicillin,
+Moldova,MDA,2020,55.56,S. aureus,Methicillin,
+Mozambique,MOZ,2020,25.0,S. aureus,Methicillin,
+Myanmar,MMR,2020,50.97,S. aureus,Methicillin,
+Netherlands,NLD,2020,1.54,S. aureus,Methicillin,
+Nigeria,NGA,2020,75.41,S. aureus,Methicillin,
+North Macedonia,MKD,2020,100.0,S. aureus,Methicillin,
+Oman,OMN,2020,31.82,S. aureus,Methicillin,
+Pakistan,PAK,2020,69.49,S. aureus,Methicillin,
+Palestine,PSE,2020,89.49,S. aureus,Methicillin,
+Philippines,PHL,2020,45.69,S. aureus,Methicillin,
+Qatar,QAT,2020,32.05,S. aureus,Methicillin,
+Saudi Arabia,SAU,2020,100.0,S. aureus,Methicillin,
+Somalia,SOM,2020,46.67,S. aureus,Methicillin,
+South Korea,KOR,2020,47.55,S. aureus,Methicillin,
+Sri Lanka,LKA,2020,53.29,S. aureus,Methicillin,
+Sudan,SDN,2020,100.0,S. aureus,Methicillin,
+Thailand,THA,2020,10.63,S. aureus,Methicillin,
+Uganda,UGA,2020,75.0,S. aureus,Methicillin,
+United Arab Emirates,ARE,2020,42.52,S. aureus,Methicillin,
+Yemen,YEM,2020,71.43,S. aureus,Methicillin,
+Zambia,ZMB,2020,100.0,S. aureus,Methicillin,
+Argentina,ARG,2022,22.47,E. coli,Cephalosporins,
+Australia,AUS,2022,12.68,E. coli,Cephalosporins,
+Bahrain,BHR,2022,62.96,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2022,26.81,E. coli,Cephalosporins,
+Brazil,BRA,2022,36.26,E. coli,Cephalosporins,
+Brunei,BRN,2022,15.6,E. coli,Cephalosporins,
+Cambodia,KHM,2022,73.51,E. coli,Cephalosporins,
+Cameroon,CMR,2022,96.3,E. coli,Cephalosporins,
+Democratic Republic of Congo,COD,2022,72.55,E. coli,Cephalosporins,
+East Timor,TLS,2022,50.0,E. coli,Cephalosporins,
+Ghana,GHA,2022,90.38,E. coli,Cephalosporins,
+Greece,GRC,2022,24.01,E. coli,Cephalosporins,
+India,IND,2022,77.53,E. coli,Cephalosporins,
+Indonesia,IDN,2022,69.73,E. coli,Cephalosporins,
+Iraq,IRQ,2022,85.71,E. coli,Cephalosporins,
+Japan,JPN,2022,20.39,E. coli,Cephalosporins,
+Kenya,KEN,2022,63.64,E. coli,Cephalosporins,
+Lebanon,LBN,2022,37.22,E. coli,Cephalosporins,
+Luxembourg,LUX,2022,10.87,E. coli,Cephalosporins,
+Mauritius,MUS,2022,60.43,E. coli,Cephalosporins,
+Moldova,MDA,2022,71.88,E. coli,Cephalosporins,
+Morocco,MAR,2022,46.07,E. coli,Cephalosporins,
+Mozambique,MOZ,2022,64.29,E. coli,Cephalosporins,
+Myanmar,MMR,2022,90.91,E. coli,Cephalosporins,
+Namibia,NAM,2022,18.18,E. coli,Cephalosporins,
+Netherlands,NLD,2022,7.61,E. coli,Cephalosporins,
+North Macedonia,MKD,2022,60.0,E. coli,Cephalosporins,
+Pakistan,PAK,2022,83.51,E. coli,Cephalosporins,
+Philippines,PHL,2022,43.89,E. coli,Cephalosporins,
+Singapore,SGP,2022,24.97,E. coli,Cephalosporins,
+Sri Lanka,LKA,2022,58.76,E. coli,Cephalosporins,
+Sweden,SWE,2022,7.31,E. coli,Cephalosporins,
+Syria,SYR,2022,78.57,E. coli,Cephalosporins,
+Thailand,THA,2022,33.77,E. coli,Cephalosporins,
+Turkey,TUR,2022,52.18,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2022,52.38,E. coli,Cephalosporins,
+Yemen,YEM,2022,90.36,E. coli,Cephalosporins,
+Zambia,ZMB,2022,76.47,E. coli,Cephalosporins,
+Argentina,ARG,2022,32.79,S. aureus,Methicillin,
+Australia,AUS,2022,14.97,S. aureus,Methicillin,
+Bahrain,BHR,2022,42.11,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2022,26.51,S. aureus,Methicillin,
+Brazil,BRA,2022,31.58,S. aureus,Methicillin,
+Brunei,BRN,2022,12.16,S. aureus,Methicillin,
+Cambodia,KHM,2022,81.25,S. aureus,Methicillin,
+Cameroon,CMR,2022,76.0,S. aureus,Methicillin,
+Democratic Republic of Congo,COD,2022,88.46,S. aureus,Methicillin,
+East Timor,TLS,2022,38.1,S. aureus,Methicillin,
+Eswatini,SWZ,2022,36.36,S. aureus,Methicillin,
+Ghana,GHA,2022,67.86,S. aureus,Methicillin,
+Greece,GRC,2022,41.08,S. aureus,Methicillin,
+India,IND,2022,54.85,S. aureus,Methicillin,
+Indonesia,IDN,2022,35.18,S. aureus,Methicillin,
+Iraq,IRQ,2022,87.76,S. aureus,Methicillin,
+Japan,JPN,2022,33.89,S. aureus,Methicillin,
+Kenya,KEN,2022,21.43,S. aureus,Methicillin,
+Lebanon,LBN,2022,52.5,S. aureus,Methicillin,
+Luxembourg,LUX,2022,4.68,S. aureus,Methicillin,
+Mauritius,MUS,2022,39.36,S. aureus,Methicillin,
+Moldova,MDA,2022,23.81,S. aureus,Methicillin,
+Morocco,MAR,2022,23.58,S. aureus,Methicillin,
+Mozambique,MOZ,2022,6.67,S. aureus,Methicillin,
+Myanmar,MMR,2022,66.67,S. aureus,Methicillin,
+Namibia,NAM,2022,0.0,S. aureus,Methicillin,
+Netherlands,NLD,2022,2.31,S. aureus,Methicillin,
+Nigeria,NGA,2022,65.09,S. aureus,Methicillin,
+North Macedonia,MKD,2022,53.85,S. aureus,Methicillin,
+Pakistan,PAK,2022,67.06,S. aureus,Methicillin,
+Philippines,PHL,2022,44.43,S. aureus,Methicillin,
+Singapore,SGP,2022,35.71,S. aureus,Methicillin,
+Sri Lanka,LKA,2022,51.31,S. aureus,Methicillin,
+Sweden,SWE,2022,1.85,S. aureus,Methicillin,
+Syria,SYR,2022,29.41,S. aureus,Methicillin,
+Thailand,THA,2022,7.47,S. aureus,Methicillin,
+Turkey,TUR,2022,31.35,S. aureus,Methicillin,
+United Arab Emirates,ARE,2022,39.88,S. aureus,Methicillin,
+Yemen,YEM,2022,93.46,S. aureus,Methicillin,
+Zambia,ZMB,2022,90.0,S. aureus,Methicillin,
+Argentina,ARG,2021,19.76,E. coli,Cephalosporins,
+Australia,AUS,2021,12.46,E. coli,Cephalosporins,
+Bahrain,BHR,2021,57.81,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2021,28.86,E. coli,Cephalosporins,
+Brazil,BRA,2021,25.58,E. coli,Cephalosporins,
+Brunei,BRN,2021,12.58,E. coli,Cephalosporins,
+Cameroon,CMR,2021,70.0,E. coli,Cephalosporins,
+Czechia,CZE,2021,14.31,E. coli,Cephalosporins,
+Democratic Republic of Congo,COD,2021,68.97,E. coli,Cephalosporins,
+East Timor,TLS,2021,53.85,E. coli,Cephalosporins,
+Ghana,GHA,2021,77.78,E. coli,Cephalosporins,
+Greece,GRC,2021,21.93,E. coli,Cephalosporins,
+India,IND,2021,77.59,E. coli,Cephalosporins,
+Indonesia,IDN,2021,71.1,E. coli,Cephalosporins,
+Iraq,IRQ,2021,85.51,E. coli,Cephalosporins,
+Japan,JPN,2021,20.64,E. coli,Cephalosporins,
+Kuwait,KWT,2021,43.66,E. coli,Cephalosporins,
+Lebanon,LBN,2021,50.0,E. coli,Cephalosporins,
+Luxembourg,LUX,2021,11.34,E. coli,Cephalosporins,
+Mauritius,MUS,2021,52.68,E. coli,Cephalosporins,
+Moldova,MDA,2021,81.82,E. coli,Cephalosporins,
+Morocco,MAR,2021,35.87,E. coli,Cephalosporins,
+Netherlands,NLD,2021,6.69,E. coli,Cephalosporins,
+North Macedonia,MKD,2021,51.22,E. coli,Cephalosporins,
+Pakistan,PAK,2021,85.16,E. coli,Cephalosporins,
+Palestine,PSE,2021,46.23,E. coli,Cephalosporins,
+Philippines,PHL,2021,44.03,E. coli,Cephalosporins,
+Saudi Arabia,SAU,2021,52.97,E. coli,Cephalosporins,
+Singapore,SGP,2021,25.83,E. coli,Cephalosporins,
+Sri Lanka,LKA,2021,57.02,E. coli,Cephalosporins,
+Thailand,THA,2021,37.4,E. coli,Cephalosporins,
+Trinidad and Tobago,TTO,2021,27.78,E. coli,Cephalosporins,
+Turkey,TUR,2021,53.77,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2021,51.67,E. coli,Cephalosporins,
+Zambia,ZMB,2021,88.71,E. coli,Cephalosporins,
+Argentina,ARG,2021,34.33,S. aureus,Methicillin,
+Australia,AUS,2021,16.91,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2021,20.83,S. aureus,Methicillin,
+Brazil,BRA,2021,7.0,S. aureus,Methicillin,
+Brunei,BRN,2021,14.62,S. aureus,Methicillin,
+Cameroon,CMR,2021,45.45,S. aureus,Methicillin,
+Czechia,CZE,2021,9.43,S. aureus,Methicillin,
+Democratic Republic of Congo,COD,2021,100.0,S. aureus,Methicillin,
+East Timor,TLS,2021,37.5,S. aureus,Methicillin,
+Ghana,GHA,2021,45.45,S. aureus,Methicillin,
+Greece,GRC,2021,43.18,S. aureus,Methicillin,
+India,IND,2021,55.67,S. aureus,Methicillin,
+Indonesia,IDN,2021,37.7,S. aureus,Methicillin,
+Iraq,IRQ,2021,84.62,S. aureus,Methicillin,
+Japan,JPN,2021,35.05,S. aureus,Methicillin,
+Lebanon,LBN,2021,37.21,S. aureus,Methicillin,
+Liberia,LBR,2021,5.88,S. aureus,Methicillin,
+Luxembourg,LUX,2021,5.53,S. aureus,Methicillin,
+Mauritius,MUS,2021,42.96,S. aureus,Methicillin,
+Moldova,MDA,2021,6.67,S. aureus,Methicillin,
+Morocco,MAR,2021,25.77,S. aureus,Methicillin,
+Mozambique,MOZ,2021,25.0,S. aureus,Methicillin,
+Netherlands,NLD,2021,1.61,S. aureus,Methicillin,
+Nigeria,NGA,2021,66.67,S. aureus,Methicillin,
+North Macedonia,MKD,2021,80.77,S. aureus,Methicillin,
+Pakistan,PAK,2021,82.56,S. aureus,Methicillin,
+Palestine,PSE,2021,73.3,S. aureus,Methicillin,
+Philippines,PHL,2021,44.6,S. aureus,Methicillin,
+Saudi Arabia,SAU,2021,50.38,S. aureus,Methicillin,
+Singapore,SGP,2021,32.54,S. aureus,Methicillin,
+Sri Lanka,LKA,2021,47.21,S. aureus,Methicillin,
+Thailand,THA,2021,7.61,S. aureus,Methicillin,
+Turkey,TUR,2021,30.99,S. aureus,Methicillin,
+United Arab Emirates,ARE,2021,35.65,S. aureus,Methicillin,
+Zambia,ZMB,2021,69.35,S. aureus,Methicillin,
+Argentina,ARG,2019,18.98,E. coli,Cephalosporins,
+Australia,AUS,2019,13.29,E. coli,Cephalosporins,
+Bahrain,BHR,2019,53.81,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2019,20.34,E. coli,Cephalosporins,
+Brazil,BRA,2019,27.74,E. coli,Cephalosporins,
+Brunei,BRN,2019,17.24,E. coli,Cephalosporins,
+Cambodia,KHM,2019,71.03,E. coli,Cephalosporins,
+Egypt,EGY,2019,87.8,E. coli,Cephalosporins,
+Greece,GRC,2019,21.73,E. coli,Cephalosporins,
+India,IND,2019,80.81,E. coli,Cephalosporins,
+Indonesia,IDN,2019,70.14,E. coli,Cephalosporins,
+Iran,IRN,2019,70.32,E. coli,Cephalosporins,
+Japan,JPN,2019,20.95,E. coli,Cephalosporins,
+Lebanon,LBN,2019,55.33,E. coli,Cephalosporins,
+Libya,LBY,2019,58.33,E. coli,Cephalosporins,
+Luxembourg,LUX,2019,15.65,E. coli,Cephalosporins,
+Madagascar,MDG,2019,40.54,E. coli,Cephalosporins,
+Malaysia,MYS,2019,27.13,E. coli,Cephalosporins,
+Mozambique,MOZ,2019,28.0,E. coli,Cephalosporins,
+Myanmar,MMR,2019,77.78,E. coli,Cephalosporins,
+Netherlands,NLD,2019,7.22,E. coli,Cephalosporins,
+North Macedonia,MKD,2019,64.29,E. coli,Cephalosporins,
+Oman,OMN,2019,54.68,E. coli,Cephalosporins,
+Pakistan,PAK,2019,88.87,E. coli,Cephalosporins,
+Palestine,PSE,2019,44.22,E. coli,Cephalosporins,
+Philippines,PHL,2019,39.93,E. coli,Cephalosporins,
+Qatar,QAT,2019,48.92,E. coli,Cephalosporins,
+Saudi Arabia,SAU,2019,57.26,E. coli,Cephalosporins,
+Singapore,SGP,2019,28.69,E. coli,Cephalosporins,
+South Korea,KOR,2019,37.08,E. coli,Cephalosporins,
+Sri Lanka,LKA,2019,63.0,E. coli,Cephalosporins,
+Thailand,THA,2019,37.26,E. coli,Cephalosporins,
+Uganda,UGA,2019,60.0,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2019,46.08,E. coli,Cephalosporins,
+Zambia,ZMB,2019,63.38,E. coli,Cephalosporins,
+Argentina,ARG,2019,42.03,S. aureus,Methicillin,
+Australia,AUS,2019,18.47,S. aureus,Methicillin,
+Bahrain,BHR,2019,40.0,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2019,10.55,S. aureus,Methicillin,
+Brazil,BRA,2019,20.56,S. aureus,Methicillin,
+Brunei,BRN,2019,12.3,S. aureus,Methicillin,
+Egypt,EGY,2019,79.59,S. aureus,Methicillin,
+Greece,GRC,2019,43.41,S. aureus,Methicillin,
+India,IND,2019,60.61,S. aureus,Methicillin,
+Indonesia,IDN,2019,39.85,S. aureus,Methicillin,
+Iran,IRN,2019,39.08,S. aureus,Methicillin,
+Japan,JPN,2019,36.42,S. aureus,Methicillin,
+Lebanon,LBN,2019,25.0,S. aureus,Methicillin,
+Luxembourg,LUX,2019,6.22,S. aureus,Methicillin,
+Madagascar,MDG,2019,33.33,S. aureus,Methicillin,
+Malaysia,MYS,2019,19.53,S. aureus,Methicillin,
+Mozambique,MOZ,2019,10.34,S. aureus,Methicillin,
+Myanmar,MMR,2019,55.61,S. aureus,Methicillin,
+Netherlands,NLD,2019,1.65,S. aureus,Methicillin,
+North Macedonia,MKD,2019,45.0,S. aureus,Methicillin,
+Pakistan,PAK,2019,64.98,S. aureus,Methicillin,
+Palestine,PSE,2019,81.78,S. aureus,Methicillin,
+Philippines,PHL,2019,50.88,S. aureus,Methicillin,
+Qatar,QAT,2019,33.8,S. aureus,Methicillin,
+Saudi Arabia,SAU,2019,48.94,S. aureus,Methicillin,
+Singapore,SGP,2019,28.65,S. aureus,Methicillin,
+South Korea,KOR,2019,48.61,S. aureus,Methicillin,
+Sri Lanka,LKA,2019,55.99,S. aureus,Methicillin,
+Sudan,SDN,2019,48.39,S. aureus,Methicillin,
+Thailand,THA,2019,12.43,S. aureus,Methicillin,
+United Arab Emirates,ARE,2019,36.23,S. aureus,Methicillin,
+Argentina,ARG,2017,18.4,E. coli,Cephalosporins,
+Argentina,ARG,2018,20.0,E. coli,Cephalosporins,
+Bahrain,BHR,2017,50.0,E. coli,Cephalosporins,
+Bahrain,BHR,2018,43.2,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2016,22.7,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2017,24.9,E. coli,Cephalosporins,
+Bosnia and Herzegovina,BIH,2018,20.2,E. coli,Cephalosporins,
+Brazil,BRA,2018,15.9,E. coli,Cephalosporins,
+Cambodia,KHM,2018,72.8,E. coli,Cephalosporins,
+Czechia,CZE,2017,14.2,E. coli,Cephalosporins,
+Czechia,CZE,2018,15.2,E. coli,Cephalosporins,
+Egypt,EGY,2018,97.87,E. coli,Cephalosporins,
+Ethiopia,ETH,2018,100.0,E. coli,Cephalosporins,
+Greece,GRC,2017,18.3,E. coli,Cephalosporins,
+Greece,GRC,2018,19.33,E. coli,Cephalosporins,
+India,IND,2017,75.11,E. coli,Cephalosporins,
+India,IND,2018,78.83,E. coli,Cephalosporins,
+Indonesia,IDN,2018,71.88,E. coli,Cephalosporins,
+Iran,IRN,2017,90.0,E. coli,Cephalosporins,
+Iran,IRN,2018,65.54,E. coli,Cephalosporins,
+Japan,JPN,2016,18.94,E. coli,Cephalosporins,
+Japan,JPN,2017,19.62,E. coli,Cephalosporins,
+Japan,JPN,2018,20.12,E. coli,Cephalosporins,
+Laos,LAO,2017,45.28,E. coli,Cephalosporins,
+Laos,LAO,2018,45.45,E. coli,Cephalosporins,
+Lebanon,LBN,2016,48.53,E. coli,Cephalosporins,
+Lebanon,LBN,2017,46.15,E. coli,Cephalosporins,
+Lebanon,LBN,2018,50.53,E. coli,Cephalosporins,
+Madagascar,MDG,2018,33.33,E. coli,Cephalosporins,
+Malawi,MWI,2016,78.52,E. coli,Cephalosporins,
+Malawi,MWI,2017,71.91,E. coli,Cephalosporins,
+Malaysia,MYS,2017,27.37,E. coli,Cephalosporins,
+Malaysia,MYS,2018,27.79,E. coli,Cephalosporins,
+Myanmar,MMR,2018,84.91,E. coli,Cephalosporins,
+Netherlands,NLD,2017,6.16,E. coli,Cephalosporins,
+Netherlands,NLD,2018,7.29,E. coli,Cephalosporins,
+Nigeria,NGA,2017,77.19,E. coli,Cephalosporins,
+Nigeria,NGA,2018,81.63,E. coli,Cephalosporins,
+North Macedonia,MKD,2016,73.44,E. coli,Cephalosporins,
+North Macedonia,MKD,2017,71.05,E. coli,Cephalosporins,
+North Macedonia,MKD,2018,79.25,E. coli,Cephalosporins,
+Oman,OMN,2017,49.48,E. coli,Cephalosporins,
+Oman,OMN,2018,52.28,E. coli,Cephalosporins,
+Pakistan,PAK,2017,86.21,E. coli,Cephalosporins,
+Pakistan,PAK,2018,69.2,E. coli,Cephalosporins,
+Philippines,PHL,2016,38.02,E. coli,Cephalosporins,
+Philippines,PHL,2017,39.56,E. coli,Cephalosporins,
+Philippines,PHL,2018,36.03,E. coli,Cephalosporins,
+Saudi Arabia,SAU,2017,50.85,E. coli,Cephalosporins,
+Saudi Arabia,SAU,2018,54.77,E. coli,Cephalosporins,
+South Africa,ZAF,2018,30.45,E. coli,Cephalosporins,
+South Korea,KOR,2016,35.33,E. coli,Cephalosporins,
+South Korea,KOR,2017,32.39,E. coli,Cephalosporins,
+South Korea,KOR,2018,38.63,E. coli,Cephalosporins,
+Sri Lanka,LKA,2018,67.67,E. coli,Cephalosporins,
+Sudan,SDN,2018,66.67,E. coli,Cephalosporins,
+Thailand,THA,2016,40.29,E. coli,Cephalosporins,
+Thailand,THA,2017,41.72,E. coli,Cephalosporins,
+Thailand,THA,2018,36.42,E. coli,Cephalosporins,
+Uganda,UGA,2017,46.15,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2017,48.07,E. coli,Cephalosporins,
+United Arab Emirates,ARE,2018,48.43,E. coli,Cephalosporins,
+Zambia,ZMB,2016,61.9,E. coli,Cephalosporins,
+Zambia,ZMB,2017,51.52,E. coli,Cephalosporins,
+Argentina,ARG,2017,45.0,S. aureus,Methicillin,
+Argentina,ARG,2018,42.5,S. aureus,Methicillin,
+Bahrain,BHR,2018,35.5,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2016,18.0,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2017,25.8,S. aureus,Methicillin,
+Bosnia and Herzegovina,BIH,2018,16.3,S. aureus,Methicillin,
+Brazil,BRA,2018,11.1,S. aureus,Methicillin,
+Cambodia,KHM,2018,48.8,S. aureus,Methicillin,
+Czechia,CZE,2017,13.2,S. aureus,Methicillin,
+Czechia,CZE,2018,13.6,S. aureus,Methicillin,
+Egypt,EGY,2018,70.4,S. aureus,Methicillin,
+Greece,GRC,2017,38.4,S. aureus,Methicillin,
+Greece,GRC,2018,36.4,S. aureus,Methicillin,
+India,IND,2017,52.5,S. aureus,Methicillin,
+India,IND,2018,63.1,S. aureus,Methicillin,
+Indonesia,IDN,2018,52.3,S. aureus,Methicillin,
+Iran,IRN,2018,38.5,S. aureus,Methicillin,
+Japan,JPN,2017,41.7,S. aureus,Methicillin,
+Japan,JPN,2018,40.6,S. aureus,Methicillin,
+Jersey,JEY,2016,36.0,S. aureus,Methicillin,
+Laos,LAO,2017,9.5,S. aureus,Methicillin,
+Laos,LAO,2018,11.4,S. aureus,Methicillin,
+Lebanon,LBN,2017,8.3,S. aureus,Methicillin,
+Lebanon,LBN,2018,20.0,S. aureus,Methicillin,
+Luxembourg,LUX,2017,9.5,S. aureus,Methicillin,
+Luxembourg,LUX,2018,7.7,S. aureus,Methicillin,
+Madagascar,MDG,2017,30.0,S. aureus,Methicillin,
+Madagascar,MDG,2018,18.8,S. aureus,Methicillin,
+Malawi,MWI,2016,82.0,S. aureus,Methicillin,
+Malawi,MWI,2017,19.7,S. aureus,Methicillin,
+Malaysia,MYS,2017,21.9,S. aureus,Methicillin,
+Malaysia,MYS,2018,23.1,S. aureus,Methicillin,
+Mozambique,MOZ,2018,20.0,S. aureus,Methicillin,
+Myanmar,MMR,2018,74.1,S. aureus,Methicillin,
+Netherlands,NLD,2017,1.5,S. aureus,Methicillin,
+Netherlands,NLD,2018,1.2,S. aureus,Methicillin,
+Nigeria,NGA,2017,62.8,S. aureus,Methicillin,
+Nigeria,NGA,2018,65.8,S. aureus,Methicillin,
+North Macedonia,MKD,2016,48.5,S. aureus,Methicillin,
+North Macedonia,MKD,2017,54.4,S. aureus,Methicillin,
+North Macedonia,MKD,2018,53.5,S. aureus,Methicillin,
+Oman,OMN,2017,41.1,S. aureus,Methicillin,
+Oman,OMN,2018,50.0,S. aureus,Methicillin,
+Pakistan,PAK,2017,62.7,S. aureus,Methicillin,
+Pakistan,PAK,2018,28.6,S. aureus,Methicillin,
+Philippines,PHL,2016,66.1,S. aureus,Methicillin,
+Philippines,PHL,2017,58.1,S. aureus,Methicillin,
+Philippines,PHL,2018,55.4,S. aureus,Methicillin,
+Saudi Arabia,SAU,2017,33.1,S. aureus,Methicillin,
+Saudi Arabia,SAU,2018,46.5,S. aureus,Methicillin,
+South Africa,ZAF,2016,24.9,S. aureus,Methicillin,
+South Africa,ZAF,2017,23.8,S. aureus,Methicillin,
+South Africa,ZAF,2018,24.6,S. aureus,Methicillin,
+South Korea,KOR,2016,53.3,S. aureus,Methicillin,
+South Korea,KOR,2017,53.3,S. aureus,Methicillin,
+South Korea,KOR,2018,47.1,S. aureus,Methicillin,
+Sudan,SDN,2018,52.2,S. aureus,Methicillin,
+Thailand,THA,2016,13.4,S. aureus,Methicillin,
+Thailand,THA,2017,16.7,S. aureus,Methicillin,
+Thailand,THA,2018,11.3,S. aureus,Methicillin,
+Uganda,UGA,2017,13.0,S. aureus,Methicillin,
+United Arab Emirates,ARE,2017,34.1,S. aureus,Methicillin,
+United Arab Emirates,ARE,2018,23.7,S. aureus,Methicillin,
+Austria,AUT,2017,9.6,E. coli,Cephalosporins,12.153824
+Austria,AUT,2018,10.2,E. coli,Cephalosporins,10.89535
+Austria,AUT,2019,9.06,E. coli,Cephalosporins,12.215894
+Bangladesh,BGD,2018,70.0,E. coli,Cephalosporins,19.797302
+Bangladesh,BGD,2019,93.1,E. coli,Cephalosporins,24.353333
+Bhutan,BTN,2019,56.78,E. coli,Cephalosporins,11.781961
+Croatia,HRV,2017,16.5,E. coli,Cephalosporins,20.017197
+Croatia,HRV,2018,14.8,E. coli,Cephalosporins,20.529783
+Croatia,HRV,2019,15.58,E. coli,Cephalosporins,20.725693
+Cyprus,CYP,2017,30.8,E. coli,Cephalosporins,29.49558
+Cyprus,CYP,2018,37.1,E. coli,Cephalosporins,28.214714
+Cyprus,CYP,2019,19.57,E. coli,Cephalosporins,30.565535
+Czechia,CZE,2019,15.36,E. coli,Cephalosporins,17.537502
+Finland,FIN,2016,6.66,E. coli,Cephalosporins,16.634512
+Finland,FIN,2017,6.14,E. coli,Cephalosporins,15.12046
+Finland,FIN,2018,7.59,E. coli,Cephalosporins,14.794249
+Finland,FIN,2019,7.79,E. coli,Cephalosporins,14.116756
+France,FRA,2017,10.22,E. coli,Cephalosporins,25.172579
+France,FRA,2018,9.59,E. coli,Cephalosporins,25.67881
+France,FRA,2019,9.07,E. coli,Cephalosporins,25.398994
+Georgia,GEO,2017,47.06,E. coli,Cephalosporins,25.122282
+Georgia,GEO,2018,55.77,E. coli,Cephalosporins,20.780441
+Georgia,GEO,2019,56.58,E. coli,Cephalosporins,16.467178
+Germany,DEU,2016,11.56,E. coli,Cephalosporins,12.994837
+Germany,DEU,2017,12.28,E. coli,Cephalosporins,12.717461
+Germany,DEU,2018,12.18,E. coli,Cephalosporins,11.887108
+Germany,DEU,2019,11.46,E. coli,Cephalosporins,11.600114
+Ireland,IRL,2017,11.98,E. coli,Cephalosporins,20.860022
+Ireland,IRL,2018,12.88,E. coli,Cephalosporins,22.332764
+Ireland,IRL,2019,12.53,E. coli,Cephalosporins,22.675123
+Italy,ITA,2018,28.7,E. coli,Cephalosporins,23.67212
+Italy,ITA,2019,33.61,E. coli,Cephalosporins,24.102755
+Jordan,JOR,2018,61.9,E. coli,Cephalosporins,36.32911
+Jordan,JOR,2019,66.67,E. coli,Cephalosporins,29.632372
+Laos,LAO,2019,50.0,E. coli,Cephalosporins,22.254206
+Latvia,LVA,2016,28.24,E. coli,Cephalosporins,14.094239
+Latvia,LVA,2017,18.02,E. coli,Cephalosporins,14.5697155
+Latvia,LVA,2018,20.4,E. coli,Cephalosporins,14.35716
+Latvia,LVA,2019,18.08,E. coli,Cephalosporins,14.380351
+Lithuania,LTU,2016,9.7,E. coli,Cephalosporins,17.570795
+Lithuania,LTU,2017,12.5,E. coli,Cephalosporins,17.78781
+Lithuania,LTU,2018,15.33,E. coli,Cephalosporins,17.140888
+Lithuania,LTU,2019,17.53,E. coli,Cephalosporins,16.699167
+Maldives,MDV,2018,62.96,E. coli,Cephalosporins,25.226318
+Mali,MLI,2018,32.05,E. coli,Cephalosporins,11.008802
+Mali,MLI,2019,39.74,E. coli,Cephalosporins,11.354568
+Malta,MLT,2017,15.89,E. coli,Cephalosporins,22.663687
+Malta,MLT,2018,16.37,E. coli,Cephalosporins,21.553877
+Malta,MLT,2019,18.16,E. coli,Cephalosporins,22.106838
+Nepal,NPL,2018,65.33,E. coli,Cephalosporins,48.188637
+Nepal,NPL,2019,77.27,E. coli,Cephalosporins,56.330605
+Norway,NOR,2016,5.58,E. coli,Cephalosporins,12.961042
+Norway,NOR,2017,5.87,E. coli,Cephalosporins,12.401856
+Norway,NOR,2018,6.75,E. coli,Cephalosporins,11.88943
+Norway,NOR,2019,5.52,E. coli,Cephalosporins,12.188524
+Poland,POL,2017,16.68,E. coli,Cephalosporins,25.758562
+Poland,POL,2018,17.6,E. coli,Cephalosporins,24.888811
+Poland,POL,2019,18.02,E. coli,Cephalosporins,24.181519
+Russia,RUS,2017,73.08,E. coli,Cephalosporins,18.376299
+Russia,RUS,2018,66.67,E. coli,Cephalosporins,17.06708
+Russia,RUS,2019,58.26,E. coli,Cephalosporins,17.280487
+South Africa,ZAF,2019,30.74,E. coli,Cephalosporins,20.089249
+Sweden,SWE,2017,7.36,E. coli,Cephalosporins,12.098713
+Sweden,SWE,2018,8.33,E. coli,Cephalosporins,11.760201
+Sweden,SWE,2019,7.62,E. coli,Cephalosporins,11.362884
+Switzerland,CHE,2016,9.16,E. coli,Cephalosporins,11.225319
+Switzerland,CHE,2017,9.45,E. coli,Cephalosporins,11.076829
+Switzerland,CHE,2018,10.38,E. coli,Cephalosporins,11.1987095
+Switzerland,CHE,2019,10.27,E. coli,Cephalosporins,11.053483
+Tunisia,TUN,2016,25.46,E. coli,Cephalosporins,31.17113
+Tunisia,TUN,2017,35.9,E. coli,Cephalosporins,33.71871
+Tunisia,TUN,2018,33.86,E. coli,Cephalosporins,36.595154
+Tunisia,TUN,2019,36.11,E. coli,Cephalosporins,29.360117
+United Kingdom,GBR,2017,10.26,E. coli,Cephalosporins,18.994778
+United Kingdom,GBR,2018,10.97,E. coli,Cephalosporins,18.467142
+United Kingdom,GBR,2019,11.27,E. coli,Cephalosporins,18.012562
+Austria,AUT,2017,5.9,S. aureus,Methicillin,12.153824
+Austria,AUT,2018,6.4,S. aureus,Methicillin,10.89535
+Austria,AUT,2019,5.26,S. aureus,Methicillin,12.215894
+Bhutan,BTN,2019,20.79,S. aureus,Methicillin,11.781961
+Croatia,HRV,2017,28.5,S. aureus,Methicillin,20.017197
+Croatia,HRV,2018,26.4,S. aureus,Methicillin,20.529783
+Croatia,HRV,2019,24.86,S. aureus,Methicillin,20.725693
+Cyprus,CYP,2017,31.2,S. aureus,Methicillin,29.49558
+Cyprus,CYP,2018,40.2,S. aureus,Methicillin,28.214714
+Cyprus,CYP,2019,100.0,S. aureus,Methicillin,30.565535
+Czechia,CZE,2019,12.52,S. aureus,Methicillin,17.537502
+Finland,FIN,2016,2.2,S. aureus,Methicillin,16.634512
+Finland,FIN,2017,1.9,S. aureus,Methicillin,15.12046
+Finland,FIN,2018,2.0,S. aureus,Methicillin,14.794249
+Finland,FIN,2019,2.07,S. aureus,Methicillin,14.116756
+France,FRA,2017,12.9,S. aureus,Methicillin,25.172579
+France,FRA,2018,12.1,S. aureus,Methicillin,25.67881
+France,FRA,2019,12.52,S. aureus,Methicillin,25.398994
+Georgia,GEO,2017,4.2,S. aureus,Methicillin,25.122282
+Georgia,GEO,2018,11.6,S. aureus,Methicillin,20.780441
+Georgia,GEO,2019,12.52,S. aureus,Methicillin,16.467178
+Germany,DEU,2016,10.3,S. aureus,Methicillin,12.994837
+Germany,DEU,2017,9.1,S. aureus,Methicillin,12.717461
+Germany,DEU,2018,7.6,S. aureus,Methicillin,11.887108
+Germany,DEU,2019,6.8,S. aureus,Methicillin,11.600114
+Ireland,IRL,2017,16.3,S. aureus,Methicillin,20.860022
+Ireland,IRL,2018,12.4,S. aureus,Methicillin,22.332764
+Ireland,IRL,2019,14.96,S. aureus,Methicillin,22.675123
+Italy,ITA,2018,34.0,S. aureus,Methicillin,23.67212
+Italy,ITA,2019,38.75,S. aureus,Methicillin,24.102755
+Jordan,JOR,2018,47.9,S. aureus,Methicillin,36.32911
+Jordan,JOR,2019,72.39,S. aureus,Methicillin,29.632372
+Laos,LAO,2019,6.06,S. aureus,Methicillin,22.254206
+Latvia,LVA,2016,2.0,S. aureus,Methicillin,14.094239
+Latvia,LVA,2017,1.7,S. aureus,Methicillin,14.5697155
+Latvia,LVA,2018,5.7,S. aureus,Methicillin,14.35716
+Latvia,LVA,2019,12.28,S. aureus,Methicillin,14.380351
+Lithuania,LTU,2016,11.6,S. aureus,Methicillin,17.570795
+Lithuania,LTU,2017,8.8,S. aureus,Methicillin,17.78781
+Lithuania,LTU,2018,8.4,S. aureus,Methicillin,17.140888
+Lithuania,LTU,2019,9.3,S. aureus,Methicillin,16.699167
+Mali,MLI,2018,0.0,S. aureus,Methicillin,11.008802
+Mali,MLI,2019,2.5,S. aureus,Methicillin,11.354568
+Malta,MLT,2017,43.3,S. aureus,Methicillin,22.663687
+Malta,MLT,2018,36.4,S. aureus,Methicillin,21.553877
+Malta,MLT,2019,22.08,S. aureus,Methicillin,22.106838
+Nepal,NPL,2018,55.6,S. aureus,Methicillin,48.188637
+Norway,NOR,2016,1.1,S. aureus,Methicillin,12.961042
+Norway,NOR,2017,1.0,S. aureus,Methicillin,12.401856
+Norway,NOR,2018,0.9,S. aureus,Methicillin,11.88943
+Norway,NOR,2019,1.27,S. aureus,Methicillin,12.188524
+Poland,POL,2017,15.2,S. aureus,Methicillin,25.758562
+Poland,POL,2018,15.9,S. aureus,Methicillin,24.888811
+Poland,POL,2019,14.94,S. aureus,Methicillin,24.181519
+Russia,RUS,2017,16.5,S. aureus,Methicillin,18.376299
+Russia,RUS,2018,14.0,S. aureus,Methicillin,17.06708
+Russia,RUS,2019,26.67,S. aureus,Methicillin,17.280487
+South Africa,ZAF,2019,21.35,S. aureus,Methicillin,20.089249
+Sweden,SWE,2016,1.8,S. aureus,Methicillin,12.606066
+Sweden,SWE,2017,1.2,S. aureus,Methicillin,12.098713
+Sweden,SWE,2018,1.9,S. aureus,Methicillin,11.760201
+Sweden,SWE,2019,1.8,S. aureus,Methicillin,11.362884
+Switzerland,CHE,2016,4.9,S. aureus,Methicillin,11.225319
+Switzerland,CHE,2017,4.7,S. aureus,Methicillin,11.076829
+Switzerland,CHE,2018,5.8,S. aureus,Methicillin,11.1987095
+Switzerland,CHE,2019,3.91,S. aureus,Methicillin,11.053483
+Tunisia,TUN,2016,24.5,S. aureus,Methicillin,31.17113
+Tunisia,TUN,2017,21.6,S. aureus,Methicillin,33.71871
+Tunisia,TUN,2018,21.1,S. aureus,Methicillin,36.595154
+Tunisia,TUN,2019,17.44,S. aureus,Methicillin,29.360117
+United Kingdom,GBR,2017,6.9,S. aureus,Methicillin,18.994778
+United Kingdom,GBR,2018,7.3,S. aureus,Methicillin,18.467142
+United Kingdom,GBR,2019,10.4,S. aureus,Methicillin,18.012562
+Austria,AUT,2020,9.43,E. coli,Cephalosporins,9.381688
+Bangladesh,BGD,2020,71.43,E. coli,Cephalosporins,24.902145
+Belgium,BEL,2020,10.33,E. coli,Cephalosporins,17.040966
+Bhutan,BTN,2020,53.93,E. coli,Cephalosporins,9.470717
+Burkina Faso,BFA,2020,63.64,E. coli,Cephalosporins,20.174881
+Croatia,HRV,2020,18.24,E. coli,Cephalosporins,17.426685
+Cyprus,CYP,2020,51.61,E. coli,Cephalosporins,29.568851
+Czechia,CZE,2020,13.09,E. coli,Cephalosporins,14.043354
+Denmark,DNK,2020,7.27,E. coli,Cephalosporins,14.448407
+Egypt,EGY,2020,89.58,E. coli,Cephalosporins,28.714851
+Ethiopia,ETH,2020,66.67,E. coli,Cephalosporins,10.509656
+Finland,FIN,2020,6.62,E. coli,Cephalosporins,11.45481
+France,FRA,2020,10.42,E. coli,Cephalosporins,20.63046
+Georgia,GEO,2020,43.65,E. coli,Cephalosporins,14.507995
+Germany,DEU,2020,10.2,E. coli,Cephalosporins,9.228744
+Iran,IRN,2020,69.23,E. coli,Cephalosporins,51.64599
+Ireland,IRL,2020,10.64,E. coli,Cephalosporins,18.548151
+Italy,ITA,2020,28.66,E. coli,Cephalosporins,20.635223
+Jordan,JOR,2020,64.52,E. coli,Cephalosporins,28.000816
+Kenya,KEN,2020,0.0,E. coli,Cephalosporins,14.041812
+Laos,LAO,2020,50.85,E. coli,Cephalosporins,20.839287
+Latvia,LVA,2020,33.33,E. coli,Cephalosporins,12.367139
+Lithuania,LTU,2020,16.35,E. coli,Cephalosporins,14.633604
+Mali,MLI,2020,60.81,E. coli,Cephalosporins,14.1921
+Malta,MLT,2020,11.91,E. coli,Cephalosporins,17.942623
+Nepal,NPL,2020,72.97,E. coli,Cephalosporins,49.546783
+Norway,NOR,2020,5.33,E. coli,Cephalosporins,10.670051
+Peru,PER,2020,71.7,E. coli,Cephalosporins,7.9186525
+Poland,POL,2020,17.51,E. coli,Cephalosporins,19.02179
+Russia,RUS,2020,73.17,E. coli,Cephalosporins,21.284985
+South Africa,ZAF,2020,28.2,E. coli,Cephalosporins,22.585402
+Sweden,SWE,2020,7.68,E. coli,Cephalosporins,9.938737
+Switzerland,CHE,2020,11.09,E. coli,Cephalosporins,9.439211
+Tanzania,TZA,2020,75.0,E. coli,Cephalosporins,29.00335
+Tunisia,TUN,2020,31.08,E. coli,Cephalosporins,28.775444
+Ukraine,UKR,2020,50.0,E. coli,Cephalosporins,18.115961
+United Kingdom,GBR,2020,10.44,E. coli,Cephalosporins,16.029922
+Austria,AUT,2020,4.47,S. aureus,Methicillin,9.381688
+Belgium,BEL,2020,6.79,S. aureus,Methicillin,17.040966
+Bhutan,BTN,2020,11.67,S. aureus,Methicillin,9.470717
+Burkina Faso,BFA,2020,100.0,S. aureus,Methicillin,20.174881
+Croatia,HRV,2020,50.0,S. aureus,Methicillin,17.426685
+Cyprus,CYP,2020,49.52,S. aureus,Methicillin,29.568851
+Czechia,CZE,2020,9.33,S. aureus,Methicillin,14.043354
+Denmark,DNK,2020,1.94,S. aureus,Methicillin,14.448407
+Egypt,EGY,2020,100.0,S. aureus,Methicillin,28.714851
+Ethiopia,ETH,2020,60.0,S. aureus,Methicillin,10.509656
+Finland,FIN,2020,1.19,S. aureus,Methicillin,11.45481
+France,FRA,2020,12.08,S. aureus,Methicillin,20.63046
+Georgia,GEO,2020,20.14,S. aureus,Methicillin,14.507995
+Germany,DEU,2020,5.58,S. aureus,Methicillin,9.228744
+Iran,IRN,2020,44.06,S. aureus,Methicillin,51.64599
+Ireland,IRL,2020,13.99,S. aureus,Methicillin,18.548151
+Italy,ITA,2020,36.55,S. aureus,Methicillin,20.635223
+Jordan,JOR,2020,58.39,S. aureus,Methicillin,28.000816
+Kenya,KEN,2020,25.0,S. aureus,Methicillin,14.041812
+Laos,LAO,2020,50.0,S. aureus,Methicillin,20.839287
+Latvia,LVA,2020,13.64,S. aureus,Methicillin,12.367139
+Lithuania,LTU,2020,9.8,S. aureus,Methicillin,14.633604
+Mali,MLI,2020,80.0,S. aureus,Methicillin,14.1921
+Malta,MLT,2020,19.57,S. aureus,Methicillin,17.942623
+Nepal,NPL,2020,79.01,S. aureus,Methicillin,49.546783
+Norway,NOR,2020,2.01,S. aureus,Methicillin,10.670051
+Peru,PER,2020,47.06,S. aureus,Methicillin,7.9186525
+Poland,POL,2020,14.7,S. aureus,Methicillin,19.02179
+Russia,RUS,2020,28.89,S. aureus,Methicillin,21.284985
+South Africa,ZAF,2020,19.64,S. aureus,Methicillin,22.585402
+Sweden,SWE,2020,5.12,S. aureus,Methicillin,9.938737
+Switzerland,CHE,2020,25.0,S. aureus,Methicillin,9.439211
+Tanzania,TZA,2020,50.21,S. aureus,Methicillin,29.00335
+Tunisia,TUN,2020,14.29,S. aureus,Methicillin,28.775444
+Ukraine,UKR,2020,18.07,S. aureus,Methicillin,18.115961
+United Kingdom,GBR,2020,3.89,S. aureus,Methicillin,16.029922
+Austria,AUT,2021,8.16,E. coli,Cephalosporins,9.417733
+Belgium,BEL,2021,8.33,E. coli,Cephalosporins,17.815628
+Colombia,COL,2021,30.77,E. coli,Cephalosporins,26.115873
+Croatia,HRV,2021,18.18,E. coli,Cephalosporins,18.456295
+Cyprus,CYP,2021,41.03,E. coli,Cephalosporins,25.782444
+Denmark,DNK,2021,6.31,E. coli,Cephalosporins,14.555556
+Estonia,EST,2021,7.86,E. coli,Cephalosporins,10.286839
+Ethiopia,ETH,2021,86.21,E. coli,Cephalosporins,12.597177
+Finland,FIN,2021,6.32,E. coli,Cephalosporins,10.922393
+France,FRA,2021,8.92,E. coli,Cephalosporins,21.915949
+Georgia,GEO,2021,35.37,E. coli,Cephalosporins,25.148424
+Germany,DEU,2021,8.96,E. coli,Cephalosporins,8.402863
+Iran,IRN,2021,70.25,E. coli,Cephalosporins,60.861404
+Ireland,IRL,2021,9.81,E. coli,Cephalosporins,17.739767
+Italy,ITA,2021,24.6,E. coli,Cephalosporins,19.765284
+Jordan,JOR,2021,60.42,E. coli,Cephalosporins,27.5204
+Kenya,KEN,2021,78.05,E. coli,Cephalosporins,18.80344
+Laos,LAO,2021,45.52,E. coli,Cephalosporins,20.412954
+Latvia,LVA,2021,18.91,E. coli,Cephalosporins,12.011205
+Lithuania,LTU,2021,13.29,E. coli,Cephalosporins,14.014603
+Mali,MLI,2021,46.38,E. coli,Cephalosporins,20.2869
+Malta,MLT,2021,13.04,E. coli,Cephalosporins,16.914368
+Nepal,NPL,2021,80.39,E. coli,Cephalosporins,78.11656
+Norway,NOR,2021,5.13,E. coli,Cephalosporins,10.658108
+Oman,OMN,2021,63.92,E. coli,Cephalosporins,4.575907
+Peru,PER,2021,58.73,E. coli,Cephalosporins,8.629612
+Poland,POL,2021,18.83,E. coli,Cephalosporins,20.9002
+Qatar,QAT,2021,42.28,E. coli,Cephalosporins,3.2891738
+Russia,RUS,2021,58.47,E. coli,Cephalosporins,18.207815
+South Africa,ZAF,2021,27.7,E. coli,Cephalosporins,25.790842
+South Korea,KOR,2021,36.63,E. coli,Cephalosporins,19.672407
+Sweden,SWE,2021,6.99,E. coli,Cephalosporins,9.67051
+Switzerland,CHE,2021,9.56,E. coli,Cephalosporins,9.029414
+Tanzania,TZA,2021,77.98,E. coli,Cephalosporins,36.185547
+Tunisia,TUN,2021,33.6,E. coli,Cephalosporins,22.920853
+Uganda,UGA,2021,80.0,E. coli,Cephalosporins,21.272966
+Ukraine,UKR,2021,60.0,E. coli,Cephalosporins,13.205445
+United Kingdom,GBR,2021,10.68,E. coli,Cephalosporins,15.847657
+Austria,AUT,2021,3.12,S. aureus,Methicillin,9.417733
+Belgium,BEL,2021,4.2,S. aureus,Methicillin,17.815628
+Colombia,COL,2021,45.24,S. aureus,Methicillin,26.115873
+Croatia,HRV,2021,66.67,S. aureus,Methicillin,18.456295
+Cyprus,CYP,2021,42.94,S. aureus,Methicillin,25.782444
+Denmark,DNK,2021,1.55,S. aureus,Methicillin,14.555556
+Egypt,EGY,2021,92.31,S. aureus,Methicillin,30.552305
+Estonia,EST,2021,2.27,S. aureus,Methicillin,10.286839
+Ethiopia,ETH,2021,59.23,S. aureus,Methicillin,12.597177
+Finland,FIN,2021,2.31,S. aureus,Methicillin,10.922393
+France,FRA,2021,11.0,S. aureus,Methicillin,21.915949
+Georgia,GEO,2021,25.32,S. aureus,Methicillin,25.148424
+Germany,DEU,2021,4.91,S. aureus,Methicillin,8.402863
+Iran,IRN,2021,32.8,S. aureus,Methicillin,60.861404
+Ireland,IRL,2021,10.96,S. aureus,Methicillin,17.739767
+Italy,ITA,2021,30.88,S. aureus,Methicillin,19.765284
+Jordan,JOR,2021,70.8,S. aureus,Methicillin,27.5204
+Kenya,KEN,2021,44.12,S. aureus,Methicillin,18.80344
+Laos,LAO,2021,29.89,S. aureus,Methicillin,20.412954
+Latvia,LVA,2021,4.55,S. aureus,Methicillin,12.011205
+Lithuania,LTU,2021,8.98,S. aureus,Methicillin,14.014603
+Mali,MLI,2021,2.13,S. aureus,Methicillin,20.2869
+Malta,MLT,2021,20.39,S. aureus,Methicillin,16.914368
+Nepal,NPL,2021,57.89,S. aureus,Methicillin,78.11656
+Norway,NOR,2021,0.94,S. aureus,Methicillin,10.658108
+Oman,OMN,2021,41.46,S. aureus,Methicillin,4.575907
+Peru,PER,2021,81.54,S. aureus,Methicillin,8.629612
+Poland,POL,2021,16.52,S. aureus,Methicillin,20.9002
+Qatar,QAT,2021,31.62,S. aureus,Methicillin,3.2891738
+Russia,RUS,2021,17.04,S. aureus,Methicillin,18.207815
+South Africa,ZAF,2021,16.64,S. aureus,Methicillin,25.790842
+South Korea,KOR,2021,45.21,S. aureus,Methicillin,19.672407
+Sudan,SDN,2021,35.71,S. aureus,Methicillin,15.162234
+Sweden,SWE,2021,1.97,S. aureus,Methicillin,9.67051
+Switzerland,CHE,2021,4.34,S. aureus,Methicillin,9.029414
+Tanzania,TZA,2021,64.88,S. aureus,Methicillin,36.185547
+Tunisia,TUN,2021,17.24,S. aureus,Methicillin,22.920853
+Ukraine,UKR,2021,28.05,S. aureus,Methicillin,13.205445
+United Kingdom,GBR,2021,6.74,S. aureus,Methicillin,15.847657
+Austria,AUT,2022,8.13,E. coli,Cephalosporins,11.026231
+Bangladesh,BGD,2022,90.0,E. coli,Cephalosporins,48.947113
+Belgium,BEL,2022,8.9,E. coli,Cephalosporins,20.874287
+Benin,BEN,2022,73.08,E. coli,Cephalosporins,23.382936
+Burkina Faso,BFA,2022,91.67,E. coli,Cephalosporins,20.103882
+Canada,CAN,2022,23.36,E. coli,Cephalosporins,14.790743
+Colombia,COL,2022,25.63,E. coli,Cephalosporins,18.429092
+Croatia,HRV,2022,16.45,E. coli,Cephalosporins,20.52807
+Cyprus,CYP,2022,40.52,E. coli,Cephalosporins,34.136124
+Czechia,CZE,2022,14.45,E. coli,Cephalosporins,17.454245
+Denmark,DNK,2022,7.32,E. coli,Cephalosporins,15.240977
+Egypt,EGY,2022,87.5,E. coli,Cephalosporins,31.09345
+Estonia,EST,2022,11.57,E. coli,Cephalosporins,12.694928
+Ethiopia,ETH,2022,80.95,E. coli,Cephalosporins,11.317588
+Finland,FIN,2022,6.67,E. coli,Cephalosporins,12.110314
+France,FRA,2022,9.13,E. coli,Cephalosporins,24.703413
+Georgia,GEO,2022,46.45,E. coli,Cephalosporins,20.077005
+Germany,DEU,2022,9.41,E. coli,Cephalosporins,10.406786
+Hong Kong,HKG,2022,30.08,E. coli,Cephalosporins,14.111866
+Iceland,ISL,2022,9.79,E. coli,Cephalosporins,18.18231
+Iran,IRN,2022,70.64,E. coli,Cephalosporins,67.97821
+Ireland,IRL,2022,10.51,E. coli,Cephalosporins,22.94159
+Italy,ITA,2022,26.5,E. coli,Cephalosporins,24.13073
+Jordan,JOR,2022,57.23,E. coli,Cephalosporins,34.303825
+Kuwait,KWT,2022,45.51,E. coli,Cephalosporins,23.28659
+Laos,LAO,2022,52.61,E. coli,Cephalosporins,30.033865
+Latvia,LVA,2022,16.17,E. coli,Cephalosporins,15.266706
+Lithuania,LTU,2022,17.03,E. coli,Cephalosporins,19.091984
+Mali,MLI,2022,60.87,E. coli,Cephalosporins,8.41913
+Malta,MLT,2022,13.35,E. coli,Cephalosporins,25.484713
+Nepal,NPL,2022,77.06,E. coli,Cephalosporins,32.3162
+Oman,OMN,2022,78.16,E. coli,Cephalosporins,6.400556
+Peru,PER,2022,76.67,E. coli,Cephalosporins,10.115588
+Poland,POL,2022,18.77,E. coli,Cephalosporins,23.85924
+Qatar,QAT,2022,43.31,E. coli,Cephalosporins,7.2045927
+Rwanda,RWA,2022,48.0,E. coli,Cephalosporins,8.681356
+Saudi Arabia,SAU,2022,52.83,E. coli,Cephalosporins,10.54433
+South Africa,ZAF,2022,30.04,E. coli,Cephalosporins,29.496218
+South Korea,KOR,2022,38.84,E. coli,Cephalosporins,26.796656
+Switzerland,CHE,2022,9.78,E. coli,Cephalosporins,10.604289
+Tanzania,TZA,2022,68.71,E. coli,Cephalosporins,34.519592
+Tunisia,TUN,2022,19.79,E. coli,Cephalosporins,27.98314
+Uganda,UGA,2022,81.82,E. coli,Cephalosporins,23.38928
+Ukraine,UKR,2022,54.55,E. coli,Cephalosporins,10.670539
+United Kingdom,GBR,2022,11.41,E. coli,Cephalosporins,16.885738
+Austria,AUT,2022,3.87,S. aureus,Methicillin,11.026231
+Bangladesh,BGD,2022,88.46,S. aureus,Methicillin,48.947113
+Belgium,BEL,2022,4.56,S. aureus,Methicillin,20.874287
+Benin,BEN,2022,52.56,S. aureus,Methicillin,23.382936
+Burkina Faso,BFA,2022,30.43,S. aureus,Methicillin,20.103882
+Canada,CAN,2022,20.98,S. aureus,Methicillin,14.790743
+Colombia,COL,2022,45.15,S. aureus,Methicillin,18.429092
+Croatia,HRV,2022,53.85,S. aureus,Methicillin,20.52807
+Cyprus,CYP,2022,55.93,S. aureus,Methicillin,34.136124
+Czechia,CZE,2022,7.64,S. aureus,Methicillin,17.454245
+Denmark,DNK,2022,1.85,S. aureus,Methicillin,15.240977
+Egypt,EGY,2022,69.44,S. aureus,Methicillin,31.09345
+Estonia,EST,2022,3.09,S. aureus,Methicillin,12.694928
+Ethiopia,ETH,2022,61.82,S. aureus,Methicillin,11.317588
+Finland,FIN,2022,1.63,S. aureus,Methicillin,12.110314
+France,FRA,2022,11.15,S. aureus,Methicillin,24.703413
+Georgia,GEO,2022,28.32,S. aureus,Methicillin,20.077005
+Germany,DEU,2022,4.43,S. aureus,Methicillin,10.406786
+Hong Kong,HKG,2022,45.84,S. aureus,Methicillin,14.111866
+Iceland,ISL,2022,2.78,S. aureus,Methicillin,18.18231
+Iran,IRN,2022,34.71,S. aureus,Methicillin,67.97821
+Ireland,IRL,2022,10.54,S. aureus,Methicillin,22.94159
+Italy,ITA,2022,30.6,S. aureus,Methicillin,24.13073
+Jordan,JOR,2022,76.27,S. aureus,Methicillin,34.303825
+Kuwait,KWT,2022,59.09,S. aureus,Methicillin,23.28659
+Laos,LAO,2022,55.88,S. aureus,Methicillin,30.033865
+Latvia,LVA,2022,3.83,S. aureus,Methicillin,15.266706
+Lithuania,LTU,2022,9.42,S. aureus,Methicillin,19.091984
+Mali,MLI,2022,13.64,S. aureus,Methicillin,8.41913
+Malta,MLT,2022,19.85,S. aureus,Methicillin,25.484713
+Nepal,NPL,2022,83.33,S. aureus,Methicillin,32.3162
+Oman,OMN,2022,28.57,S. aureus,Methicillin,6.400556
+Papua New Guinea,PNG,2022,65.52,S. aureus,Methicillin,13.830913
+Peru,PER,2022,49.15,S. aureus,Methicillin,10.115588
+Poland,POL,2022,13.66,S. aureus,Methicillin,23.85924
+Qatar,QAT,2022,30.06,S. aureus,Methicillin,7.2045927
+Saudi Arabia,SAU,2022,52.05,S. aureus,Methicillin,10.54433
+South Africa,ZAF,2022,16.48,S. aureus,Methicillin,29.496218
+South Korea,KOR,2022,45.71,S. aureus,Methicillin,26.796656
+Switzerland,CHE,2022,4.07,S. aureus,Methicillin,10.604289
+Tanzania,TZA,2022,59.49,S. aureus,Methicillin,34.519592
+Tunisia,TUN,2022,13.61,S. aureus,Methicillin,27.98314
+Ukraine,UKR,2022,15.28,S. aureus,Methicillin,10.670539
+United Kingdom,GBR,2022,7.96,S. aureus,Methicillin,16.885738

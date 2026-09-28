@@ -31,6 +31,14 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ## 📌 Projects
 
+### 🦠 AMR Atlas — Antibiotic Resistance Explorer
+📂 Code: [`amr-explorer/`](amr-explorer/)
+- Interactive map, trends, Europe heatmap and consumption-vs-resistance analysis of real WHO GLASS & ECDC EARS-Net data
+- Built with HTML, CSS, JavaScript and D3.js — responsive, dark mode, shareable URLs, accessible charts
+- Data pipeline in Node/Python turns raw surveillance CSVs into a lightweight JSON + TopoJSON bundle
+
+---
+
 ### 🌐 Personal Portfolio Website  
 💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
