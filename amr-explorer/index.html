@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMR Atlas — Antibiotic Resistance Explorer</title>
+  <meta name="description" content="Explore real antimicrobial resistance surveillance data from WHO GLASS and ECDC EARS-Net with interactive maps, trends and rankings.">
+  <meta name="theme-color" content="#001D39">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='11' width='20' height='10' rx='5' fill='%237BBDE8'/%3E%3Ccircle cx='12' cy='16' r='2' fill='%230A4174'/%3E%3Ccircle cx='19' cy='16' r='2' fill='%230A4174'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      const t = localStorage.getItem("amr-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#explorer">Skip to the explorer</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-orb" id="cursor-orb" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="AMR Atlas home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="10" width="24" height="12" rx="6"/><circle cx="11" cy="16" r="2.2"/><circle cx="18" cy="16" r="2.2"/><path d="M28 16h3M1 16h3" /></svg>
+        <span>AMR<b>Atlas</b></span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#findings">Findings</a>
+        <a href="#story">Story</a>
+        <a href="#explorer">Map</a>
+        <a href="#trends">Trends</a>
+        <a href="#europe">Europe</a>
+        <a href="#usage">Antibiotic use</a>
+        <a href="#data">Data</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-sun"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <button class="icon-btn icon-btn--solid nav__menu" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__panel" data-parallax>
+        <div class="hero__spot" aria-hidden="true"></div>
+        <p class="hero__ghost" aria-hidden="true">RESISTANCE</p>
+
+        <svg class="hero__art" viewBox="0 0 600 520" aria-hidden="true">
+          <defs>
+            <radialGradient id="g-cell" cx="38%" cy="32%" r="70%">
+              <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+              <stop offset=".35" stop-color="#BDD8E9" stop-opacity=".75"/>
+              <stop offset=".8" stop-color="#7BBDE8" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#4E8EA2" stop-opacity=".7"/>
+            </radialGradient>
+            <radialGradient id="g-core" cx="40%" cy="35%" r="65%">
+              <stop offset="0" stop-color="#7BBDE8"/>
+              <stop offset=".7" stop-color="#49769F"/>
+              <stop offset="1" stop-color="#0A4174"/>
+            </radialGradient>
+            <radialGradient id="g-bubble" cx="35%" cy="30%" r="70%">
+              <stop offset="0" stop-color="#FFFFFF" stop-opacity=".9"/>
+              <stop offset=".5" stop-color="#7BBDE8" stop-opacity=".7"/>
+              <stop offset="1" stop-color="#0A4174" stop-opacity=".8"/>
+            </radialGradient>
+            <linearGradient id="g-rod" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#BDD8E9"/>
+              <stop offset=".45" stop-color="#6EA2B3"/>
+              <stop offset="1" stop-color="#0A4174"/>
+            </linearGradient>
+            <filter id="f-soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2"/></filter>
+          </defs>
+          <!-- main cell -->
+          <g class="depth" style="--depth:10"><g class="float float--slow">
+            <circle cx="300" cy="260" r="170" fill="url(#g-cell)"/>
+            <circle cx="300" cy="260" r="170" fill="none" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="2"/>
+            <circle cx="262" cy="232" r="54" fill="url(#g-core)" opacity=".9"/>
+            <circle cx="336" cy="238" r="46" fill="url(#g-core)" opacity=".85"/>
+            <circle cx="300" cy="306" r="50" fill="url(#g-core)" opacity=".9"/>
+            <ellipse cx="238" cy="170" rx="46" ry="18" fill="#FFFFFF" opacity=".55" transform="rotate(-28 238 170)" filter="url(#f-soft)"/>
+          </g></g>
+          <!-- rod bacteria -->
+          <g class="depth" style="--depth:28"><g class="float float--a">
+            <g transform="translate(470 110) rotate(-32)">
+              <rect x="-58" y="-19" width="116" height="38" rx="19" fill="url(#g-rod)"/>
+              <rect x="-50" y="-13" width="70" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+              <path d="M58 0c14 -10 22 10 36 0s22 10 36 0" fill="none" stroke="#49769F" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </g></g>
+          <g class="depth" style="--depth:22"><g class="float float--b">
+            <g transform="translate(110 420) rotate(24)">
+              <rect x="-46" y="-15" width="92" height="30" rx="15" fill="url(#g-rod)"/>
+              <rect x="-40" y="-10" width="52" height="6" rx="3" fill="#FFFFFF" opacity=".5"/>
+              <path d="M-46 0c-12 8 -20 -8 -32 0s-20 -8 -32 0" fill="none" stroke="#49769F" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </g></g>
+          <!-- floating cocci -->
+          <g class="depth" style="--depth:40"><g class="float float--c"><circle cx="80" cy="120" r="30" fill="url(#g-bubble)"/><circle cx="118" cy="150" r="22" fill="url(#g-bubble)"/></g></g>
+          <g class="depth" style="--depth:34"><g class="float float--a"><circle cx="520" cy="360" r="26" fill="url(#g-bubble)"/></g></g>
+          <g class="depth" style="--depth:18"><g class="float float--b"><circle cx="400" cy="40" r="14" fill="url(#g-bubble)"/><circle cx="40" cy="300" r="12" fill="url(#g-bubble)"/></g></g>
+          <g class="depth" style="--depth:46"><g class="float float--c"><circle cx="560" cy="210" r="10" fill="url(#g-bubble)"/></g></g>
+        </svg>
+
+        <aside class="hero__card glass fx-glow">
+          <p>Real surveillance data from <b>WHO GLASS</b> and <b>ECDC EARS-Net</b>, 2013–2022.</p>
+          <span class="hero__card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </aside>
+
+        <div class="hero__content">
+          <p class="eyebrow">Antibiotic resistance explorer</p>
+          <h1 id="hero-title">Mapping how bacteria are outpacing our medicines.</h1>
+        </div>
+
+        <div class="hero__aside">
+          <p>Follow resistance in bloodstream infections across <b id="hero-country-count">100+</b> countries — who is winning, who is falling behind, and how antibiotic use fits in.</p>
+          <div class="hero__cta">
+            <span class="chip-stack" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="c3"></i></span>
+            <a class="btn btn--pill" href="#explorer">Explore the map
+              <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro container" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="visually-hidden">Why it matters</h2>
+      <p class="statement reveal">
+        <b>Antimicrobial resistance</b> was directly responsible for an estimated <b>1.14 million deaths</b> in 2021 and associated with <b>4.71 million</b>.
+        When first-line antibiotics stop working, <b>routine surgery</b>, <b>childbirth</b> and <b>cancer care</b> all become riskier.
+      </p>
+      <p class="statement__cite">Source: GBD 2021 Antimicrobial Resistance Collaborators, <i>The Lancet</i>, 2024.</p>
+
+      <div class="stats" id="stats" aria-live="polite"></div>
+    </section>
+
+
+    <!-- ================= KEY FINDINGS (glass carousel) ================= -->
+    <section class="findings" id="findings" aria-labelledby="findings-title" data-parallax>
+      <div class="findings__blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+      <div class="findings__spot" aria-hidden="true"></div>
+      <div class="container">
+        <div class="findings__head">
+          <div class="section__head reveal">
+            <p class="eyebrow eyebrow--deep">01 · Key findings</p>
+            <h2 id="findings-title">Seven things the data says</h2>
+            <p class="section__lede">Each card is calculated live from the surveillance data. Swipe, drag or use the arrows, then jump straight to that view.</p>
+          </div>
+          <div class="carousel__controls">
+            <button class="icon-btn icon-btn--glass" id="carousel-prev" type="button" aria-label="Previous finding"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="icon-btn icon-btn--glass" id="carousel-next" type="button" aria-label="Next finding"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel" aria-roledescription="carousel" aria-label="Key findings">
+        <div class="carousel__track" id="carousel-track" tabindex="0" aria-label="Findings, use left and right arrow keys"></div>
+      </div>
+      <div class="container carousel__footer">
+        <div class="carousel__dots" id="carousel-dots"></div>
+        <p class="carousel__status" id="carousel-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ================= STORY (scroll-driven) ================= -->
+    <section class="section story" id="story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">02 · The story in one chart</p>
+          <h2 id="story-heading">Scroll through six years of E. coli resistance</h2>
+          <p class="section__lede">The chart stays pinned while you scroll. Each step changes what it highlights.</p>
+        </div>
+        <div class="story__grid">
+          <div class="story__sticky">
+            <figure class="card story__chart">
+              <figcaption class="card__head">
+                <div>
+                  <h3 id="story-title">E. coli resistance</h3>
+                  <p class="card__sub">WHO GLASS · each dot is one country · hover a dot for its value</p>
+                </div>
+              </figcaption>
+              <div class="chart" id="story-chart"></div>
+              <div class="story__progress" id="story-progress" aria-hidden="true"><i></i></div>
+            </figure>
+          </div>
+          <div class="story__steps" id="story-steps"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPLORER ================= -->
+    <section class="section" id="explorer" aria-labelledby="explorer-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">03 · Interactive map</p>
+          <h2 id="explorer-title">Where is resistance highest?</h2>
+          <p class="section__lede">Pick a dataset, a pathogen and a year. Hover a country for its value, click it for its full profile. Every chart below follows these filters.</p>
+        </div>
+
+        <div class="filters glass" role="group" aria-label="Filters">
+          <div class="filter">
+            <span class="filter__label" id="lbl-source">Dataset</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="lbl-source" id="source-control"></div>
+          </div>
+          <div class="filter">
+            <span class="filter__label" id="lbl-pathogen">Pathogen</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="lbl-pathogen" id="pathogen-control"></div>
+          </div>
+          <div class="filter filter--grow">
+            <label class="filter__label" for="year-slider">Year <output id="year-output" for="year-slider"></output></label>
+            <div class="year">
+              <button class="icon-btn icon-btn--solid" id="play" type="button" aria-label="Play through the years">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-play"><path d="M8 5.5v13l11-6.5z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-pause"><path d="M8 5v14M16 5v14"/></svg>
+              </button>
+              <input type="range" id="year-slider" min="2016" max="2022" step="1" value="2022">
+            </div>
+          </div>
+          <div class="filter">
+            <label class="filter__label" for="country-select">Country</label>
+            <select id="country-select"></select>
+          </div>
+        </div>
+
+        <div class="explorer">
+          <figure class="card map-card reveal">
+            <figcaption class="card__head">
+              <div>
+                <h3 id="map-title">Resistance by country</h3>
+                <p class="card__sub" id="map-sub"></p>
+              </div>
+              <div class="map-tools">
+                <button class="icon-btn" type="button" id="zoom-in" aria-label="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
+                <button class="icon-btn" type="button" id="zoom-out" aria-label="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+                <button class="icon-btn" type="button" id="zoom-reset" aria-label="Reset view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg></button>
+              </div>
+            </figcaption>
+            <div class="map" id="map" role="img" aria-label="Choropleth map of resistance by country"></div>
+            <div class="legend" id="map-legend"></div>
+            <p class="insight" id="map-insight" aria-live="polite"></p>
+          </figure>
+
+          <aside class="card profile" id="profile" aria-live="polite"></aside>
+        </div>
+
+        <figure class="card reveal">
+          <figcaption class="card__head">
+            <div>
+              <h3 id="rank-title">Country ranking</h3>
+              <p class="card__sub" id="rank-sub"></p>
+            </div>
+            <div class="segmented segmented--small" role="radiogroup" aria-label="Ranking order" id="rank-control">
+              <button type="button" role="radio" data-value="high" aria-checked="true">Highest</button>
+              <button type="button" role="radio" data-value="low" aria-checked="false">Lowest</button>
+            </div>
+          </figcaption>
+          <div class="chart" id="ranking"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= TRENDS ================= -->
+    <section class="section section--tint" id="trends" aria-labelledby="trends-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">04 · Over time</p>
+          <h2 id="trends-title">Is it getting better or worse?</h2>
+          <p class="section__lede">The selected country's resistance for every tracked pathogen, against the spread of all reporting countries (shaded: middle 50%, line: median) for the pathogen chosen above.</p>
+        </div>
+        <figure class="card reveal">
+          <figcaption class="card__head">
+            <div>
+              <h3 id="trend-title">Trend</h3>
+              <p class="card__sub" id="trend-sub"></p>
+            </div>
+            <div class="legend legend--series" id="trend-legend"></div>
+          </figcaption>
+          <div class="chart chart--tall" id="trend"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= EUROPE HEATMAP ================= -->
+    <section class="section" id="europe" aria-labelledby="europe-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">05 · Europe in detail</p>
+          <h2 id="europe-title">A decade of resistance across Europe</h2>
+          <p class="section__lede">ECDC's EARS-Net tracks invasive isolates from hospital laboratories. Each cell is one country in one year — darker means more resistant. Rows are sorted by the most recent value.</p>
+        </div>
+        <figure class="card reveal">
+          <figcaption class="card__head">
+            <div>
+              <h3 id="heat-title">Europe heatmap</h3>
+              <p class="card__sub">ECDC EARS-Net, % of invasive isolates resistant</p>
+            </div>
+            <div class="segmented segmented--small" role="radiogroup" aria-label="Heatmap pathogen" id="heat-control"></div>
+          </figcaption>
+          <div class="chart" id="heatmap"></div>
+          <div class="legend" id="heat-legend"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= CONSUMPTION ================= -->
+    <section class="section section--tint" id="usage" aria-labelledby="usage-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">06 · Antibiotic use</p>
+          <h2 id="usage-title">Do countries that use more antibiotics see more resistance?</h2>
+          <p class="section__lede">Each dot is a country: how many antibiotic doses its population uses (defined daily doses per 1,000 people per day) against its resistance rate, averaged over every year both were reported.</p>
+        </div>
+        <div class="usage">
+          <figure class="card reveal">
+            <figcaption class="card__head">
+              <div>
+                <h3 id="scatter-title">Consumption vs resistance</h3>
+                <p class="card__sub" id="scatter-sub"></p>
+              </div>
+            </figcaption>
+            <div class="chart chart--tall" id="scatter"></div>
+          </figure>
+          <aside class="card corr" id="corr"></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PATHOGENS ================= -->
+    <section class="section" id="pathogens" aria-labelledby="pathogens-title">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow">07 · Know the enemy</p>
+          <h2 id="pathogens-title">The bugs behind the numbers</h2>
+          <p class="section__lede">All three appear on the WHO Bacterial Priority Pathogens List (2024). Each is tracked against the antibiotic class that matters most for treating it.</p>
+        </div>
+        <div class="bugs">
+          <article class="bug fx-glow fx-tilt reveal" data-pathogen="ecoli">
+            <span class="bug__num">01</span>
+            <div class="bug__art" aria-hidden="true"><svg viewBox="0 0 120 80"><rect x="20" y="24" width="80" height="32" rx="16"/><path d="M100 40c8-6 14 6 22 0M20 40c-8 6-14-6-22 0M40 24c-4-10 6-14 2-22M80 56c4 10-6 14-2 22"/></svg></div>
+            <h3><i>Escherichia coli</i></h3>
+            <p class="bug__tag"><span class="tag tag--critical">WHO: Critical</span> vs 3rd-gen cephalosporins</p>
+            <p>The most common cause of bloodstream and urinary tract infections. Resistance to cephalosporins such as ceftriaxone usually comes from ESBL enzymes that break the drug down, pushing doctors towards last-resort carbapenems.</p>
+          </article>
+          <article class="bug fx-glow fx-tilt reveal" data-pathogen="kpn">
+            <span class="bug__num">02</span>
+            <div class="bug__art" aria-hidden="true"><svg viewBox="0 0 120 80"><rect x="26" y="22" width="68" height="36" rx="18"/><rect x="18" y="14" width="84" height="52" rx="26" class="capsule"/></svg></div>
+            <h3><i>Klebsiella pneumoniae</i></h3>
+            <p class="bug__tag"><span class="tag tag--critical">WHO: Critical</span> vs 3rd-gen cephalosporins</p>
+            <p>A hospital-associated pathogen behind pneumonia and sepsis, protected by a thick capsule. It is especially good at collecting resistance genes on mobile plasmids and sharing them with other bacteria.</p>
+          </article>
+          <article class="bug fx-glow fx-tilt reveal" data-pathogen="mrsa">
+            <span class="bug__num">03</span>
+            <div class="bug__art" aria-hidden="true"><svg viewBox="0 0 120 80"><circle cx="42" cy="34" r="14"/><circle cx="66" cy="30" r="14"/><circle cx="54" cy="54" r="14"/><circle cx="80" cy="50" r="14"/><circle cx="30" cy="56" r="11"/></svg></div>
+            <h3><i>Staphylococcus aureus</i> (MRSA)</h3>
+            <p class="bug__tag"><span class="tag tag--high">WHO: High</span> vs methicillin</p>
+            <p>A skin bacterium that turns dangerous once it reaches the blood. Methicillin-resistant strains (MRSA) shrug off the whole penicillin family — yet, where infection control is strong, MRSA rates have fallen sharply.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DATA ================= -->
+    <section class="section section--tint" id="data" aria-labelledby="data-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">08 · Data &amp; methods</p>
+          <h2 id="data-title">Every number, in one table</h2>
+          <p class="section__lede">The table follows the dataset and year chosen above. Sort any column, search for a country, or download the full dataset.</p>
+        </div>
+        <div class="card">
+          <div class="table-tools">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+              <span class="visually-hidden">Search countries</span>
+              <input type="search" id="table-search" placeholder="Search countries…" autocomplete="off">
+            </label>
+            <p class="card__sub" id="table-sub"></p>
+            <button class="btn btn--ghost" type="button" id="download">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+              Download CSV
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="table"></table>
+          </div>
+        </div>
+
+        <div class="methods">
+          <article class="method glass fx-glow reveal">
+            <h3>WHO GLASS</h3>
+            <p>The Global Antimicrobial Resistance and Use Surveillance System. Share of bloodstream infections caused by <i>E. coli</i> resistant to 3rd-generation cephalosporins and by MRSA (SDG indicator 3.d.2), 2016–2022, with antibiotic consumption from GLASS-AMC. Republished by <a href="https://ourworldindata.org/antibiotics">Our World in Data</a>; extracted from the <a href="https://github.com/chamodSN/Antibiotic-Resistance-Gap-Analysis">Antibiotic Resistance Gap Analysis</a> workbook.</p>
+          </article>
+          <article class="method glass fx-glow reveal">
+            <h3>ECDC EARS-Net &amp; ESAC-Net</h3>
+            <p>The European Antimicrobial Resistance Surveillance Network: % of invasive isolates resistant, 2013–2022, for 27 EU/EEA countries (UK until 2019), joined with total, community and hospital antibiotic consumption (ATC J01); a year appears only when both were reported, which explains some gaps. From the <a href="https://atlas.ecdc.europa.eu/public/index.aspx">ECDC Surveillance Atlas</a>, via the <a href="https://github.com/asiyaghk-bot/antibiotic-use-and-resistance-ecdc">antibiotic-use-and-resistance-ecdc</a> dataset.</p>
+          </article>
+          <article class="method glass fx-glow reveal">
+            <h3>Read with care</h3>
+            <p>Countries report from different numbers of laboratories and patients, and coverage grows over time, so a rise can partly reflect better testing. Rates from small samples swing year to year. Correlation between use and resistance is not causation. Gaps on the map mean no data was reported, not zero resistance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__big">Explore. Understand. <span>Act.</span></p>
+        <p class="footer__note">Use antibiotics only when prescribed, finish the course as directed, and never share them. Every avoided prescription helps keep them working.</p>
+      </div>
+      <div class="footer__meta">
+        <p>Built by <a href="https://github.com/sheisAries1">Bukola</a> with HTML, CSS, JavaScript and D3.</p>
+        <p>Data: WHO GLASS · ECDC EARS-Net &amp; ESAC-Net · Our World in Data.</p>
+        <p><a href="#top">Back to top ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="status" aria-hidden="true"></div>
+
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/topojson-client.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
