@@ -10,7 +10,7 @@ A study tool for learning how clinical labs identify bacteria: Gram stain first,
 - **Flashcards.** 29 organisms with a microscope-style drawing of each. You can study name-first or profile-first, filter by Gram reaction, shuffle, and swipe on touch screens. The cards you mark as known are saved in `localStorage`.
 - **Quiz.** Ten rounds built from the key itself. The wrong options are the organism's closest relatives, and a wrong answer tells you exactly which test separates the two.
 - **Bench reference.** 16 tests, each with drawings of a positive and a negative result (tubes, slides, plates and discs).
-- Frosted-glass surfaces, a light and a dark theme, the Poppins font, scroll-reveal animations and `prefers-reduced-motion` support.
+- The "Deep + Refined" palette (Midnight Blue, Ivory, Slate, Dusty Blue, Espresso), frosted-glass surfaces, a light and a dark theme, the Poppins font, scroll-reveal animations and `prefers-reduced-motion` support.
 
 ## Structure
 
