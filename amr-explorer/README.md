@@ -7,6 +7,10 @@ An interactive, responsive website for exploring **real antimicrobial resistance
 
 ## Features
 
+- **Key findings carousel.** Seven findings, each computed live from the data, on frosted-glass cards over a moving gradient. Swipe, drag, use the arrows or the keyboard; it autoplays while visible and pauses when you interact. Each card jumps to the matching map view.
+- **Scroll-driven story.** A pinned beeswarm chart of E. coli resistance by country. As you scroll through six steps it animates from 2016 to 2022, then highlights the median, the lowest and highest countries, and the UK.
+- **Cursor effects.** A glass cursor lens that grows over clickable things, a light sheen that follows the cursor on cards, 3D tilt on cards, and a hero illustration and background that drift with the cursor.
+- **Scroll-driven animation.** A reading-progress bar, sections fading in as they enter, and the hero text and illustration moving away as you scroll. These use CSS scroll timelines, with a JavaScript fallback for the progress bar; all motion switches off with `prefers-reduced-motion`, and cursor effects switch off on touch screens.
 - **Interactive world map.** A zoomable, pannable choropleth. Switch between the global (WHO) and European (ECDC) datasets, the pathogen and the year. Small states get markers, and a ▶ button animates the map through the years.
 - **Country profile.** Click any country to see its resistance rate, its rank, how far it sits from the median, its change over time, its antibiotic use, and sparklines for every pathogen.
 - **Ranking chart.** The 15 highest or lowest countries, with the median marked.
@@ -57,6 +61,8 @@ css/styles.css        design tokens (light/dark), layout, components
 js/main.js            state, URL sharing, stats, profile, table, wiring
 js/map.js             D3 choropleth with zoom and small-state markers
 js/charts.js          ranking, trend, heatmap, scatter, sparkline
+js/story.js           findings carousel and scroll-driven story
+js/fx.js              cursor lens, sheen, tilt, parallax, scroll progress
 js/config.js          dataset and pathogen metadata, colour classes
 js/utils.js           formatting, statistics, tooltip, helpers
 scripts/              data extraction and build scripts

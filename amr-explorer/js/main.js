@@ -5,6 +5,8 @@ import {
 } from "./utils.js";
 import { createMap } from "./map.js";
 import { renderRanking, renderTrend, renderHeatmap, renderScatter, sparkline } from "./charts.js";
+import { buildFindings, buildStory } from "./story.js";
+import { initFx } from "./fx.js";
 
 const d3 = window.d3;
 const $ = (id) => document.getElementById(id);
@@ -432,7 +434,7 @@ function renderStats() {
   });
 
   $("stats").replaceChildren(...tiles.map((t) => {
-    const card = el("article", { class: "stat" },
+    const card = el("article", { class: "stat fx-glow fx-tilt" },
       el("p", { class: "stat__label" }, t.label),
       el("p", { class: "stat__value" }, t.value[0], el("small", {}, t.value[1])),
       el("p", { class: "stat__delta" }, ...t.delta));
@@ -580,11 +582,25 @@ function renderEverything() {
   renderStats();
   renderAll();
   renderHeatCard();
+  story?.redraw();
 }
+
+/** Jump to a view from the findings carousel or the story. */
+function go(view) {
+  const { scrollTo = "explorer", ...patch } = view;
+  stopPlay();
+  setState(patch);
+  map.setFocus(state.source === "ecdc" ? "europe" : "world");
+  document.getElementById(scrollTo).scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}
+let story = null;
 
 readHash();
 writeHash();
 renderEverything();
+buildFindings({ data, go });
+story = buildStory({ data, go });
+initFx();
 if (state.source === "ecdc") map.setFocus("europe", false);
 
 // Charts are drawn to their container width, so redraw on resize.
