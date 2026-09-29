@@ -32,7 +32,7 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 ## 📌 Projects
 
 ### 🦠 AMR Atlas — Antibiotic Resistance Explorer
-🔗 Live: https://sheisaries1.github.io/sheisAries1/  
+🔗 Live: https://sheisaries1.github.io/sheisAries1/amr-explorer/  
 📂 Code: [`amr-explorer/`](amr-explorer/)
 - Interactive map, trends, Europe heatmap and consumption-vs-resistance analysis of real WHO GLASS & ECDC EARS-Net data
 - Built with HTML, CSS, JavaScript and D3.js — responsive, dark mode, shareable URLs, accessible charts

@@ -39,7 +39,7 @@ Map shapes come from [world-atlas](https://github.com/topojson/world-atlas) (Nat
 
 ## Live site
 
-https://sheisaries1.github.io/sheisAries1/ is deployed by `.github/workflows/pages.yml` on every push to `main` that touches `amr-explorer/`.
+https://sheisaries1.github.io/sheisAries1/amr-explorer/ is served by GitHub Pages from the `main` branch, which redeploys automatically on every push.
 
 ## Run it
 
