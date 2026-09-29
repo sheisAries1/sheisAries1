@@ -40,8 +40,8 @@ function tilt() {
     const r = el.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
-    el.style.setProperty("--rx", `${(-py * 7).toFixed(2)}deg`);
-    el.style.setProperty("--ry", `${(px * 9).toFixed(2)}deg`);
+    el.style.setProperty("--rx", `${(-py * 3).toFixed(2)}deg`);
+    el.style.setProperty("--ry", `${(px * 4).toFixed(2)}deg`);
     el.classList.add("is-tilting");
     el.onpointerleave = () => {
       el.classList.remove("is-tilting");
@@ -59,8 +59,8 @@ function cursorOrb() {
   const INTERACTIVE = "a, button, select, input, label, [role='radio'], .has-data, .dot, .bar-row, .heat-cell, .dot-point, [data-orb]";
 
   function frame() {
-    x = lerp(x, tx, 0.22);
-    y = lerp(y, ty, 0.22);
+    x = lerp(x, tx, 0.18);
+    y = lerp(y, ty, 0.18);
     orb.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
     raf = Math.abs(x - tx) + Math.abs(y - ty) > 0.3 ? requestAnimationFrame(frame) : 0;
   }

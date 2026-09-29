@@ -414,7 +414,7 @@ function renderStats() {
     value: new Set([...valuesFor(g, "ecoli", y).keys(), ...valuesFor(g, "mrsa", y).keys()]).size,
   }));
   tiles.push({
-    label: `Countries reporting to WHO GLASS, ${last}`,
+    label: `Countries reporting E. coli or MRSA bloodstream data to WHO, ${last}`,
     value: [String(counts[counts.length - 1].value), ""],
     delta: ["Up from ", el("b", {}, String(counts[0].value)), ` in ${years[0]} — surveillance is growing`],
     spark: counts,
@@ -546,6 +546,7 @@ $("download").addEventListener("click", () => {
 /* =========================================================
    Theme, menu & render loop
    ========================================================= */
+let themeTimer = 0;
 $("theme-toggle").addEventListener("click", () => {
   const dark = document.documentElement.dataset.theme
     ? document.documentElement.dataset.theme === "dark"
@@ -553,6 +554,10 @@ $("theme-toggle").addEventListener("click", () => {
   const next = dark ? "light" : "dark";
   document.documentElement.dataset.theme = next;
   try { localStorage.setItem("amr-theme", next); } catch (e) { /* storage unavailable */ }
+  // Cross-fade colours for a moment while the theme swaps.
+  document.documentElement.classList.add("theme-anim");
+  clearTimeout(themeTimer);
+  themeTimer = setTimeout(() => document.documentElement.classList.remove("theme-anim"), 500);
   renderEverything();
 });
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => renderEverything());
