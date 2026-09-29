@@ -37,6 +37,8 @@ export function createMap({ container, topo, onHover, onLeave, onSelect }) {
 
   const zoom = d3.zoom()
     .scaleExtent([1, 14])
+    // On touch screens one finger keeps scrolling the page; two fingers pan and pinch.
+    .filter((event) => (event.type.startsWith("touch") ? event.touches.length > 1 : !event.button))
     .on("zoom", (event) => {
       transform = event.transform;
       root.attr("transform", transform);

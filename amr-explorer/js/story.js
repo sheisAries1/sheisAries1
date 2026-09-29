@@ -414,21 +414,61 @@ export function buildStory({ data, go }) {
   onResize(chartEl, () => { layout = computeLayout(); draw(false); });
 
   const stepEls = [...stepsEl.children];
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      const i = +entry.target.dataset.step;
-      if (i === active) continue;
-      active = i;
-      stepEls.forEach((s, j) => s.classList.toggle("is-active", j === i));
-      document.getElementById("story-progress").style.setProperty("--p", (i + 1) / steps.length);
-      if (layout) draw();
+  const progress = document.getElementById("story-progress");
+  const count = document.getElementById("story-count");
+
+  // On phones the steps become a horizontal swipe row under the chart;
+  // on wider screens they scroll vertically past the pinned chart.
+  const horizontal = () => getComputedStyle(stepsEl).overflowX === "auto";
+
+  function setActive(i) {
+    if (i === active) return;
+    active = i;
+    stepEls.forEach((s, j) => s.classList.toggle("is-active", j === i));
+    progress.style.setProperty("--p", (i + 1) / steps.length);
+    count.textContent = `${i + 1} / ${steps.length}`;
+    if (layout) draw();
+  }
+
+  // Position-based (not IntersectionObserver), so a fast fling never skips a step.
+  function sync() {
+    let i = 0;
+    if (horizontal()) {
+      const mid = stepsEl.scrollLeft + stepsEl.clientWidth / 2;
+      let best = Infinity;
+      stepEls.forEach((s, j) => {
+        const dist = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid);
+        if (dist < best) { best = dist; i = j; }
+      });
+    } else {
+      const line = innerHeight * 0.55;
+      stepEls.forEach((s, j) => { if (s.getBoundingClientRect().top < line) i = j; });
     }
-  // On narrow screens the chart pins at the top, so steps trigger lower down, below it.
-  }, { rootMargin: matchMedia("(max-width: 900px)").matches ? "-72% 0px -24% 0px" : "-45% 0px -45% 0px" });
-  stepEls.forEach((s) => io.observe(s));
+    setActive(i);
+  }
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { ticking = false; sync(); });
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  stepsEl.addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll);
+
+  const goStep = (i) => {
+    const target = stepEls[Math.max(0, Math.min(steps.length - 1, i))];
+    stepsEl.scrollTo({
+      left: target.offsetLeft - (stepsEl.clientWidth - target.offsetWidth) / 2,
+      behavior: reduceMotion() ? "auto" : "smooth",
+    });
+  };
+  document.getElementById("story-prev").onclick = () => goStep(active - 1);
+  document.getElementById("story-next").onclick = () => goStep(active + 1);
+
   stepEls[0].classList.add("is-active");
-  document.getElementById("story-progress").style.setProperty("--p", 1 / steps.length);
+  progress.style.setProperty("--p", 1 / steps.length);
+  count.textContent = `1 / ${steps.length}`;
 
   return { redraw: () => { if (layout) draw(false); } };
 }

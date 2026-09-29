@@ -210,7 +210,7 @@
         <div class="section__head reveal">
           <p class="eyebrow">02 · The story in one chart</p>
           <h2 id="story-heading">Scroll through six years of E. coli resistance</h2>
-          <p class="section__lede">The chart stays pinned while you scroll. Each step changes what it highlights.</p>
+          <p class="section__lede">Each step changes what the chart highlights. On a large screen the chart stays pinned while you scroll; on a phone, swipe through the steps.</p>
         </div>
         <div class="story__grid">
           <div class="story__sticky">
@@ -218,11 +218,16 @@
               <figcaption class="card__head">
                 <div>
                   <h3 id="story-title">E. coli resistance</h3>
-                  <p class="card__sub">WHO GLASS · each dot is one country · hover a dot for its value</p>
+                  <p class="card__sub">WHO GLASS · each dot is one country · hover or tap a dot for its value</p>
                 </div>
               </figcaption>
               <div class="chart" id="story-chart"></div>
               <div class="story__progress" id="story-progress" aria-hidden="true"><i></i></div>
+              <div class="story__nav">
+                <button class="icon-btn" type="button" id="story-prev" aria-label="Previous step"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <span id="story-count" aria-live="polite">1 / 6</span>
+                <button class="icon-btn icon-btn--solid" type="button" id="story-next" aria-label="Next step"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+              </div>
             </figure>
           </div>
           <div class="story__steps" id="story-steps"></div>
@@ -278,6 +283,7 @@
               </div>
             </figcaption>
             <div class="map" id="map" role="img" aria-label="Choropleth map of resistance by country"></div>
+            <p class="map-hint">Tap a country for its profile. Use two fingers or the + and − buttons to zoom.</p>
             <div class="legend" id="map-legend"></div>
             <p class="insight" id="map-insight" aria-live="polite"></p>
           </figure>
