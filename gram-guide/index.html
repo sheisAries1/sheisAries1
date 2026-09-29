@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gram Guide — Bacteria ID Study Kit</title>
+  <meta name="description" content="Learn to identify bacteria by Gram stain, shape and biochemical tests with an interactive key, flashcards and a quick quiz.">
+  <meta name="theme-color" content="#001D39">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23001D39'/%3E%3Ccircle cx='12' cy='13' r='4' fill='%237BBDE8'/%3E%3Crect x='13' y='17' width='11' height='5' rx='2.5' fill='%23BDD8E9'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    try {
+      const t = localStorage.getItem("gg-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#identify">Skip to the key</a>
+
+  <div class="backdrop" aria-hidden="true">
+    <span class="blob blob--a"></span>
+    <span class="blob blob--b"></span>
+    <span class="blob blob--c"></span>
+  </div>
+
+  <header class="nav" id="top">
+    <div class="nav__inner glass">
+      <a class="brand" href="#top" aria-label="Gram Guide home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="14"/>
+          <circle cx="12" cy="13" r="4" class="c1"/>
+          <rect x="13" y="17" width="11" height="5" rx="2.5" class="c2"/>
+        </svg>
+        <span>Gram<b>Guide</b></span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#identify">Identify</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#tests">Tests</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-sun"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <button class="icon-btn nav__menu" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14M5 16h14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Clinical microbiology · study kit</p>
+        <h1 id="hero-title" class="reveal">Identify bacteria the way the <em>lab</em> does.</h1>
+        <p class="hero__lead reveal">Start with a Gram stain, look at the shape, then work through the bench tests one at a time. Revise with flashcards and a quick quiz.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#identify">
+            Start identifying
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#flashcards">Flip some cards</a>
+        </div>
+        <dl class="hero__stats reveal">
+          <div><dt>Organisms</dt><dd data-count="organisms">0</dd></div>
+          <div><dt>Bench tests</dt><dd data-count="tests">0</dd></div>
+          <div><dt>Study modes</dt><dd>3</dd></div>
+        </dl>
+      </div>
+
+      <div class="scope reveal" aria-hidden="true">
+        <div class="scope__ring">
+          <div class="scope__field" id="scope-field"></div>
+          <div class="scope__lens"></div>
+        </div>
+        <div class="scope__tag scope__tag--pos glass"><i></i>Gram-positive <span>retains crystal violet</span></div>
+        <div class="scope__tag scope__tag--neg glass"><i></i>Gram-negative <span>takes up safranin</span></div>
+      </div>
+    </section>
+
+    <!-- Identification key -->
+    <section class="section container" id="identify" aria-labelledby="identify-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">01 · Interactive key</p>
+        <h2 id="identify-title">Work an unknown, one test at a time</h2>
+        <p>Pick what you see at the bench. Organisms that no longer fit drop out of the list as you go.</p>
+      </header>
+
+      <div class="key reveal">
+        <div class="key__main glass">
+          <ol class="trail" id="trail" aria-label="Your answers so far"></ol>
+          <div class="key__stage" id="key-stage" aria-live="polite"></div>
+        </div>
+
+        <aside class="key__side glass" aria-labelledby="pool-title">
+          <div class="pool__head">
+            <h3 id="pool-title">Still in the running</h3>
+            <span class="pool__count" id="pool-count">0</span>
+          </div>
+          <div class="pool__meter"><span id="pool-meter"></span></div>
+          <ul class="pool" id="pool"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Flashcards -->
+    <section class="section container" id="flashcards" aria-labelledby="cards-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">02 · Flashcards</p>
+        <h2 id="cards-title">Flip, recall, repeat</h2>
+        <p>See the name and recall the profile, or see the profile and name the bug. Cards you know are saved on this device.</p>
+      </header>
+
+      <div class="deck reveal">
+        <div class="deck__bar glass">
+          <div class="seg" role="radiogroup" aria-label="Filter by Gram reaction" id="deck-filter">
+            <button role="radio" aria-checked="true" data-filter="all">All</button>
+            <button role="radio" aria-checked="false" data-filter="pos">Gram +</button>
+            <button role="radio" aria-checked="false" data-filter="neg">Gram −</button>
+            <button role="radio" aria-checked="false" data-filter="learning">Learning</button>
+          </div>
+          <div class="deck__tools">
+            <button class="chip-btn" id="deck-mode" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>
+              <span>Name first</span>
+            </button>
+            <button class="chip-btn" id="deck-shuffle" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c5 0 5 10 10 10h3M4 17h3c1.6 0 2.7-1 3.6-2.4M13.4 9.4C14.3 8 15.4 7 17 7h3M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>
+              <span>Shuffle</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="deck__stage" id="deck-stage">
+          <div class="card-shadow card-shadow--2"></div>
+          <div class="card-shadow card-shadow--1"></div>
+          <button class="flash" id="flash" type="button" aria-describedby="flash-hint">
+            <span class="flash__inner" id="flash-inner">
+              <span class="flash__face flash__face--front glass" id="flash-front"></span>
+              <span class="flash__face flash__face--back glass" id="flash-back"></span>
+            </span>
+          </button>
+          <p class="deck__empty" id="deck-empty" hidden>Nothing left in this pile. Nice work.</p>
+        </div>
+
+        <div class="deck__controls">
+          <button class="round-btn" id="deck-prev" type="button" aria-label="Previous card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="deck__progress">
+            <span id="deck-pos">1 / 1</span>
+            <div class="bar"><span id="deck-bar"></span></div>
+            <span class="deck__known"><b id="deck-known">0</b> known</span>
+          </div>
+          <button class="round-btn" id="deck-next" type="button" aria-label="Next card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="deck__verdict">
+          <button class="btn btn--soft" id="deck-again" type="button">Still learning</button>
+          <button class="btn btn--primary" id="deck-got" type="button">Got it</button>
+        </div>
+        <p class="kbd-hint" id="flash-hint">
+          <span class="hint-keys"><kbd>Space</kbd> flip · <kbd>←</kbd><kbd>→</kbd> move · <kbd>K</kbd> got it</span>
+          <span class="hint-touch">Tap to flip · swipe sideways to move</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section container" id="quiz" aria-labelledby="quiz-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">03 · Quick quiz</p>
+        <h2 id="quiz-title">Name the organism from its profile</h2>
+        <p>Ten rounds. Each profile follows the same route through the key, so a wrong answer shows you which test to look at again.</p>
+      </header>
+      <div class="quiz glass reveal" id="quiz-box" aria-live="polite"></div>
+    </section>
+
+    <!-- Tests reference -->
+    <section class="section container" id="tests" aria-labelledby="tests-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">04 · Bench reference</p>
+        <h2 id="tests-title">What each test is telling you</h2>
+        <p>The reactions used in the key, with what a positive and a negative look like.</p>
+      </header>
+      <div class="tests" id="tests-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Built by <a href="https://github.com/sheisAries1">Bukola Okoya</a> · HTML, CSS and JavaScript, no frameworks.</p>
+    <p class="footer__note">For study only. Reactions shown are typical textbook results; real isolates vary, so always follow your lab's SOPs.</p>
+  </footer>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
