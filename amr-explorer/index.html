@@ -115,7 +115,7 @@
         </svg>
 
         <aside class="hero__card glass fx-glow">
-          <p>Real surveillance data from <b>WHO GLASS</b> and <b>ECDC EARS-Net</b>, 2013–2022.</p>
+          <p>Real surveillance data, <b>2013–2025</b>: country figures from <b>WHO GLASS</b> and <b>ECDC EARS-Net</b> (2013–2022) and the latest <b>WHO</b> and <b>ECDC</b> reports (2025).</p>
           <span class="hero__card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
         </aside>
 
@@ -146,6 +146,35 @@
       <p class="statement__cite">Source: GBD 2021 Antimicrobial Resistance Collaborators, <i>The Lancet</i>, 2024.</p>
 
       <div class="stats" id="stats" aria-live="polite"></div>
+
+      <div class="latest reveal" aria-labelledby="latest-title">
+        <div class="latest__head">
+          <h3 id="latest-title">What the newest reports say</h3>
+          <p class="card__sub">Headline figures from the WHO and ECDC reports published in 2025, covering data to 2023 and 2024. Country-level data for these years is not yet in the explorer.</p>
+        </div>
+        <div class="latest__grid">
+          <article class="report glass fx-glow">
+            <p class="report__big">1 in 6</p>
+            <p class="report__text">laboratory-confirmed bacterial infections worldwide were resistant to antibiotic treatment in 2023.</p>
+            <a class="report__src" href="https://www.paho.org/en/news/13-10-2025-who-warns-widespread-resistance-common-antibiotics-worldwide" target="_blank" rel="noopener">WHO · GLASS report 2025 ↗</a>
+          </article>
+          <article class="report glass fx-glow">
+            <p class="report__big">104</p>
+            <p class="report__text">countries reported resistance data to WHO GLASS for 2023, up from 25 in 2016.</p>
+            <a class="report__src" href="https://www.paho.org/en/news/13-10-2025-who-warns-widespread-resistance-common-antibiotics-worldwide" target="_blank" rel="noopener">WHO · GLASS report 2025 ↗</a>
+          </article>
+          <article class="report glass fx-glow">
+            <p class="report__big">−20.4%</p>
+            <p class="report__text">MRSA bloodstream infections in the EU in 2024 compared with 2019, at 4.48 per 100,000 people.</p>
+            <a class="report__src" href="https://www.ecdc.europa.eu/en/publications-data/antimicrobial-resistance-eueea-ears-net-annual-epidemiological-report-2024" target="_blank" rel="noopener">ECDC · EARS-Net report for 2024 ↗</a>
+          </article>
+          <article class="report glass fx-glow">
+            <p class="report__big">+60%</p>
+            <p class="report__text">Carbapenem-resistant K. pneumoniae bloodstream infections in the EU rose by more than 60% between 2019 and 2024.</p>
+            <a class="report__src" href="https://www.ecdc.europa.eu/en/publications-data/antimicrobial-resistance-eueea-ears-net-annual-epidemiological-report-2024" target="_blank" rel="noopener">ECDC · EARS-Net report for 2024 ↗</a>
+          </article>
+        </div>
+      </div>
     </section>
 
 
@@ -409,7 +438,7 @@
           </article>
           <article class="method glass fx-glow reveal">
             <h3>Read with care</h3>
-            <p>Countries report from different numbers of laboratories and patients, and coverage grows over time, so a rise can partly reflect better testing. Rates from small samples swing year to year. Correlation between use and resistance is not causation. Gaps on the map mean no data was reported, not zero resistance.</p>
+            <p>The interactive charts use country data to 2022, the latest year available in machine-readable form for both networks here. The newest reports, <a href="https://www.paho.org/en/news/13-10-2025-who-warns-widespread-resistance-common-antibiotics-worldwide">WHO GLASS 2025</a> (2023 data) and <a href="https://www.ecdc.europa.eu/en/publications-data/antimicrobial-resistance-eueea-ears-net-annual-epidemiological-report-2024">ECDC's report for 2024</a> (published 2025), are quoted as headline figures above. Countries report from different numbers of laboratories and patients, and coverage grows over time, so a rise can partly reflect better testing. Rates from small samples swing year to year. Correlation between use and resistance is not causation. Gaps on the map mean no data was reported, not zero resistance.</p>
           </article>
         </div>
       </div>
@@ -424,7 +453,7 @@
       </div>
       <div class="footer__meta">
         <p>Built by <a href="https://github.com/sheisAries1">Bukola</a> with HTML, CSS, JavaScript and D3.</p>
-        <p>Data: WHO GLASS · ECDC EARS-Net &amp; ESAC-Net · Our World in Data.</p>
+        <p>Data: WHO GLASS · ECDC EARS-Net &amp; ESAC-Net · Our World in Data, 2013–2022. Latest figures: WHO GLASS report 2025 · ECDC EARS-Net report for 2024.</p>
         <p><a href="#top">Back to top ↑</a></p>
       </div>
     </div>

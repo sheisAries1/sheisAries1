@@ -49,7 +49,7 @@
   --critical: #b3261e;
   --high: #9a5b00;
   --mark-muted: #cfdbe5;
-  --sheen: rgba(255, 255, 255, 0.45);
+  --sheen: rgba(255, 255, 255, 0.3);
 
   /* "Deep" glass stage: the same navy look in both themes */
   --deep-bg: #001d39;
@@ -632,33 +632,33 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
    ========================================================= */
 .cursor-orb {
   position: fixed; left: 0; top: 0; z-index: 95; pointer-events: none;
-  width: 22px; height: 22px; border-radius: 999px;
+  width: 14px; height: 14px; border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--sky) 70%, white);
   background: color-mix(in srgb, var(--sky) 16%, transparent);
   backdrop-filter: blur(3px) saturate(170%); -webkit-backdrop-filter: blur(3px) saturate(170%);
   box-shadow: 0 6px 18px -6px rgba(0, 29, 57, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  opacity: 0; transition: width .25s ease, height .25s ease, border-radius .25s ease, opacity .2s ease, background .25s ease;
+  opacity: 0; transition: width .35s cubic-bezier(.2, .8, .2, 1), height .35s cubic-bezier(.2, .8, .2, 1), border-radius .35s ease, opacity .3s ease, background .35s ease;
   will-change: transform;
 }
 .cursor-orb.is-visible { opacity: 1; }
-.cursor-orb.is-hover { width: 54px; height: 54px; background: color-mix(in srgb, var(--sky) 10%, transparent); }
-.cursor-orb.is-text { width: 6px; height: 30px; border-radius: 3px; }
-.cursor-orb.is-down { width: 16px; height: 16px; }
+.cursor-orb.is-hover { width: 32px; height: 32px; background: color-mix(in srgb, var(--sky) 10%, transparent); }
+.cursor-orb.is-text { width: 4px; height: 22px; border-radius: 2px; }
+.cursor-orb.is-down { width: 10px; height: 10px; }
 @media (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-orb { display: none; } }
 
 .fx-glow { position: relative; isolation: isolate; }
 .fx-glow::after {
   /* z-index -1 inside the isolated card: above its background, below its content */
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
-  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), var(--sheen), transparent 45%);
-  opacity: 0; transition: opacity .3s ease;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), var(--sheen), transparent 55%);
+  opacity: 0; transition: opacity .5s ease;
 }
 .fx-glow.is-lit::after { opacity: 1; }
 .fx-tilt {
   transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition: transform .6s cubic-bezier(.2, .8, .2, 1);
 }
-.fx-tilt.is-tilting { transition: transform .1s linear; }
+.fx-tilt.is-tilting { transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
 
 .hero__spot {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
@@ -686,9 +686,9 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
 @keyframes art-exit { to { scale: 0.8; rotate: 14deg; opacity: 0.35; } }
 @keyframes content-exit { to { translate: 0 -60px; opacity: 0.2; } }
 @keyframes slide-focus {
-  0% { scale: 0.88; opacity: 0.5; }
-  40%, 60% { scale: 1; opacity: 1; }
-  100% { scale: 0.88; opacity: 0.5; }
+  0% { scale: 0.9; opacity: 0.45; }
+  35%, 65% { scale: 1; opacity: 1; }
+  100% { scale: 0.9; opacity: 0.45; }
 }
 @supports (animation-timeline: scroll()) {
   .scroll-progress { animation: grow-x linear both; animation-timeline: scroll(root); }
@@ -746,20 +746,22 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
   display: flex; gap: 20px; overflow-x: auto; overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   /* Side padding lets the first and last slide sit in the centre */
-  padding: 24px calc(50% - min(200px, 42vw)) 36px; scrollbar-width: none; cursor: grab;
+  padding: 20px calc(50% - min(165px, 40vw)) 32px; scrollbar-width: none; cursor: grab; scroll-behavior: smooth;
 }
 .carousel__track::-webkit-scrollbar { display: none; }
-.carousel__track.is-dragging { scroll-snap-type: none; cursor: grabbing; user-select: none; }
+.carousel__track.is-dragging { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
 .carousel__track:focus-visible { outline-offset: -4px; }
 .slide {
-  flex: 0 0 min(400px, 84vw); scroll-snap-align: center; min-height: 460px;
-  display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px;
+  flex: 0 0 min(330px, 80vw); scroll-snap-align: center; min-height: 390px;
+  display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 24px;
+  transition: border-color .5s ease, box-shadow .5s ease;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04) 60%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
   box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  --sheen: rgba(255, 255, 255, 0.16);
+  --sheen: rgba(255, 255, 255, 0.1);
 }
+.slide.is-active { border-color: rgba(255, 255, 255, 0.32); }
 .slide__top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .chip {
   display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; padding: 5px 12px;
@@ -769,11 +771,11 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
 .tone { font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--on-deep-2); }
 .tone--bad { color: #ffb4a6; }
 .tone--good { color: #9fe3dc; }
-.slide__big { font-size: clamp(40px, 5vw, 54px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: #fff; margin-top: 8px; }
-.slide__title { font-size: 20px; color: #fff; text-wrap: balance; }
-.slide__body { font-size: 15px; color: var(--on-deep-2); }
+.slide__big { font-size: clamp(32px, 4vw, 42px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: #fff; margin-top: 8px; }
+.slide__title { font-size: 18px; color: #fff; text-wrap: balance; }
+.slide__body { font-size: 14px; color: var(--on-deep-2); }
 .slide__visual { margin-top: auto; padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
-.slide__visual svg { width: 100%; height: 56px; overflow: visible; }
+.slide__visual svg { width: 100%; height: 44px; overflow: visible; }
 .slide__axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--on-deep-2); }
 .mini-bar { display: grid; grid-template-columns: 96px 1fr 40px; align-items: center; gap: 10px; font-size: 12px; }
 .mini-bar__label { color: var(--on-deep-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -790,10 +792,10 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
 .carousel__footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .carousel__dots { display: flex; gap: 8px; flex-wrap: wrap; }
 .carousel__dot {
-  width: 10px; height: 10px; border-radius: 999px; border: 0; padding: 0; cursor: pointer;
-  background: rgba(255, 255, 255, 0.28); transition: width .3s ease, background .3s ease;
+  width: 8px; height: 8px; border-radius: 999px; border: 0; padding: 0; cursor: pointer;
+  background: rgba(255, 255, 255, 0.28); transition: width .5s cubic-bezier(.2, .8, .2, 1), background .5s ease;
 }
-.carousel__dot[aria-current="true"] { width: 30px; background: var(--sky); }
+.carousel__dot[aria-current="true"] { width: 24px; background: var(--sky); }
 .carousel__status { font-size: 13px; color: var(--on-deep-2); font-variant-numeric: tabular-nums; }
 
 /* =========================================================
@@ -825,6 +827,40 @@ input[type="range"] { width: 100%; accent-color: var(--navy-700); height: 28px; 
   .story__steps { position: relative; z-index: 2; gap: 60vh; padding-block: 55vh 30vh; }
   .step { background: color-mix(in srgb, var(--surface) 88%, transparent); opacity: 0.9; }
   .step.is-active { translate: none; }
+}
+
+/* =========================================================
+   Latest reports (published 2025)
+   ========================================================= */
+.latest { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
+.latest__head h3 { font-size: 20px; }
+.latest__head .card__sub { max-width: 720px; }
+.latest__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 960px) { .latest__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .latest__grid { grid-template-columns: 1fr; } }
+.report { border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.report__big { font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.report__text { font-size: 14px; color: var(--ink-2); }
+.report__src { margin-top: auto; padding-top: 6px; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.report__src:hover { text-decoration: underline; }
+
+/* =========================================================
+   Smooth transitions
+   ========================================================= */
+@keyframes fade-up { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) {
+  /* Charts that redraw fully cross-fade in; keyed charts animate their marks instead. */
+  .chart > svg:not([data-kind]) { animation: fade-in .45s ease both; }
+  .profile > *, .corr > *, .stat, .insight { animation: fade-up .45s cubic-bezier(.2, .8, .2, 1) both; }
+  .profile > :nth-child(2) { animation-delay: .04s; }
+  .profile > :nth-child(3) { animation-delay: .08s; }
+  .profile > :nth-child(4) { animation-delay: .12s; }
+  .segmented button { transition: background-color .3s ease, color .3s ease, box-shadow .3s ease; }
+  .card, .icon-btn, .btn, .nav__links a, .data-table tbody tr { transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease; }
+  .theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after {
+    transition: background-color .45s ease, color .45s ease, border-color .45s ease, fill .45s ease, stroke .45s ease !important;
+  }
 }
 
 @media (forced-colors: active) {

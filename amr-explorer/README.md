@@ -25,6 +25,9 @@ An interactive, responsive website for exploring **real antimicrobial resistance
 
 ## Data
 
+The interactive charts use country-level data from 2013 to 2022. A "What the newest reports say" panel adds headline figures from the reports published in 2025: the [WHO Global antibiotic resistance surveillance report 2025](https://www.paho.org/en/news/13-10-2025-who-warns-widespread-resistance-common-antibiotics-worldwide), which covers 2023 data, and [ECDC's EARS-Net report for 2024](https://www.ecdc.europa.eu/en/publications-data/antimicrobial-resistance-eueea-ears-net-annual-epidemiological-report-2024). Country-level figures for 2023–2024 could be added by exporting them from the [ECDC Surveillance Atlas](https://atlas.ecdc.europa.eu/public/index.aspx) and extending `scripts/build-data.mjs` to read that export.
+
+
 | Dataset | Coverage | Measure |
 |---|---|---|
 | WHO GLASS (via [Our World in Data](https://ourworldindata.org/antibiotics)) | 101 countries, 2016–2022 | % of bloodstream infections due to *E. coli* resistant to 3rd-gen cephalosporins, and due to MRSA (SDG 3.d.2); antibiotic consumption from GLASS-AMC (DDD per 1,000 people per day) |
