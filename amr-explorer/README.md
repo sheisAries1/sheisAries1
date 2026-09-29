@@ -37,6 +37,10 @@ The raw files are in `data/raw/`:
 
 Map shapes come from [world-atlas](https://github.com/topojson/world-atlas) (Natural Earth 1:50m) and are simplified at build time.
 
+## Live site
+
+https://sheisaries1.github.io/sheisAries1/ is deployed by `.github/workflows/pages.yml` on every push to `main` that touches `amr-explorer/`.
+
 ## Run it
 
 It is a static site with no framework. D3 and topojson-client are vendored in `vendor/`.
