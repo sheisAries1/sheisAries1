@@ -40,6 +40,15 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### 🧫 Stain & Sort — Bacterial ID Study Guide
+🔗 Live: https://sheisaries1.github.io/sheisAries1/stain-and-sort/  
+📂 Code: [`stain-and-sort/`](stain-and-sort/)
+- Interactive Gram stain walkthrough, a step-by-step identification key, flashcards, a bench-test library and a quiz covering 27 organisms
+- Built with HTML, CSS and JavaScript modules — procedurally drawn microscope fields, glass UI, light/dark themes, fully responsive
+- Content drawn from my clinical microbiology training: Gram stain, morphology and biochemical tests
+
+---
+
 ### 🌐 Personal Portfolio Website  
 💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
