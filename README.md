@@ -1,6 +1,6 @@
-# 👋 Hi, I'm Bukola
+#  Hi, I'm Bukola
 
-💻 Junior Frontend Developer  
+💻 Frontend Developer  
 📍 United Kingdom  
 
 ---
@@ -58,10 +58,10 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 ## 📚 Education
 
 **PGDip Biomedical Science (Clinical Microbiology)**  
-Swansea University (2024 – 2025)
+Swansea University 
 
 **BSc Microbiology**  
-Oduduwa University (2015 – 2023)
+Oduduwa University
 
 ---
 
