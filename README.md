@@ -40,6 +40,15 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### 🔬 Gram Guide — Bacteria ID Study Kit
+🔗 Live: https://sheisaries1.github.io/sheisAries1/gram-guide/  
+📂 Code: [`gram-guide/`](gram-guide/)
+- Interactive identification key: Gram stain → shape → biochemical tests, with the candidate list narrowing live
+- Flashcards (flip, swipe, progress saved), a 10-round quiz that explains where you went wrong, and an illustrated bench-test reference
+- Vanilla HTML, CSS and JavaScript — glass UI, Poppins, light/dark themes, responsive and reduced-motion friendly
+
+---
+
 ### 🌐 Personal Portfolio Website  
 💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
