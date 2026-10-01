@@ -119,6 +119,13 @@ a { color: inherit; }
   border: 3px solid transparent;
 }
 .nav nav a:hover { border-color: var(--ink); background: var(--yellow); color: #2b1d16; }
+.icon-toggle {
+  width: 40px; height: 36px; flex: none; display: grid; place-items: center; padding: 0;
+  font-size: 1.1rem; border: var(--outline); border-radius: 999px; background: var(--paper); cursor: pointer;
+}
+.nav nav + .icon-toggle { margin-left: 4px; }
+.icon-toggle[aria-pressed="true"]#musicToggle { background: var(--yellow); }
+.icon-toggle.playing { animation: wiggle 1s ease-in-out infinite; }
 .theme-toggle {
   position: relative; width: 64px; height: 36px; flex: none;
   border: var(--outline); border-radius: 999px; background: var(--sky-1); cursor: pointer; padding: 0;
@@ -315,6 +322,7 @@ a { color: inherit; }
 .footer p { margin: 0; }
 
 /* ---------- Animations ---------- */
+@keyframes wiggle { 25% { rotate: -10deg; } 75% { rotate: 10deg; } }
 @keyframes bob { 50% { transform: translateY(-14px); } }
 @keyframes shadow { 50% { transform: scaleX(.8); opacity: .7; } }
 @keyframes jump { 30% { transform: translateY(-60px) rotate(-6deg); } 60% { transform: translateY(0) scale(1.05, .95); } }
@@ -343,7 +351,8 @@ a { color: inherit; }
 @media (max-width: 600px) {
   .nav { padding: 8px 16px; }
   .nav nav { display: none; }
-  .theme-toggle { margin-left: auto; }
+  .nav #musicToggle { margin-left: auto; }
+  .logo span { font-size: 1.15rem; white-space: nowrap; }
   .section { padding-inline: 16px; }
   .bubble { translate: -50% 0; font-size: 1rem; }
   .bubble::after { left: 50%; margin-left: -10px; }

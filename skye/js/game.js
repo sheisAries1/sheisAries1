@@ -33,6 +33,8 @@
   try { best = Number(localStorage.getItem('skye-best')) || 0; } catch (e) { /* storage blocked */ }
   bestEl.textContent = best;
 
+  function sfx(name) { if (window.skyeSound) window.skyeSound(name); }
+
   function spawn() {
     const roll = Math.random();
     let type = 'star';
@@ -174,9 +176,9 @@
       it.spin += 0.04 * step;
       const hit = it.y > top + 10 && it.y < top + skye.h && Math.abs(it.x - skye.x) < skye.w / 2 + 12;
       if (hit) {
-        if (it.type === 'star') { score += 1; pops.push({ x: it.x, y: it.y, text: '+1', color: '#ffd93d', life: 1 }); }
-        else if (it.type === 'heart') { score += 5; pops.push({ x: it.x, y: it.y, text: '+5', color: '#ff6fa8', life: 1 }); }
-        else { score = Math.max(0, score - 2); flash = 0.8; pops.push({ x: it.x, y: it.y, text: '-2', color: '#9aa5b8', life: 1 }); }
+        if (it.type === 'star') { sfx('star'); score += 1; pops.push({ x: it.x, y: it.y, text: '+1', color: '#ffd93d', life: 1 }); }
+        else if (it.type === 'heart') { sfx('heart'); score += 5; pops.push({ x: it.x, y: it.y, text: '+5', color: '#ff6fa8', life: 1 }); }
+        else { sfx('rain'); score = Math.max(0, score - 2); flash = 0.8; pops.push({ x: it.x, y: it.y, text: '-2', color: '#9aa5b8', life: 1 }); }
         scoreEl.textContent = score;
         return false;
       }
@@ -211,6 +213,7 @@
     scoreEl.textContent = '0';
     timeEl.textContent = ROUND;
     overlay.hidden = true;
+    sfx('start');
     running = true;
     canvas.focus({ preventScroll: true });
     lastTime = performance.now();
@@ -226,11 +229,13 @@
       bestEl.textContent = best;
       try { localStorage.setItem('skye-best', String(best)); } catch (e) { /* storage blocked */ }
       title = 'New record! 🏆';
+      sfx('record');
       const r = canvas.getBoundingClientRect();
       if (window.skyeBurst) window.skyeBurst(r.left + r.width / 2, r.top + r.height / 2);
     } else if (score >= 25) {
       title = 'Superstar! 🌟';
     }
+    if (title !== 'New record! 🏆') sfx('end');
     overlayTitle.textContent = title;
     overlayText.textContent = `Skye caught ${score} star point${score === 1 ? '' : 's'}!`;
     startBtn.textContent = '↻ Play again';

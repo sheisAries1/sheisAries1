@@ -25,6 +25,7 @@
   toggle.addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
+    window.skyeSound(next === 'dark' ? 'night' : 'day');
     store('skye-theme', next);
   });
 
@@ -69,6 +70,7 @@
   skyeBtn.addEventListener('click', (e) => {
     g = (g + 1) % greetings.length;
     bubble.textContent = greetings[g];
+    window.skyeSound(g % 2 ? 'boing' : 'giggle');
     bubble.style.animation = 'none';
     void bubble.offsetWidth;
     bubble.style.animation = '';
@@ -95,6 +97,7 @@
     do { n = Math.floor(Math.random() * words.length); } while (n === last);
     last = n;
     wordEl.textContent = words[n];
+    window.skyeSound('sparkle');
     wordEl.classList.remove('pop');
     void wordEl.offsetWidth;
     wordEl.classList.add('pop');

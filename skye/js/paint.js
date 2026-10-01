@@ -3,6 +3,7 @@
   const canvas = document.getElementById('paintCanvas');
   const ctx = canvas.getContext('2d');
   const swatchBox = document.getElementById('swatches');
+  const sfx = (name) => { if (window.skyeSound) window.skyeSound(name); };
 
   const colours = [
     ['#2b1d16', 'Black'], ['#ffd93d', 'Yellow'], ['#ff8a3d', 'Orange'], ['#ff5c5c', 'Red'], ['#ff6fa8', 'Pink'],
@@ -30,6 +31,7 @@
     b.addEventListener('click', () => {
       colour = hex;
       stamp = null;
+      sfx('click');
       document.querySelectorAll('.swatch, .stamp').forEach((el) => el.classList.remove('active'));
       b.classList.add('active');
     });
@@ -39,6 +41,7 @@
   document.querySelectorAll('.size').forEach((b) => {
     b.addEventListener('click', () => {
       size = Number(b.dataset.size);
+      sfx('click');
       document.querySelectorAll('.size').forEach((el) => el.classList.remove('active'));
       b.classList.add('active');
     });
@@ -48,6 +51,7 @@
     b.addEventListener('click', () => {
       const on = stamp !== b.dataset.stamp;
       stamp = on ? b.dataset.stamp : null;
+      sfx('click');
       document.querySelectorAll('.stamp').forEach((el) => el.classList.remove('active'));
       if (on) b.classList.add('active');
     });
@@ -68,6 +72,7 @@
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(stamp, p.x, p.y);
+      sfx('pop');
       return;
     }
     drawing = true;
@@ -98,11 +103,12 @@
   canvas.addEventListener('pointercancel', stop);
 
   document.getElementById('clearBtn').addEventListener('click', () => {
-    if (confirm('Clear your picture?')) fillWhite();
+    if (confirm('Clear your picture?')) { fillWhite(); sfx('whoosh'); }
   });
 
   document.getElementById('saveBtn').addEventListener('click', () => {
     const a = document.createElement('a');
+    sfx('sparkle');
     a.download = 'skyes-drawing.png';
     a.href = canvas.toDataURL('image/png');
     a.click();
