@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PearlyBeau</title>
+  <meta name="description" content="PearlyBeau — a female-led wrist watch brand from Lagos. Shop watches, jewelry and eyewear.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='21' font-family='Courier New,monospace' font-size='13' fill='%23fff' text-anchor='middle'%3EPB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <header class="header">
+    <a class="wordmark" href="#/" aria-label="PearlyBeau home">PEARLY&nbsp;BEAU</a>
+    <div class="header-icons">
+      <a class="icon-btn" href="#/wishlist" aria-label="Wishlist" data-ico="heart"><span class="count" data-wish-count hidden>0</span></a>
+      <a class="icon-btn" href="#/account" aria-label="Your orders" data-ico="user"></a>
+      <button class="icon-btn" id="cartBtn" type="button" aria-label="Open cart" data-ico="cart"><span class="count" data-count hidden>0</span></button>
+    </div>
+    <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" data-ico="moon"></button>
+    <button class="icon-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" data-ico="menu"></button>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="connect">
+        <h2>Let's Connect!</h2>
+        <p>Stay up to date with our exclusive offer and new products. Sign up and receive discounts.</p>
+        <form class="signup" id="signup">
+          <label class="sr-only" for="signupEmail">Email</label>
+          <input id="signupEmail" type="email" placeholder="Enter your email" required autocomplete="email">
+          <button>SIGN UP</button>
+        </form>
+        <p class="signup-msg" id="signupMsg" role="status"></p>
+        <div class="socials" id="socials"></div>
+      </div>
+      <div>
+        <h2>Contact us</h2>
+        <p>Ajah, Lagos, Nigeria,</p>
+        <p><a href="tel:+2349114819336">+2349114819336</a><br>pearlybeau.co</p>
+      </div>
+      <nav aria-label="Shop PearlyBeau">
+        <h2>Shop PearlyBeau</h2>
+        <a href="#/shop?category=watches">Shop Watches</a>
+        <a href="#/shop?category=eyewear">Shop Eyewear</a>
+        <a href="#/shop?category=jewelry">Shop Jewelry</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Shop Insta</a>
+      </nav>
+      <nav aria-label="Company">
+        <h2>Company</h2>
+        <a href="#/about">About PearlyBeau</a>
+        <a href="#/page/for-business">For Business</a>
+        <a href="#/page/partnership">Partnership</a>
+        <a href="#/page/careers">Careers</a>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <p>© <span id="year"></span> PEARLYBEAU</p>
+      <p><a href="#/page/terms">Terms &amp; Conditions</a><a href="#/page/privacy">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Hamburger menu -->
+  <div class="drawer left" id="menu" hidden>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer-head">
+        <span class="wordmark">PEARLY&nbsp;BEAU</span>
+        <button class="icon-btn drawer-close" type="button" aria-label="Close menu" data-ico="close"></button>
+      </div>
+      <nav class="menu-links" aria-label="Main">
+        <a href="#/">Home</a>
+        <a href="#/shop">All Products</a>
+        <a href="#/shop?category=watches">Watches</a>
+        <a href="#/shop?category=jewelry">Jewelry</a>
+        <a href="#/shop?category=eyewear">Eyewear</a>
+        <a href="#/shop?collection=classic-era">The Era Collection</a>
+        <a href="#/about">About Us</a>
+        <a href="#/wishlist">Wishlist</a>
+        <a href="#/account">Your Orders</a>
+      </nav>
+    </aside>
+  </div>
+
+  <!-- Cart drawer -->
+  <div class="drawer" id="cartDrawer" hidden>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer-head">
+        <h2 id="cartTitle">Your Cart <span class="count inline" data-count hidden>0</span></h2>
+        <button class="icon-btn drawer-close" type="button" aria-label="Close cart" data-ico="close"></button>
+      </div>
+      <div class="drawer-body" id="drawerBody"></div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="empty">Please turn on JavaScript to shop PearlyBeau.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

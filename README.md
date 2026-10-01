@@ -58,6 +58,15 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### ⌚ PearlyBeau — E-commerce Storefront
+🔗 Live: https://sheisaries1.github.io/sheisAries1/pearly-beau/  
+📂 Code: [`pearly-beau/`](pearly-beau/)
+- Storefront for a Lagos watch brand: product listing with filters and search, product pages, wishlist and a slide-out cart
+- Three-step checkout with form checks, delivery options and a mock payment gateway (test cards succeed or decline)
+- Hash routing that works on GitHub Pages, built with vanilla HTML, CSS and JavaScript modules — responsive, dark mode, accessible
+
+---
+
 ### 🌐 Personal Portfolio Website  
 💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
