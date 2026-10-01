@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pearlybeau | Quality Watches, Eyewear & Jewelry</title>
+  <meta name="description" content="PearlyBeau: watches in polished stainless steel, plus eyewear, jewelry and gifts. A female-led brand from Lagos.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="images/era-rose-gold.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead__bar">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <form class="search" id="searchForm" role="search">
+        <label class="sr-only" for="searchInput">Search products</label>
+        <input id="searchInput" name="q" type="search" placeholder="Search.." autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+
+      <a class="logo" href="#/" aria-label="Pearly Beau home">PEARLY&nbsp;&nbsp;BEAU</a>
+
+      <div class="masthead__icons">
+        <a class="icon-btn" href="#/wishlist" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="badge" id="wishCount" hidden>0</span>
+        </a>
+        <a class="icon-btn" href="#/account" aria-label="Account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"/></svg>
+        </a>
+        <a class="icon-btn" href="#/cart" aria-label="Cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+          <span class="badge" id="cartCount" hidden>0</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="mainnav" id="mainNav" aria-label="Shop">
+      <a href="#/shop/watches" data-nav="watches">WATCHES</a>
+      <a href="#/shop/eyewear" data-nav="eyewear">EYEWEAR</a>
+      <a href="#/shop/jewelry" data-nav="jewelry">JEWELRY</a>
+      <a href="#/shop/giftshop" data-nav="giftshop">GIFTSHOP</a>
+      <a href="#/brand" data-nav="brand">BRAND</a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <section class="footer__connect">
+        <h2>Let's Connect!</h2>
+        <p>Stay up to date with our exclusive offer and new products. Sign up and receive discounts.</p>
+        <form class="newsletter" id="newsletter">
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">SIGN UP</button>
+        </form>
+        <p class="newsletter__msg" id="newsMsg" role="status"></p>
+        <div class="socials">
+          <a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener" target="_blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" class="fill"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener" target="_blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2a10 10 0 0 0-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 12 2z"/></svg>
+          </a>
+          <a href="https://twitter.com/" aria-label="Twitter" rel="noopener" target="_blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M22 5.9c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.3 4.1-.6.2-1.2.2-1.9.1.5 1.6 2.1 2.8 3.9 2.9A8.2 8.2 0 0 1 2 18.4 11.6 11.6 0 0 0 8.3 20.2c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Contact us</h2>
+        <address>
+          Ajah, Lagos,<br>Nigeria,
+          <br><br>
+          <a href="tel:+2349114819336">+2349114819336</a><br>
+          <a href="https://pearlybeau.co" rel="noopener">pearlybeau.co</a>
+        </address>
+      </section>
+
+      <section>
+        <h2>Shop PearlyBeau</h2>
+        <ul>
+          <li><a href="#/shop/watches">Shop Watches</a></li>
+          <li><a href="#/shop/eyewear">Shop Eyewear</a></li>
+          <li><a href="#/shop/jewelry">Shop Jewelry</a></li>
+          <li><a href="https://www.instagram.com/" rel="noopener" target="_blank">Shop Insta</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="#/brand">About PearlyBeau</a></li>
+          <li><a href="#/page/business">For Business</a></li>
+          <li><a href="#/page/partnership">Partnership</a></li>
+          <li><a href="#/page/careers">Careers</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer__legal">
+      <span>© <span id="year">2026</span> PEARLYBEAU</span>
+      <span class="footer__links">
+        <a href="#/page/terms">Terms &amp; Conditions</a>
+        <a href="#/page/privacy">Privacy Policy</a>
+      </span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
