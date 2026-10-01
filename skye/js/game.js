@@ -33,6 +33,8 @@
   try { best = Number(localStorage.getItem('skye-best')) || 0; } catch (e) { /* storage blocked */ }
   bestEl.textContent = best;
 
+  function sfx(name) { if (window.skyeSound) window.skyeSound(name); }
+
   function spawn() {
     const roll = Math.random();
     let type = 'star';
@@ -58,10 +60,10 @@
       ctx.lineTo(Math.cos(a) * rad, Math.sin(a) * rad);
     }
     ctx.closePath();
-    ctx.fillStyle = '#ffd93d';
+    ctx.fillStyle = '#ff9ec7';
     ctx.fill();
     ctx.lineWidth = 3;
-    ctx.strokeStyle = '#2b1d16';
+    ctx.strokeStyle = '#4a1f35';
     ctx.stroke();
     ctx.restore();
   }
@@ -73,10 +75,10 @@
     ctx.moveTo(0, s * 0.35);
     ctx.bezierCurveTo(-s * 1.1, -s * 0.35, -s * 0.45, -s * 1.05, 0, -s * 0.45);
     ctx.bezierCurveTo(s * 0.45, -s * 1.05, s * 1.1, -s * 0.35, 0, s * 0.35);
-    ctx.fillStyle = '#ff6fa8';
+    ctx.fillStyle = '#f06aa4';
     ctx.fill();
     ctx.lineWidth = 3;
-    ctx.strokeStyle = '#2b1d16';
+    ctx.strokeStyle = '#4a1f35';
     ctx.stroke();
     ctx.restore();
   }
@@ -84,8 +86,8 @@
   function drawRain(x, y) {
     ctx.save();
     ctx.translate(x, y);
-    ctx.fillStyle = '#9aa5b8';
-    ctx.strokeStyle = '#2b1d16';
+    ctx.fillStyle = '#bfa9b6';
+    ctx.strokeStyle = '#4a1f35';
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.arc(-12, 0, 13, Math.PI * 0.5, Math.PI * 1.5);
@@ -105,8 +107,8 @@
 
   function drawGround() {
     const night = document.documentElement.dataset.theme === 'dark';
-    ctx.fillStyle = night ? '#2e5a4a' : '#8fdc7e';
-    ctx.strokeStyle = '#2b1d16';
+    ctx.fillStyle = night ? '#8a3f6e' : '#ffb7d0';
+    ctx.strokeStyle = '#4a1f35';
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(0, H - 22);
@@ -124,7 +126,7 @@
     if (sprite.complete && sprite.naturalWidth) {
       ctx.drawImage(sprite, skye.x - skye.w / 2, y, skye.w, skye.h);
     } else {
-      ctx.fillStyle = '#ffd93d';
+      ctx.fillStyle = '#ff9ec7';
       ctx.fillRect(skye.x - skye.w / 2, y, skye.w, skye.h);
     }
     ctx.globalAlpha = 1;
@@ -144,7 +146,7 @@
     for (const p of pops) {
       ctx.globalAlpha = Math.max(p.life, 0);
       ctx.fillStyle = p.color;
-      ctx.strokeStyle = '#2b1d16';
+      ctx.strokeStyle = '#4a1f35';
       ctx.lineWidth = 4;
       ctx.strokeText(p.text, p.x, p.y);
       ctx.fillText(p.text, p.x, p.y);
@@ -174,9 +176,9 @@
       it.spin += 0.04 * step;
       const hit = it.y > top + 10 && it.y < top + skye.h && Math.abs(it.x - skye.x) < skye.w / 2 + 12;
       if (hit) {
-        if (it.type === 'star') { score += 1; pops.push({ x: it.x, y: it.y, text: '+1', color: '#ffd93d', life: 1 }); }
-        else if (it.type === 'heart') { score += 5; pops.push({ x: it.x, y: it.y, text: '+5', color: '#ff6fa8', life: 1 }); }
-        else { score = Math.max(0, score - 2); flash = 0.8; pops.push({ x: it.x, y: it.y, text: '-2', color: '#9aa5b8', life: 1 }); }
+        if (it.type === 'star') { sfx('star'); score += 1; pops.push({ x: it.x, y: it.y, text: '+1', color: '#ff9ec7', life: 1 }); }
+        else if (it.type === 'heart') { sfx('heart'); score += 5; pops.push({ x: it.x, y: it.y, text: '+5', color: '#f06aa4', life: 1 }); }
+        else { sfx('rain'); score = Math.max(0, score - 2); flash = 0.8; pops.push({ x: it.x, y: it.y, text: '-2', color: '#bfa9b6', life: 1 }); }
         scoreEl.textContent = score;
         return false;
       }
@@ -211,6 +213,7 @@
     scoreEl.textContent = '0';
     timeEl.textContent = ROUND;
     overlay.hidden = true;
+    sfx('start');
     running = true;
     canvas.focus({ preventScroll: true });
     lastTime = performance.now();
@@ -226,11 +229,13 @@
       bestEl.textContent = best;
       try { localStorage.setItem('skye-best', String(best)); } catch (e) { /* storage blocked */ }
       title = 'New record! 🏆';
+      sfx('record');
       const r = canvas.getBoundingClientRect();
       if (window.skyeBurst) window.skyeBurst(r.left + r.width / 2, r.top + r.height / 2);
     } else if (score >= 25) {
       title = 'Superstar! 🌟';
     }
+    if (title !== 'New record! 🏆') sfx('end');
     overlayTitle.textContent = title;
     overlayText.textContent = `Skye caught ${score} star point${score === 1 ? '' : 's'}!`;
     startBtn.textContent = '↻ Play again';
