@@ -1,23 +1,26 @@
 :root {
-  --yellow: #ffd93d;
-  --yellow-deep: #f5b800;
-  --sky-1: #7cc8ff;
-  --sky-2: #bfe6ff;
-  --pink: #ffc4dd;
-  --mint: #bff2d6;
-  --lilac: #dccbff;
-  --peach: #ffd8b5;
-  --ink: #2b1d16;
-  --ink-soft: #5b4a40;
-  --hair: #3a2c28;
-  --page: #fff8e8;
+  /* Pastel pink palette */
+  --accent: #ffb3d1;
+  --accent-deep: #f06aa4;
+  --on-accent: #4a1f35;
+  --sky-1: #ffc8de;
+  --sky-2: #ffd1dc;
+  --pink: #ffc1e3;
+  --mint: #ffbcd9;
+  --lilac: #f4c2e4;
+  --peach: #ffc9c9;
+  --ink: #4a1f35;
+  --ink-soft: #7a3d5c;
+  --lead: #5a2440;
+  --page: #fff0f5;
   --paper: #ffffff;
-  --hill-1: #8fdc7e;
-  --hill-2: #6cc56a;
-  --sky-top: #6ec1ff;
-  --sky-bottom: #d9f1ff;
+  --hill-1: #ffb7d0;
+  --hill-2: #f79bbf;
+  --sky-top: #ffc6dd;
+  --sky-bottom: #fff0f6;
   --cloud: #ffffff;
-  --sun: #ffe15a;
+  --sun: #ffe3ee;
+  --toggle-night: #6b2d5c;
   --outline: 4px solid var(--ink);
   --pop: 0 6px 0 var(--ink);
   --radius: 26px;
@@ -26,40 +29,42 @@
 
 /* Night sky (used for the toggle and system dark mode) */
 :root[data-theme="dark"] {
-  --page: #1d1838;
-  --paper: #2c2552;
-  --ink: #7a6be0;
-  --ink-soft: #d6cff5;
-  --sky-top: #141036;
-  --sky-bottom: #3b2f7a;
-  --hill-1: #2e5a4a;
-  --hill-2: #23463a;
-  --cloud: #6c64a8;
-  --sun: #f4f1d0;
-  --sky-2: #4a5fb0;
-  --pink: #8a4d7a;
-  --mint: #2f7a63;
-  --lilac: #5e4ca8;
-  --peach: #9a6040;
+  --page: #2a1426;
+  --paper: #3d1f38;
+  --ink: #d684b4;
+  --ink-soft: #ffd6ea;
+  --lead: #ffe6f2;
+  --sky-top: #2b0f28;
+  --sky-bottom: #6b2d5c;
+  --hill-1: #8a3f6e;
+  --hill-2: #6e2f58;
+  --cloud: #b8679a;
+  --sun: #ffe6f0;
+  --sky-2: #7a3b63;
+  --pink: #8e4570;
+  --mint: #9c4d77;
+  --lilac: #7d3a5e;
+  --peach: #a0566f;
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --page: #1d1838;
-    --paper: #2c2552;
-    --ink: #7a6be0;
-    --ink-soft: #d6cff5;
-    --sky-top: #141036;
-    --sky-bottom: #3b2f7a;
-    --hill-1: #2e5a4a;
-    --hill-2: #23463a;
-    --cloud: #6c64a8;
-    --sun: #f4f1d0;
-    --sky-2: #4a5fb0;
-    --pink: #8a4d7a;
-    --mint: #2f7a63;
-    --lilac: #5e4ca8;
-    --peach: #9a6040;
+    --page: #2a1426;
+    --paper: #3d1f38;
+    --ink: #d684b4;
+    --ink-soft: #ffd6ea;
+    --lead: #ffe6f2;
+    --sky-top: #2b0f28;
+    --sky-bottom: #6b2d5c;
+    --hill-1: #8a3f6e;
+    --hill-2: #6e2f58;
+    --cloud: #b8679a;
+    --sun: #ffe6f0;
+    --sky-2: #7a3b63;
+    --pink: #8e4570;
+    --mint: #9c4d77;
+    --lilac: #7d3a5e;
+    --peach: #a0566f;
     color-scheme: dark;
   }
 }
@@ -80,11 +85,11 @@ a { color: inherit; }
 
 .skip {
   position: absolute; left: -999px; top: 8px;
-  background: var(--yellow); color: #2b1d16; padding: 8px 14px; border-radius: 12px; z-index: 100;
+  background: var(--accent); color: var(--on-accent); padding: 8px 14px; border-radius: 12px; z-index: 100;
 }
 .skip:focus { left: 8px; }
 
-:focus-visible { outline: 4px dashed var(--yellow-deep); outline-offset: 4px; }
+:focus-visible { outline: 4px dashed var(--accent-deep); outline-offset: 4px; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -93,12 +98,12 @@ a { color: inherit; }
   padding: 12px 22px;
   border: var(--outline); border-radius: 999px;
   box-shadow: var(--pop);
-  color: #2b1d16; text-decoration: none; cursor: pointer;
+  color: var(--on-accent); text-decoration: none; cursor: pointer;
   transition: transform .12s, box-shadow .12s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--ink); }
 .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--ink); }
-.btn-yellow { background: var(--yellow); }
+.btn-accent { background: var(--accent); }
 .btn-white { background: #fff; }
 .btn-small { font-size: .95rem; padding: 8px 16px; box-shadow: 0 4px 0 var(--ink); }
 
@@ -118,13 +123,13 @@ a { color: inherit; }
   text-decoration: none; font-weight: 600; padding: 6px 14px; border-radius: 999px;
   border: 3px solid transparent;
 }
-.nav nav a:hover { border-color: var(--ink); background: var(--yellow); color: #2b1d16; }
+.nav nav a:hover { border-color: var(--ink); background: var(--accent); color: var(--on-accent); }
 .icon-toggle {
   width: 40px; height: 36px; flex: none; display: grid; place-items: center; padding: 0;
   font-size: 1.1rem; border: var(--outline); border-radius: 999px; background: var(--paper); cursor: pointer;
 }
 .nav nav + .icon-toggle { margin-left: 4px; }
-.icon-toggle[aria-pressed="true"]#musicToggle { background: var(--yellow); }
+.icon-toggle[aria-pressed="true"]#musicToggle { background: var(--accent); }
 .icon-toggle.playing { animation: wiggle 1s ease-in-out infinite; }
 .theme-toggle {
   position: relative; width: 64px; height: 36px; flex: none;
@@ -133,7 +138,7 @@ a { color: inherit; }
 .theme-toggle span { position: absolute; top: 50%; translate: 0 -50%; font-size: 1.05rem; transition: opacity .2s; }
 .theme-toggle .sun { left: 6px; }
 .theme-toggle .moon { right: 6px; opacity: .35; }
-.theme-toggle[aria-pressed="true"] { background: #3b2f7a; }
+.theme-toggle[aria-pressed="true"] { background: var(--toggle-night); }
 .theme-toggle[aria-pressed="true"] .sun { opacity: .35; }
 .theme-toggle[aria-pressed="true"] .moon { opacity: 1; }
 
@@ -152,7 +157,7 @@ a { color: inherit; }
   box-shadow: 0 0 0 18px color-mix(in srgb, var(--sun) 35%, transparent), 0 0 0 40px color-mix(in srgb, var(--sun) 15%, transparent);
   animation: pulse 4s ease-in-out infinite;
 }
-:root[data-theme="dark"] .sun-orb { box-shadow: inset -26px -6px 0 #d6d1a8, 0 0 40px #f4f1d088; }
+:root[data-theme="dark"] .sun-orb { box-shadow: inset -26px -6px 0 #e8bfd2, 0 0 40px #ffe6f088; }
 
 .cloud {
   position: absolute; width: 160px; height: 52px; background: var(--cloud);
@@ -170,7 +175,7 @@ a { color: inherit; }
 .rainbow {
   position: absolute; left: -120px; bottom: 60px; width: 420px; height: 210px;
   border-radius: 420px 420px 0 0;
-  background: radial-gradient(circle at 50% 100%, transparent 54%, #a78bfa 54% 60%, #60a5fa 60% 66%, #4ade80 66% 72%, #facc15 72% 78%, #fb923c 78% 84%, #f87171 84% 90%, transparent 90%);
+  background: radial-gradient(circle at 50% 100%, transparent 54%, #fde4ef 54% 60%, #ffd1e3 60% 66%, #ffbcd6 66% 72%, #ffa6c9 72% 78%, #f78fb9 78% 84%, #ec79a9 84% 90%, transparent 90%);
   opacity: .85;
 }
 :root[data-theme="dark"] .rainbow { opacity: .15; }
@@ -202,27 +207,26 @@ a { color: inherit; }
 }
 .hello-tag {
   display: inline-block; margin: 0 0 8px; padding: 4px 14px;
-  background: #fff; color: #2b1d16; border: 3px solid var(--ink); border-radius: 999px; font-weight: 600;
+  background: #fff; color: var(--on-accent); border: 3px solid var(--ink); border-radius: 999px; font-weight: 600;
   transform: rotate(-3deg);
 }
 .hero h1 {
-  font-size: clamp(3rem, 9vw, 6rem); font-weight: 700; color: var(--yellow);
+  font-size: clamp(3rem, 9vw, 6rem); font-weight: 700; color: var(--accent);
   -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill;
   text-shadow: 0 6px 0 var(--ink);
   letter-spacing: 1px;
 }
-.lead { font-size: 1.25rem; max-width: 30ch; color: #1c2b4a; font-weight: 500; margin: 18px 0 26px; }
-:root[data-theme="dark"] .lead { color: #e9e4ff; }
+.lead { font-size: 1.25rem; max-width: 30ch; color: var(--lead); font-weight: 500; margin: 18px 0 26px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
 .hero-skye { position: relative; display: grid; justify-items: center; }
 .skye-btn { background: none; border: 0; padding: 0; cursor: pointer; border-radius: 30px; }
 .skye-btn img { width: min(300px, 60vw); height: auto; animation: bob 2.6s ease-in-out infinite; filter: drop-shadow(0 4px 0 rgba(0,0,0,.08)); }
 .skye-btn.jump img { animation: jump .6s ease-out; }
-.shadow { width: 180px; height: 22px; border-radius: 50%; background: rgba(0,0,0,.18); margin-top: -10px; animation: shadow 2.6s ease-in-out infinite; }
+.shadow { width: 180px; height: 22px; border-radius: 50%; background: rgba(122,61,92,.2); margin-top: -10px; animation: shadow 2.6s ease-in-out infinite; }
 .bubble {
   position: absolute; top: -10px; left: 50%; translate: 40px 0; z-index: 2;
-  background: #fff; color: #2b1d16; font-weight: 600; font-size: 1.1rem;
+  background: #fff; color: var(--on-accent); font-weight: 600; font-size: 1.1rem;
   padding: 10px 18px; border: var(--outline); border-radius: 22px; white-space: nowrap;
   box-shadow: 0 4px 0 var(--ink);
   animation: pop .35s ease-out;
@@ -239,7 +243,7 @@ a { color: inherit; }
 .section { max-width: 1120px; margin: 0 auto; padding: 72px 20px 24px; }
 .section-title { text-align: center; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; }
 .section-title span {
-  display: inline-block; padding: 6px 26px; background: var(--yellow); color: #2b1d16;
+  display: inline-block; padding: 6px 26px; background: var(--accent); color: var(--on-accent);
   border: var(--outline); border-radius: 999px; box-shadow: var(--pop); transform: rotate(-1.5deg);
 }
 .section-sub { text-align: center; font-size: 1.15rem; margin: 22px auto 0; max-width: 52ch; }
@@ -263,7 +267,7 @@ a { color: inherit; }
   margin: 48px auto 0; max-width: 620px; text-align: center;
   background: var(--paper); border: var(--outline); border-radius: var(--radius); box-shadow: var(--pop);
   padding: 26px 20px 30px;
-  background-image: radial-gradient(circle at 10% 20%, color-mix(in srgb, var(--yellow) 30%, transparent) 0 40px, transparent 41px),
+  background-image: radial-gradient(circle at 10% 20%, color-mix(in srgb, var(--accent) 30%, transparent) 0 40px, transparent 41px),
                     radial-gradient(circle at 92% 80%, color-mix(in srgb, var(--pink) 50%, transparent) 0 50px, transparent 51px);
 }
 .sparkle-label { margin: 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: .9rem; }
@@ -285,12 +289,12 @@ a { color: inherit; }
   background: color-mix(in srgb, var(--sky-top) 55%, transparent); backdrop-filter: blur(2px);
 }
 .game-overlay[hidden] { display: none; }
-.overlay-title { margin: 0; font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--yellow); -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; text-shadow: 0 4px 0 var(--ink); }
-.overlay-text { margin: 0 0 12px; font-size: 1.15rem; font-weight: 600; color: #fff; text-shadow: 0 2px 0 rgba(0,0,0,.35); }
+.overlay-title { margin: 0; font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--accent); -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; text-shadow: 0 4px 0 var(--ink); }
+.overlay-text { margin: 0 0 12px; font-size: 1.15rem; font-weight: 600; color: var(--lead); }
 .game-pad { display: none; justify-content: center; gap: 24px; margin-top: 18px; }
 .game-pad button {
-  width: 84px; height: 64px; font-size: 1.6rem; border: var(--outline); border-radius: 20px; background: var(--yellow);
-  box-shadow: 0 4px 0 var(--ink); color: #2b1d16; touch-action: manipulation;
+  width: 84px; height: 64px; font-size: 1.6rem; border: var(--outline); border-radius: 20px; background: var(--accent);
+  box-shadow: 0 4px 0 var(--ink); color: var(--on-accent); touch-action: manipulation;
 }
 .game-pad button:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
 @media (hover: none) { .game-pad { display: flex; } }
@@ -303,14 +307,14 @@ a { color: inherit; }
 }
 .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
 .swatch { aspect-ratio: 1; border-radius: 50%; border: 3px solid var(--ink); cursor: pointer; padding: 0; }
-.swatch.active, .size.active, .stamp.active { outline: 4px solid var(--yellow-deep); outline-offset: 2px; }
+.swatch.active, .size.active, .stamp.active { outline: 4px solid var(--accent-deep); outline-offset: 2px; }
 .tool-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .tool-label { width: 100%; font-weight: 600; font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; }
 .size, .stamp {
   width: 42px; height: 42px; display: grid; place-items: center; border: 3px solid var(--ink); border-radius: 12px;
   background: #fff; cursor: pointer; font-size: 1.3rem; padding: 0;
 }
-.size i { width: var(--d); height: var(--d); border-radius: 50%; background: #2b1d16; }
+.size i { width: var(--d); height: var(--d); border-radius: 50%; background: var(--on-accent); }
 #paintCanvas {
   width: 100%; height: auto; display: block; background: #fff; border: var(--outline); border-radius: var(--radius);
   box-shadow: var(--pop); touch-action: none; cursor: crosshair;
