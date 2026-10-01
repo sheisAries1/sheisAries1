@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skye's World</title>
+  <meta name="description" content="A cartoon website made with love for Skye — games, drawing and sunshine.">
+  <meta name="theme-color" content="#7cc8ff">
+  <link rel="icon" href="images/skye.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="logo" href="#hello" aria-label="Skye's World home">
+      <img src="images/skye.png" alt="" width="34" height="53">
+      <span>Skye's World</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#about">About me</a>
+      <a href="#game">Star Catcher</a>
+      <a href="#paint">Sky Painter</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to night sky">
+      <span class="sun" aria-hidden="true">☀️</span><span class="moon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hello">
+      <div class="sky" aria-hidden="true">
+        <div class="sun-orb"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="twinkles"></div>
+        <div class="rainbow"></div>
+        <div class="hill h1"></div>
+        <div class="hill h2"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hello-tag">Welcome to</p>
+          <h1><span class="wobble" aria-label="Skye's World">Skye's World</span></h1>
+          <p class="lead">Big curls, a sunny yellow top and the biggest smile in the whole sky. Click on me to say hi!</p>
+          <div class="hero-actions">
+            <a class="btn btn-yellow" href="#game">⭐ Play a game</a>
+            <a class="btn btn-white" href="#paint">🎨 Draw a picture</a>
+          </div>
+        </div>
+
+        <div class="hero-skye">
+          <div class="bubble" id="bubble" role="status" aria-live="polite">Hi! I'm Skye! 👋</div>
+          <button class="skye-btn" id="skyeBtn" type="button" aria-label="Say hi to Skye">
+            <img src="images/skye.png" alt="Cartoon Skye with big curly hair, a yellow top and a black skirt" width="413" height="640">
+          </button>
+          <div class="shadow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-title"><span>All About Me</span></h2>
+      <div class="cards">
+        <article class="card" style="--tilt:-2deg; --tint:var(--yellow)">
+          <div class="card-emoji" aria-hidden="true">💛</div>
+          <h3>Favourite colour</h3>
+          <p>Sunshine yellow — just like my top!</p>
+        </article>
+        <article class="card" style="--tilt:1.5deg; --tint:var(--sky-2)">
+          <div class="card-emoji" aria-hidden="true">☁️</div>
+          <h3>My name</h3>
+          <p>Skye — like the big blue sky that goes on forever.</p>
+        </article>
+        <article class="card" style="--tilt:-1deg; --tint:var(--pink)">
+          <div class="card-emoji" aria-hidden="true">🌀</div>
+          <h3>My hair</h3>
+          <p>Big, bouncy, beautiful curls. They do a little dance when I run.</p>
+        </article>
+        <article class="card" style="--tilt:2deg; --tint:var(--mint)">
+          <div class="card-emoji" aria-hidden="true">🦸🏾‍♀️</div>
+          <h3>My superpower</h3>
+          <p>Making everybody smile, every single day.</p>
+        </article>
+        <article class="card" style="--tilt:-1.5deg; --tint:var(--lilac)">
+          <div class="card-emoji" aria-hidden="true">⭐</div>
+          <h3>Things I love</h3>
+          <p>Stars, games, drawing and silly dances.</p>
+        </article>
+        <article class="card" style="--tilt:1deg; --tint:var(--peach)">
+          <div class="card-emoji" aria-hidden="true">🌈</div>
+          <h3>My motto</h3>
+          <p>Be kind, be brave, be you!</p>
+        </article>
+      </div>
+
+      <div class="sparkle-box">
+        <p class="sparkle-label">Skye's sparkle words</p>
+        <p class="sparkle-word" id="sparkleWord" aria-live="polite">You are amazing!</p>
+        <button class="btn btn-yellow" id="sparkleBtn" type="button">✨ Give me another</button>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section class="section" id="game">
+      <h2 class="section-title"><span>Star Catcher</span></h2>
+      <p class="section-sub">Help Skye catch the falling stars! Hearts are worth 5. Watch out for rain clouds 🌧️</p>
+
+      <div class="game-wrap">
+        <div class="game-hud">
+          <span>⭐ <b id="score">0</b></span>
+          <span>⏱️ <b id="time">30</b>s</span>
+          <span>🏆 <b id="best">0</b></span>
+        </div>
+        <div class="game-stage">
+          <canvas id="gameCanvas" width="720" height="440" aria-label="Star Catcher game. Use the arrow keys, or drag, to move Skye."></canvas>
+          <div class="game-overlay" id="gameOverlay">
+            <p class="overlay-title" id="overlayTitle">Ready, Skye?</p>
+            <p class="overlay-text" id="overlayText">Use ← → keys, or drag your finger, to move.</p>
+            <button class="btn btn-yellow" id="startBtn" type="button">▶ Start</button>
+          </div>
+        </div>
+        <div class="game-pad" aria-hidden="true">
+          <button type="button" id="padLeft" tabindex="-1">◀</button>
+          <button type="button" id="padRight" tabindex="-1">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAINT -->
+    <section class="section" id="paint">
+      <h2 class="section-title"><span>Sky Painter</span></h2>
+      <p class="section-sub">Draw anything you like — then save it to keep!</p>
+
+      <div class="paint-wrap">
+        <div class="paint-tools" role="toolbar" aria-label="Drawing tools">
+          <div class="swatches" id="swatches"></div>
+          <div class="tool-row">
+            <span class="tool-label">Brush</span>
+            <button type="button" class="size" data-size="4" aria-label="Small brush"><i style="--d:6px"></i></button>
+            <button type="button" class="size active" data-size="10" aria-label="Medium brush"><i style="--d:12px"></i></button>
+            <button type="button" class="size" data-size="22" aria-label="Big brush"><i style="--d:20px"></i></button>
+          </div>
+          <div class="tool-row">
+            <span class="tool-label">Stickers</span>
+            <button type="button" class="stamp" data-stamp="⭐" aria-label="Star sticker">⭐</button>
+            <button type="button" class="stamp" data-stamp="💛" aria-label="Heart sticker">💛</button>
+            <button type="button" class="stamp" data-stamp="🌈" aria-label="Rainbow sticker">🌈</button>
+            <button type="button" class="stamp" data-stamp="🦋" aria-label="Butterfly sticker">🦋</button>
+            <button type="button" class="stamp" data-stamp="🌸" aria-label="Flower sticker">🌸</button>
+          </div>
+          <div class="tool-row">
+            <button type="button" class="btn btn-small btn-white" id="clearBtn">🧽 Clear</button>
+            <button type="button" class="btn btn-small btn-yellow" id="saveBtn">💾 Save</button>
+          </div>
+        </div>
+        <canvas id="paintCanvas" width="900" height="560" aria-label="Drawing canvas"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="images/skye.png" alt="" width="40" height="62">
+    <p>Made with lots of love for Skye 💛</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/paint.js"></script>
+</body>
+</html>
