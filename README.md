@@ -31,6 +31,15 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ## 📌 Projects
 
+### 🪟 Linen — Glass SaaS Landing Page
+🔗 Live: https://sheisaries1.github.io/sheisAries1/linen/  
+📂 Code: [`linen/`](linen/)
+- Product landing page in a glass style with a warm neutral palette: hero, a working product demo, bento feature grid, pricing toggle, FAQ and testimonials
+- Slow ambient gradient, scroll reveals, magnetic buttons and a pointer-following glass highlight, all respecting reduced motion
+- Vanilla HTML, CSS and JavaScript (ES modules) with reusable render components and all copy in a single data file
+
+---
+
 ### ⌚ Pearly Beau — E-commerce Storefront
 🔗 Live: https://sheisaries1.github.io/sheisAries1/pearlybeau/  
 📂 Code: [`pearlybeau/`](pearlybeau/)

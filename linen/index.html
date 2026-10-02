@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linen — Client portals for independent studios</title>
+  <meta name="description" content="Linen gives every client one calm portal for the proposal, the project and the payments, so independent studios get approved and paid faster.">
+  <meta name="theme-color" content="#E5DED2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23232323'/%3E%3Cpath d='M11 8v16h10' stroke='%23FBF7F4' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Slow ambient light behind everything -->
+  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner glass">
+      <a class="brand" href="#top" aria-label="Linen home">
+        <span class="brand__mark" aria-hidden="true">L</span>Linen
+      </a>
+      <nav class="nav__links" data-nav-links aria-label="Main">
+        <a href="#preview">Product</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav__mobile-cta" href="#cta">Start free</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="nav__signin" href="#cta">Sign in</a>
+        <a class="btn btn--solid btn--sm" href="#cta" data-magnetic><span>Start free</span></a>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <p class="pill glass" data-reveal><span class="pill__dot"></span>New: milestone payments with automatic invoices</p>
+      <h1 data-reveal style="--i:1">
+        One calm portal for every client, <em class="serif">from proposal to paid.</em>
+      </h1>
+      <p class="hero__lede" data-reveal style="--i:2">
+        Linen lets independent studios send proposals, run projects and collect payments in a single branded link, so clients approve faster and pay on time.
+      </p>
+      <div class="hero__ctas" data-reveal style="--i:3">
+        <a class="btn btn--solid btn--lg" href="#cta" data-magnetic><span>Start your free trial</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+        <a class="btn btn--glass btn--lg" href="#preview" data-magnetic><span>Try the live demo</span></a>
+      </div>
+      <p class="hero__note" data-reveal style="--i:4">14 days free · No card needed · Set up in 4 minutes</p>
+    </section>
+
+    <!-- Interactive product preview -->
+    <section class="preview-wrap" id="preview" aria-label="Interactive product preview">
+      <div class="preview glass" data-preview data-reveal data-sheen>
+        <div class="preview__chrome">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="preview__url">app.linen.so/projects</span>
+          <span class="preview__live"><i></i>Live demo · click around</span>
+        </div>
+        <div class="preview__body">
+          <aside class="pv-side">
+            <p class="pv-label">Projects</p>
+            <ul data-pv-projects></ul>
+          </aside>
+          <div class="pv-main">
+            <header class="pv-head" data-pv-head></header>
+            <div class="pv-tabs" role="tablist" aria-label="Project views">
+              <button type="button" role="tab" id="pvTab-overview" data-tab="overview" aria-selected="true" aria-controls="pvPanel">Overview</button>
+              <button type="button" role="tab" id="pvTab-milestones" data-tab="milestones" aria-selected="false" aria-controls="pvPanel" tabindex="-1">Milestones</button>
+              <button type="button" role="tab" id="pvTab-invoice" data-tab="invoice" aria-selected="false" aria-controls="pvPanel" tabindex="-1">Invoice</button>
+            </div>
+            <div class="pv-body" id="pvPanel" role="tabpanel" data-pv-body aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="pv-toast" data-pv-toast role="status"></div>
+      </div>
+    </section>
+
+    <!-- Logo cloud -->
+    <section class="logos" aria-labelledby="logosTitle">
+      <h2 id="logosTitle" class="logos__title" data-reveal>Trusted by 2,300+ independent studios</h2>
+      <ul class="logos__list" data-logos data-reveal style="--i:1"></ul>
+    </section>
+
+    <!-- Three core benefits -->
+    <section class="section" aria-labelledby="benefitsTitle">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Why studios switch</p>
+        <h2 id="benefitsTitle" data-reveal style="--i:1">Less admin. <em class="serif">More of the work you’re hired for.</em></h2>
+      </div>
+      <div class="benefits" data-benefits></div>
+    </section>
+
+    <!-- Bento feature grid -->
+    <section class="section" id="features" aria-labelledby="featuresTitle">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Features</p>
+        <h2 id="featuresTitle" data-reveal style="--i:1">Everything a client project needs, <em class="serif">nothing it doesn’t.</em></h2>
+      </div>
+      <div class="bento" data-bento></div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section how" id="how" aria-labelledby="howTitle">
+      <div class="how__intro">
+        <p class="kicker" data-reveal>How it works</p>
+        <h2 id="howTitle" data-reveal style="--i:1">From first hello <em class="serif">to final payment</em> in three steps.</h2>
+        <p data-reveal style="--i:2">No new habits for your clients. They open a link, read, sign and pay, just like booking a table.</p>
+        <a class="btn btn--glass" href="#preview" data-magnetic data-reveal style="--i:3"><span>See it in the demo</span></a>
+      </div>
+      <ol class="steps" data-steps></ol>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" aria-labelledby="quotesTitle">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Loved by studios</p>
+        <h2 id="quotesTitle" data-reveal style="--i:1">Clients notice. <em class="serif">So does your bank balance.</em></h2>
+      </div>
+      <div class="quotes" data-quotes></div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing" aria-labelledby="pricingTitle">
+      <div class="section__head">
+        <p class="kicker" data-reveal>Pricing</p>
+        <h2 id="pricingTitle" data-reveal style="--i:1">Simple plans. <em class="serif">No fees on your payments.</em></h2>
+        <div class="billing glass" data-billing data-period="yearly" role="group" aria-label="Billing period" data-reveal style="--i:2">
+          <button type="button" data-period="monthly" aria-pressed="false">Monthly</button>
+          <button type="button" data-period="yearly" aria-pressed="true">Yearly <span>Save 20%</span></button>
+        </div>
+      </div>
+      <div class="plans" data-plans></div>
+      <p class="plans__note" data-reveal>All plans include a 14-day free trial. Prices exclude VAT.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq" aria-labelledby="faqTitle">
+      <div class="faq-section__intro">
+        <p class="kicker" data-reveal>FAQ</p>
+        <h2 id="faqTitle" data-reveal style="--i:1">Questions, <em class="serif">answered.</em></h2>
+        <p data-reveal style="--i:2">Something else? Email <a href="mailto:hello@linen.so">hello@linen.so</a>. A real person replies within a working day.</p>
+      </div>
+      <div class="faqs" data-faqs></div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-wrap" id="cta" aria-labelledby="ctaTitle">
+      <div class="cta" data-reveal data-sheen>
+        <h2 id="ctaTitle">Your next client deserves <em class="serif">a better first impression.</em></h2>
+        <p>Set up your portal today. Your first proposal could be signed by tonight.</p>
+        <form class="signup" data-signup novalidate>
+          <label class="sr-only" for="ctaEmail">Work email</label>
+          <input id="ctaEmail" name="email" type="email" placeholder="you@yourstudio.com" autocomplete="email" required>
+          <button class="btn btn--light" type="submit" data-magnetic><span>Start free</span></button>
+          <p class="signup__msg" data-signup-msg role="status"></p>
+        </form>
+        <p class="cta__note">14 days free · No card needed · Cancel any time</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">L</span>Linen</a>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@linen.so">Contact</a>
+      </nav>
+      <p>© <span data-year>2026</span> Linen. A demo product page.</p>
+    </div>
+  </footer>
+</body>
+</html>
