@@ -18,6 +18,15 @@ Every page has its own link (hash routing, so it runs on GitHub Pages with no se
 | `#/wishlist`, `#/account` | Saved items, demo sign-in and order history |
 | `#/brand`, `#/page/terms` … | Brand story and footer pages |
 
+## Landing page (`landing/`)
+
+A separate brand landing page in a glass style, at `pearlybeau/landing/`. It shares its look with [`linen/`](../linen/): the Milk, Oat, Taupe, Mocha and Charcoal palette, Instrument Sans and Instrument Serif, translucent glass panels, slow ambient light, scroll reveals and buttons that drift toward the cursor.
+
+- **Sections:** hero, interactive watch explorer, delivery cities, three benefits, bento craft grid, how to order, reviews, prices (watch only / with a cuff), FAQ and a newsletter call to action.
+- **Connected to the shop:** it imports the shop's catalogue (`js/data.js`) and cart (`js/store.js`), so names and prices always match, and "Add to bag" fills the same cart used at checkout.
+- **Images:** watches and cuffs use transparent cut-outs from `images/cutouts/`, made from the product photos.
+- **Placeholders:** the reviews (and their randomuser.me photos) are made up. Replace them with real customer reviews before going live. Copy lives in `landing/js/content.js`.
+
 ## Payments are mocked
 
 No real payment is taken. `js/payments.js` acts as a pretend gateway:

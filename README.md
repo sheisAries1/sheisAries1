@@ -41,11 +41,12 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 ---
 
 ### ⌚ Pearly Beau — E-commerce Storefront
-🔗 Live: https://sheisaries1.github.io/sheisAries1/pearlybeau/  
+🔗 Live: https://sheisaries1.github.io/sheisAries1/pearlybeau/ · Landing page: https://sheisaries1.github.io/sheisAries1/pearlybeau/landing/  
 📂 Code: [`pearlybeau/`](pearlybeau/)
 - Online shop for a Lagos watch and jewelry brand: product listing with filters, sort and search; product pages; wishlist and cart
 - Checkout with address and delivery options, promo codes and gift wrap, plus mock card payments (declines and one-time-code checks), bank transfer and pay on delivery
 - Vanilla HTML, CSS and JavaScript (ES modules) with a hash router; responsive, accessible, and the cart is saved in localStorage
+- Glass landing page with an interactive watch explorer that adds straight to the shop's cart
 
 ---
 
