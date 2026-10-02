@@ -3,76 +3,14 @@ import { PRODUCTS, CATEGORIES, productById, FREE_DELIVERY_FROM } from './data.js
 import * as store from './store.js';
 import { esc, money, icons, productImage, wishButton, grid, categoryName } from './ui.js';
 
-// ---------- Home ----------
-
-export function home() {
-  const era = productById('the-era-rose-gold');
-  const best = PRODUCTS.filter((p) => p.bestseller);
-  const cats = ['watches', 'jewelry', 'eyewear'];
-  return {
-    title: 'Pearlybeau | Quality Watches, Eyewear & Jewelry',
-    html: `
-      <section class="hero">
-        <div class="hero__text">
-          <p class="eyebrow">NEW</p>
-          <h1>THE ERA<br>COLLECTION</h1>
-          <p class="lede">Collection is available and in polished stainless steel with refined Rose Gold plating.</p>
-          <a class="btn" href="#/product/${era.id}">Shop Now</a>
-        </div>
-        <div class="hero__media">
-          <img src="${era.image}" alt="The Era watch in rose gold" width="350" height="605">
-        </div>
-      </section>
-
-      <section class="features" aria-label="Why shop with us">
-        <div class="feature">
-          <span class="feature__icon">${icons.globe}</span>
-          <div><h2>Worldwide Shipping</h2><p>Delivery is world wide and super swift.</p></div>
-        </div>
-        <div class="feature">
-          <span class="feature__icon">${icons.card}</span>
-          <div><h2>Easy Payment</h2><p>Payment is secure.</p></div>
-        </div>
-        <div class="feature">
-          <span class="feature__icon">${icons.award}</span>
-          <div><h2>Guarantee</h2><p>2 years Guarantee</p></div>
-        </div>
-      </section>
-
-      <section class="band band--grey">
-        <header class="section-head">
-          <p class="eyebrow">TRENDING PRODUCTS</p>
-          <h2>Our Best Sellers</h2>
-        </header>
-        ${grid(best)}
-        <p class="center"><a class="btn" href="#/shop">View all products</a></p>
-      </section>
-
-      <section class="band">
-        <header class="section-head">
-          <p class="eyebrow">SHOP BY CATEGORIES</p>
-          <h2>Popular Categories</h2>
-        </header>
-        <div class="categories">
-          ${cats.map((c) => `
-            <a class="category" href="#/shop/${c}">
-              <img src="${CATEGORIES[c].image}" alt="" loading="lazy">
-              <span class="btn">${CATEGORIES[c].name.toUpperCase()}</span>
-            </a>`).join('')}
-        </div>
-      </section>
-
-      ${brandSections(true)}
-    `,
-  };
-}
+export { home } from './home.js';
 
 function brandSections(teaser = false) {
   return `
     <section class="band brand">
       <header class="section-head section-head--left">
         <p class="eyebrow">BRAND</p>
-        <h2>Who We Are</h2>
+        <h2 class="display">Who We Are</h2>
       </header>
       <div class="split">
         <div>

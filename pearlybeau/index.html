@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pearlybeau | Quality Watches, Eyewear & Jewelry</title>
   <meta name="description" content="PearlyBeau: watches in polished stainless steel, plus eyewear, jewelry and gifts. A female-led brand from Lagos.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#FBF7F4">
   <link rel="icon" href="images/era-rose-gold.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script type="module" src="js/app.js"></script>
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
   <a class="skip" href="#app">Skip to content</a>
 
   <header class="masthead">
+    <div class="masthead__glass glass">
     <div class="masthead__bar">
       <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -30,7 +32,7 @@
         </button>
       </form>
 
-      <a class="logo" href="#/" aria-label="Pearly Beau home">PEARLY&nbsp;&nbsp;BEAU</a>
+      <a class="logo" href="#/" aria-label="Pearly Beau home">Pearly Beau</a>
 
       <div class="masthead__icons">
         <a class="icon-btn" href="#/wishlist" aria-label="Wishlist">
@@ -48,17 +50,19 @@
     </div>
 
     <nav class="mainnav" id="mainNav" aria-label="Shop">
-      <a href="#/shop/watches" data-nav="watches">WATCHES</a>
-      <a href="#/shop/eyewear" data-nav="eyewear">EYEWEAR</a>
-      <a href="#/shop/jewelry" data-nav="jewelry">JEWELRY</a>
-      <a href="#/shop/giftshop" data-nav="giftshop">GIFTSHOP</a>
-      <a href="#/brand" data-nav="brand">BRAND</a>
+      <a href="#/shop/watches" data-nav="watches">Watches</a>
+      <a href="#/shop/eyewear" data-nav="eyewear">Eyewear</a>
+      <a href="#/shop/jewelry" data-nav="jewelry">Jewelry</a>
+      <a href="#/shop/giftshop" data-nav="giftshop">Giftshop</a>
+      <a href="#/brand" data-nav="brand">Brand</a>
     </nav>
+    </div>
   </header>
 
   <main id="app" tabindex="-1"></main>
 
   <footer class="footer">
+    <div class="footer__inner glass">
     <div class="footer__grid">
       <section class="footer__connect">
         <h2>Let's Connect!</h2>
@@ -66,7 +70,7 @@
         <form class="newsletter" id="newsletter">
           <label class="sr-only" for="newsEmail">Email address</label>
           <input id="newsEmail" type="email" placeholder="Enter your email" required>
-          <button type="submit">SIGN UP</button>
+          <button type="submit" data-magnetic>Sign up</button>
         </form>
         <p class="newsletter__msg" id="newsMsg" role="status"></p>
         <div class="socials">
@@ -119,6 +123,7 @@
         <a href="#/page/terms">Terms &amp; Conditions</a>
         <a href="#/page/privacy">Privacy Policy</a>
       </span>
+    </div>
     </div>
   </footer>
 

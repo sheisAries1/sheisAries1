@@ -5,6 +5,7 @@ import { checkout, order } from './checkout.js';
 import * as store from './store.js';
 import { productById } from './data.js';
 import { esc, money, toast } from './ui.js';
+import { enhance } from './motion.js';
 
 const app = document.getElementById('app');
 
@@ -43,6 +44,7 @@ function render({ keepScroll = false } = {}) {
   app.innerHTML = view.html;
   document.title = view.title;
   view.mount?.(app);
+  enhance(app);
 
   document.querySelectorAll('[data-nav]').forEach((a) => {
     const on = a.dataset.nav === view.nav;
@@ -160,6 +162,7 @@ menuBtn.addEventListener('click', () => {
 // Shadow under the sticky header once the page scrolls.
 const masthead = document.querySelector('.masthead');
 window.addEventListener('scroll', () => masthead.classList.toggle('is-scrolled', window.scrollY > 10), { passive: true });
+enhance(document.querySelector('.footer'));
 
 // ---------- Footer ----------
 
