@@ -410,7 +410,7 @@ figcaption {
 }
 .rooms__grid > * { grid-column: 1 / -1; }
 .room img { width: 100%; object-fit: cover; }
-.room--a img, .room--c img { aspect-ratio: 2 / 3; }
+.room--a img, .room--c img, .room--e img { aspect-ratio: 2 / 3; }
 .room--b img, .room--d img { aspect-ratio: 4 / 5; }
 .room figcaption span { display: block; margin-bottom: 0.25rem; color: var(--ink); }
 .rooms__note {
@@ -425,6 +425,7 @@ figcaption {
 @media (max-width: 59.99em) {
   .room--b { grid-column: 4 / -1; }
   .room--d { grid-column: 1 / 9; }
+  .room--e { grid-column: 5 / -1; }
 }
 
 @media (min-width: 60em) {
@@ -434,6 +435,7 @@ figcaption {
   .rooms__note { grid-column: 2 / 6; grid-row: 2; align-self: center; margin-top: 6rem; }
   .room--c { grid-column: 7 / 11; grid-row: 2 / span 2; margin-top: 18rem; }
   .room--d { grid-column: 2 / 5; grid-row: 3; margin-top: 6rem; }
+  .room--e { grid-column: 8 / 12; grid-row: 4; margin-top: 6rem; }
 }
 
 /* ——— Process ——— */
@@ -492,11 +494,14 @@ figcaption {
 }
 .story figcaption { margin-top: 1.5rem; color: var(--moss); font-size: 0.75rem; }
 .story + .story { margin-top: 4rem; }
+.stories__media { margin: 4rem 0 4rem 25%; }
+.stories__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 
 @media (min-width: 60em) {
-  .story--lead { grid-column: 2 / 10; grid-row: 2; }
-  .stories .story:nth-of-type(2) { grid-column: 2 / 7; grid-row: 3; margin-top: 8rem; }
-  .stories .story:nth-of-type(3) { grid-column: 8 / 13; grid-row: 3; margin-top: 14rem; }
+  .story--lead { grid-column: 2 / 9; grid-row: 2; }
+  .stories__media { grid-column: 10 / -1; grid-row: 2 / span 3; align-self: start; margin: 0 calc(var(--gutter) * -1) 0 0; }
+  .stories .story:nth-of-type(3) { grid-column: 2 / 6; grid-row: 3; margin-top: 8rem; }
+  .stories .story:nth-of-type(4) { grid-column: 5 / 9; grid-row: 4; margin-top: 5rem; }
 }
 
 /* ——— Materials ——— */
@@ -529,6 +534,8 @@ figcaption {
 .enquire { padding-bottom: var(--section-space); }
 .enquire__intro { display: grid; gap: 1.25rem; align-self: start; margin-bottom: 4rem; }
 .enquire__intro p { color: var(--ink-soft); max-width: 28rem; }
+.enquire__media { margin-top: 2.5rem; max-width: 24rem; }
+.enquire__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .enquire__availability {
   font-family: var(--serif);
   font-style: italic;
@@ -608,7 +615,7 @@ figcaption {
 .form__status:empty { display: none; }
 
 @media (min-width: 60em) {
-  .enquire__intro { grid-column: 1 / 6; position: sticky; top: 8rem; }
+  .enquire__intro { grid-column: 1 / 6; }
   .form { grid-column: 7 / 13; }
 }
 
