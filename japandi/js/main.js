@@ -72,11 +72,11 @@
 
   function validate(input) {
     if (input.validity.valueMissing) {
-      setError(input, input.name === 'email' ? 'Please share an email so we can reply.' : 'Please tell us your name.');
+      setError(input, input.name === 'email' ? 'We will need an email so we can write back.' : 'Just a first name is fine.');
       return false;
     }
     if (input.validity.typeMismatch) {
-      setError(input, 'This email address doesn’t look quite right.');
+      setError(input, 'That email doesn’t look quite right. Could you check it?');
       return false;
     }
     setError(input, '');
@@ -101,7 +101,7 @@
       return;
     }
     var name = form.elements.name.value.trim().split(' ')[0];
-    status.textContent = 'Thank you, ' + name + '. We will be in touch within two working days.';
+    status.textContent = 'Thank you, ' + name + '. We have your note and one of us will write back within two working days. Aiko & Daniel';
     form.reset();
   });
 
