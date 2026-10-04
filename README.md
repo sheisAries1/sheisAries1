@@ -68,15 +68,6 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
-### 💛 Skye's World — Cartoon Site for My Niece
-🔗 Live: https://sheisaries1.github.io/sheisAries1/skye/  
-📂 Code: [`skye/`](skye/)
-- Playful cartoon homepage with a day/night sky, a clickable bouncing Skye and "all about me" cards
-- Star Catcher canvas game (keyboard, drag or touch buttons) and a Sky Painter drawing pad with stickers and PNG export
-- Vanilla HTML, CSS and JavaScript — responsive, reduced-motion friendly
-
----
-
 ### 🌐 Personal Portfolio Website  
 💻 GitHub: https://github.com/sheisAries1/portfolio  
 - Fully responsive portfolio website  
