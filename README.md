@@ -41,6 +41,15 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### 🍵 Atelier Ma — Japandi Interior Studio
+🔗 Live: https://sheisaries1.github.io/sheisAries1/japandi/  
+📂 Code: [`japandi/`](japandi/)
+- Quiet, editorial site for a luxury Japandi interior designer: asymmetric print-style layouts, paper grain and a rice/ink/clay/moss/walnut palette
+- Philosophy, services, slow image gallery, process, client stories, materials and a consultation form with accessible validation
+- Vanilla HTML, CSS and JavaScript with Noto Serif & DM Sans; responsive WebP images, near-invisible mask and fade animations, reduced-motion friendly
+
+---
+
 ### 🦠 AMR Atlas — Antibiotic Resistance Explorer
 🔗 Live: https://sheisaries1.github.io/sheisAries1/amr-explorer/  
 📂 Code: [`amr-explorer/`](amr-explorer/)
