@@ -41,6 +41,16 @@ Responsive Design, REST APIs, Cross-Browser Compatibility
 
 ---
 
+### 🚪 ABC Doors: 3D Alphabet Video for Toddlers
+🎬 Video: [`abc-doors/video/abc-doors.mp4`](abc-doors/video/abc-doors.mp4)  
+🔗 Live: https://sheisaries1.github.io/sheisAries1/abc-doors/  
+📂 Code: [`abc-doors/`](abc-doors/)
+- Vertical 9:16 nursery-style animation: a toddler opens colourful doors from A for Apple to L for Lion, then a hamster waves goodbye
+- Every character, animal and prop is built in code with Three.js, with no model files; glossy mirrored floor, soft shadows, expressive pose rig
+- Frame-exact offline render via headless Chromium and ffmpeg, plus an original synthesized soundtrack timed to each door
+
+---
+
 ### 🍵 Atelier Ma — Japandi Interior Studio
 🔗 Live: https://sheisaries1.github.io/sheisAries1/japandi/  
 📂 Code: [`japandi/`](japandi/)
