@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABC Doors</title>
+  <meta name="description" content="A 3D animated ABC video for toddlers: open the colourful doors from A for Apple to L for Lion.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main id="stage" aria-label="ABC Doors animation">
+    <div class="loading" aria-hidden="true">Loading…</div>
+    <button id="play" type="button" aria-label="Play">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+    </button>
+  </main>
+  <audio id="music" src="audio/soundtrack.m4a" preload="auto"></audio>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
