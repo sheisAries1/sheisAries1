@@ -1,8 +1,8 @@
 # ABC Doors: a 3D alphabet video for toddlers
 
-A vertical (9:16) 3D animated learning video in a bright nursery-rhyme style. A little girl toddles down a hall of colourful doors, opens each one, and finds the word behind it: **A - Apple, B - Banana, C - Cat, D - Dog, E - Elephant, F - Fish, G - Grapes, I - Ice, J - Jelly, K - Kite, L - Lion**. At the end a fluffy hamster waves "Bye-Bye 👋".
+A vertical (9:16) 3D animated learning video in a bright nursery-rhyme style. A little girl toddles down a hall of colourful doors, opens each one, and finds the word behind it: **A - Apple, B - Banana, C - Cat, D - Dog, E - Elephant, F - Fish, G - Grapes, H - Hat, I - Ice, J - Jelly, K - Kite, L - Lion**. At the end a fluffy hamster waves "Bye-Bye 👋".
 
-- **Video:** [`video/abc-doors.mp4`](video/abc-doors.mp4): 1080×1920, 30 fps, about 64 s, with music and sound effects
+- **Video:** [`video/abc-doors.mp4`](video/abc-doors.mp4): 1080×1920, 30 fps, about 70 s, with music and sound effects
 - **Live version:** open `index.html` from a web server. It plays the same animation in real time with WebGL.
 - **AI-video prompt pack:** [`PROMPTS.md`](PROMPTS.md) has scene-by-scene prompts for Veo, Sora, Kling and similar tools, written so the character stays consistent.
 

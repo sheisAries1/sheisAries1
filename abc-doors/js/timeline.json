@@ -12,6 +12,7 @@
     { "letter": "E", "word": "ELEPHANT", "door": "#2f7cf6", "glyph": "#ffd21f", "kind": "elephant", "react": "cheeks" },
     { "letter": "F", "word": "FISH",     "door": null,      "glyph": "#ffd21f", "kind": "fish",     "react": "point" },
     { "letter": "G", "word": "GRAPES",   "door": "#22b55a", "glyph": "#ffd21f", "kind": "grapes",   "react": "point" },
+    { "letter": "H", "word": "HAT",      "door": "#ffb41f", "glyph": "#2f7cf6", "kind": "hat",      "react": "cheeks" },
     { "letter": "I", "word": "ICE",      "door": "#e8323c", "glyph": "#ffd21f", "kind": "ice",      "react": "bounce" },
     { "letter": "J", "word": "JELLY",    "door": "#2f7cf6", "glyph": "#ffd21f", "kind": "jelly",    "react": "point" },
     { "letter": "K", "word": "KITE",     "door": "#e8323c", "glyph": "#ffd21f", "kind": "kite",     "react": "wave" },

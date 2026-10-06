@@ -50,19 +50,22 @@ Each prompt below goes after the Style and Character blocks.
 **7. G for Grapes**
 > A green door with a large yellow letter "G". She opens it and finds a huge, shiny bunch of purple grapes with a green leaf, swaying gently in a lilac room, with small grapes floating around. She points at the grapes with excitement.
 
-**8. I for Ice**
+**8. H for Hat**
+> A sunny yellow door with a large blue letter "H". She opens it and discovers a pink hat room: a big straw sun hat with a pink ribbon and a daisy spinning on a white hat stand, while a red top hat, a blue polka-dot party hat and a green bobble beanie float and twirl above colourful hat boxes. She holds her cheeks and giggles.
+
+**9. I for Ice**
 > A red door with a large yellow letter "I". She stands beside the closed door, reaches for the knob and opens it. Behind it is a playful icy room: shiny translucent ice cubes (the biggest one has a cute smiling face), icicles, little snow mounds and gently falling snowflakes. She bounces happily with her arms up.
 
-**9. J for Jelly**
+**10. J for Jelly**
 > A blue door with a large yellow letter "J". She opens the door to find colourful wobbly jelly desserts (red, green, orange, purple and yellow) on white plates and a cake stand, each with whipped cream and a cherry on top, jiggling. She points at them happily.
 
-**10. K for Kite**
+**11. K for Kite**
 > A red door with a large yellow letter "K". She opens it and reveals a bright blue sky scene with fluffy clouds and green grass, where three colourful diamond kites with bow tails fly and dance in the breeze. She waves up at the kites.
 
-**11. L for Lion**
+**12. L for Lion**
 > A green door with a large yellow letter "L". She opens it and a cute, friendly cartoon lion cub with a fluffy orange mane, soft golden fur and a gentle smile appears. It looks playful and kind, not scary. She claps with excitement.
 
-**12. Goodbye**
+**13. Goodbye**
 > A cute fluffy orange-and-white hamster with round pink ears and big shiny eyes sits on a lavender cushion against a soft pastel pink-lavender-mint gradient background, with floating hearts and bubbles, and waves goodbye to the camera with one tiny paw. Leave empty space at the top for the text "Bye-Bye 👋" and at the bottom for a kids-learning logo.
 
 ---
@@ -71,6 +74,6 @@ Each prompt below goes after the Style and Character blocks.
 
 A simple call-and-repeat works well over the soundtrack:
 
-> "A is for Apple, A-A-Apple! … B is for Banana, B-B-Banana! … C is for Cat … D is for Dog … E is for Elephant … F is for Fish … G is for Grapes … I is for Ice … J is for Jelly … K is for Kite … L is for Lion! … Bye-bye, friends!"
+> "A is for Apple, A-A-Apple! … B is for Banana, B-B-Banana! … C is for Cat … D is for Dog … E is for Elephant … F is for Fish … G is for Grapes … H is for Hat … I is for Ice … J is for Jelly … K is for Kite … L is for Lion! … Bye-bye, friends!"
 
 Each line starts as its door opens, about 2.2 s into each 5.4 s scene (scene *n* starts at *n* × 5.4 s, counting from 0).

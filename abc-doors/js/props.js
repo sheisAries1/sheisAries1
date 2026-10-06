@@ -582,6 +582,81 @@ export function lion(rand) {
   };
 }
 
+export function hat(rand) {
+  const g = new THREE.Group();
+  const room = { wall: '#ffe3f1', floor: '#ffc4df' };
+  const dome = (r, m, parent, pos) => mesh(new THREE.SphereGeometry(r, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2), m, { parent, pos });
+  const bowAt = (parent, pos, color, s = 1) => {
+    const b = group(parent, pos);
+    const m = mat(color, { gloss: true, rough: 0.25 });
+    blob(m, [-0.05 * s, 0, 0], [0.055 * s, 0.035 * s, 0.02 * s], { parent: b, rot: [0, 0, 0.25] });
+    blob(m, [0.05 * s, 0, 0], [0.055 * s, 0.035 * s, 0.02 * s], { parent: b, rot: [0, 0, -0.25] });
+    blob(m, [0, 0, 0.01], 0.022 * s, { parent: b });
+    return b;
+  };
+
+  // Hero: a big straw sun hat with a pink ribbon and a daisy, on a white stand
+  mesh(new THREE.CylinderGeometry(0.3, 0.36, 0.06, 40), mat('#ffffff', { gloss: true }), { parent: g, pos: [0, 0.03, -0.85] });
+  mesh(new THREE.CylinderGeometry(0.025, 0.03, 0.85, 16), mat('#ffffff', { gloss: true }), { parent: g, pos: [0, 0.45, -0.85] });
+  const sun = group(g, [0, 1.0, -0.85]);
+  const straw = mat('#f4cf7a', { rough: 0.7 });
+  mesh(new THREE.CylinderGeometry(0.46, 0.48, 0.025, 64), straw, { parent: sun });
+  mesh(new THREE.TorusGeometry(0.47, 0.018, 10, 64), mat('#e8b85a', { rough: 0.7 }), { parent: sun, rot: [Math.PI / 2, 0, 0] });
+  dome(0.22, straw, sun, [0, 0.01, 0]).scale.set(1, 0.85, 1);
+  mesh(new THREE.CylinderGeometry(0.222, 0.222, 0.06, 48, 1, true), mat('#ff5aa5', { gloss: true, rough: 0.3, side: THREE.DoubleSide }), { parent: sun, pos: [0, 0.04, 0] });
+  bowAt(sun, [0.0, 0.05, 0.225], '#ff5aa5', 1.4);
+  const daisy = group(sun, [-0.17, 0.08, 0.14], [0, -0.6, 0]);
+  for (let k = 0; k < 8; k++) {
+    const a = (k / 8) * Math.PI * 2;
+    blob(mat('#ffffff'), [Math.cos(a) * 0.035, Math.sin(a) * 0.035, 0], [0.026, 0.012, 0.008], { parent: daisy, rot: [0, 0, a], cast: false });
+  }
+  blob(mat('#ffc61f'), [0, 0, 0.006], 0.018, { parent: daisy, cast: false });
+
+  // Floating friends: a red top hat, a party hat and a bobble beanie
+  const top = group(g, [-0.62, 1.75, -1.3]);
+  const black = mat('#e8323c', { gloss: true, rough: 0.3 });
+  mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.025, 40), black, { parent: top });
+  mesh(new THREE.CylinderGeometry(0.13, 0.12, 0.3, 40), black, { parent: top, pos: [0, 0.16, 0] });
+  mesh(new THREE.CylinderGeometry(0.125, 0.125, 0.05, 40), mat('#ffd21f', { gloss: true }), { parent: top, pos: [0, 0.05, 0] });
+
+  const party = group(g, [0.62, 1.7, -1.2]);
+  mesh(new THREE.ConeGeometry(0.15, 0.38, 40), mat('#2f7cf6', { gloss: true, rough: 0.3 }), { parent: party, pos: [0, 0.19, 0] });
+  for (let k = 0; k < 10; k++) {
+    const y = 0.05 + (k % 5) * 0.06, a = k * 1.9, r = 0.15 * (1 - y / 0.38) + 0.004;
+    blob(mat(['#ffd21f', '#ff5aa5', '#ffffff'][k % 3]), [Math.cos(a) * r, y, Math.sin(a) * r], 0.018, { parent: party, cast: false, seg: 10 });
+  }
+  blob(mat('#ffd21f', { rough: 0.8 }), [0, 0.4, 0], 0.045, { parent: party });
+
+  const beanie = group(g, [0.05, 2.15, -1.9]);
+  dome(0.17, mat('#22b55a', { rough: 0.8 }), beanie, [0, 0, 0]);
+  mesh(new THREE.TorusGeometry(0.165, 0.035, 12, 40), mat('#9fe8cf', { rough: 0.8 }), { parent: beanie, rot: [Math.PI / 2, 0, 0] });
+  blob(mat('#ffffff', { rough: 0.9 }), [0, 0.19, 0], 0.06, { parent: beanie });
+
+  // Hat boxes on the floor
+  [[-0.7, -0.75, '#ff8cc6', 0.22], [-0.55, -1.25, '#7fc8ff', 0.18], [0.72, -0.8, '#ffd21f', 0.2]].forEach(([x, z, c, r]) => {
+    mesh(new THREE.CylinderGeometry(r, r, r * 1.1, 40), mat(c, { gloss: true }), { parent: g, pos: [x, r * 0.55, z] });
+    mesh(new THREE.CylinderGeometry(r * 1.06, r * 1.06, 0.05, 40), mat('#ffffff', { gloss: true }), { parent: g, pos: [x, r * 1.1 + 0.02, z] });
+  });
+
+  const floaters = [[top, 0], [party, 1], [beanie, 2]].map(([o, i]) => ({ o, i, y: o.position.y }));
+  const tw = sparkleCloud(g, rand, 14, [2, 2, 2]);
+  return {
+    group: g, room,
+    update(rv, t) {
+      const k = elasticOut(span(rv, 0, 1.0));
+      sun.scale.setScalar(Math.max(0.001, k * 1.25));
+      sun.position.y = 1.0 + Math.abs(Math.sin(t * 3)) * 0.06 * smooth(span(rv, 0.9, 1.2));
+      sun.rotation.set(0.25 + Math.sin(t * 1.5) * 0.06, t * 0.7, Math.sin(t * 2) * 0.08);
+      floaters.forEach(({ o, i, y }) => {
+        o.scale.setScalar(Math.max(0.001, pop(rv, 0.25 + i * 0.12)));
+        o.position.y = y + Math.sin(t * 2 + i * 2) * 0.07;
+        o.rotation.set(Math.sin(t * 1.3 + i) * 0.25, t * (0.6 + i * 0.2), Math.sin(t * 1.7 + i) * 0.2);
+      });
+      tw(t);
+    },
+  };
+}
+
 export function hamster() {
   const g = new THREE.Group();
   const fur = mat('#f2a65a', { rough: 0.75 });
@@ -629,4 +704,4 @@ export function hamster() {
   };
 }
 
-export const builders = { apple, banana, cat, dog, elephant, fish: fishTank, grapes, ice, jelly, kite, lion };
+export const builders = { apple, banana, cat, dog, elephant, fish: fishTank, grapes, hat, ice, jelly, kite, lion };
